@@ -12,7 +12,21 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      borderImage: {
+        'gradient-to-r': 'linear-gradient(76.91deg, #FFDE4D -0.16%, #C847FF 104.72%)',
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addComponents }) {
+      addComponents({
+        '.border-gradient': {
+          border: '5px solid',
+          borderImageSlice: '1',
+          borderImageSource: 'linear-gradient(76.91deg, #FFDE4D -0.16%, #C847FF 104.72%)',
+        },
+      });
+    },
+  ],
 } satisfies Config;
+

@@ -1,101 +1,225 @@
 import Image from "next/image";
+import Navbar from "./componenets/navbar";
+import Footer from "./componenets/footer";
+import myImage from "../public/Bitcoin.svg"
+
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+
+  return (
+    <>
+      <Navbar />
+      <div className="h-screen w-full bg-cover bg-center relative flex items-center justify-center flex-col">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-[url('../public/homebg.svg')] blur-sm z-0"
+        />
+        <div
+          className="mt-16 h-[80vh] w-[80vw] bg-[#D9D9D91A] border-4 rounded-2xl overflow-hidden flex items-center justify-center flex-col border-gradient relative z-10"
+        >
+          <h1 className="text-[40px] sm:text-[100px] xl:text-[130px] font-bold mb-8 sm:mb-0">DecentInvest</h1>
+          <h2 className="text-[18px] xl:text-[40px] mb-8 sm:mb-0">Invest Decently, Invest Decentrally</h2>
+          <h2 className=" text-[12px] xl:text-[30px]  mb-8 sm:mb-0">Secure, transparent, and fair investments</h2>
+          <button className="bg-[#FFB200] text-black font-medium  w-[147px] h-[35px] sm:h-[65px] sm:w-[281px] rounded-2xl hover:bg-yellow-500 transition-colors duration-300 text-[18px] mt-8 ">
+            Get Started
+          </button>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+      <div className="bg-[#1A1A1D] h-[500px] w-full">
+
+      </div>
+      <div className="min-h-screen bg-black bg-[url('../public/BG1.svg')] bg-cover bg-center p-6 md:p-8 flex items-center justify-center flex-col">
+        <h1 className="text-[80px] mt-16 text-center mb-8">About Us</h1>
+
+        <div className="max-w-7xl flex items-center justify-center grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <div
+            className="relative w-full max-w-[550px] aspect-[14/9] rounded-[48px] overflow-hidden flex flex-col items-center"
+            style={{
+              background: 'linear-gradient(76.91deg, #FFDE4D -0.16%, #C847FF 104.72%)',
+              padding: '2px',
+            }}
+          >
+            <div className="absolute inset-[2px] rounded-[46px] bg-black overflow-hidden">
+              <div className="relative z-10 h-full w-full flex flex-col items-center justify-center text-center px-6">
+                <h2 className="text-white text-[22px] sm:text-[25px] lg:text-[28px] font-bold leading-none mt-8">
+                  Marketplace for startups and investors
+                </h2>
+                <Image
+                  src="/Bitcoin.svg"
+                  alt="Marketplace illustration"
+                  width={260}
+                  height={260}
+                  className="w-[180px] h-[180px] sm:w-[200px] sm:h-[200px] lg:w-[220px] lg:h-[220px] xl:w-[260px] xl:h-[260px]"
+                />
+              </div>
+              <div
+                className="absolute inset-0 z-0"
+                style={{
+                  background: 'radial-gradient(circle at 30% 70%, rgba(168, 85, 247, 0.15), transparent 50%), radial-gradient(circle at 70% 30%, rgba(234, 179, 8, 0.15), transparent 50%)',
+                  filter: 'blur(40px)',
+                }}
+              />
+            </div>
+          </div>
+
+          <div
+            className="relative w-full max-w-[550px] aspect-[14/9] md:aspect-[14/19] rounded-[48px] overflow-hidden flex flex-col items-center row-span-2"
+            style={{
+              background: 'linear-gradient(76.91deg, #FFDE4D -0.16%, #C847FF 104.72%)',
+              padding: '2px',
+            }}
+          >
+            <div className="absolute inset-[2px] rounded-[46px] bg-black overflow-hidden">
+              <div className="relative z-10 h-full w-full flex flex-col items-center justify-center text-center px-6">
+                <h2 className="text-white text-[18px] sm:text-[25px] md:text-[30px] font-bold leading-none mt-2">
+                  All startups in one place for investors and all investors in one place for startups
+                </h2>
+                <Image
+                  src="/startups.svg"
+                  alt="Startups illustration"
+                  width={600}
+                  height={200}
+                  className="ml-8 md:ml-16 w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] md:w-[500px] md:h-[500px]"
+                />
+              </div>
+              <div
+                className="absolute inset-0 z-0"
+                style={{
+                  background: 'radial-gradient(circle at 30% 70%, rgba(168, 85, 247, 0.15), transparent 50%), radial-gradient(circle at 70% 30%, rgba(234, 179, 8, 0.15), transparent 50%)',
+                  filter: 'blur(40px)',
+                }}
+              />
+            </div>
+          </div>
+
+          <div
+            className="relative w-full max-w-[550px] aspect-[14/9] rounded-[48px] overflow-hidden flex flex-col items-center"
+            style={{
+              background: 'linear-gradient(76.91deg, #FFDE4D -0.16%, #C847FF 104.72%)',
+              padding: '2px',
+            }}
+          >
+            <div className="absolute inset-[2px] rounded-[46px] bg-black overflow-hidden">
+              <div className="relative z-10 h-full w-full flex flex-col items-center justify-center text-center">
+                <h2 className="text-white text-[22px] sm:text-[28px] font-bold leading-none mt-16">
+                  NFT for your startups
+                </h2>
+                <Image
+                  src="/nfts.svg"
+                  alt="NFT illustration"
+                  width={280}
+                  height={280}
+                  className="w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] md:w-[200px] md:h-[250px] lg:w-[260px] lg:h-[260px] mb-8"
+                />
+              </div>
+              <div
+                className="absolute inset-0 z-0"
+                style={{
+                  background: 'radial-gradient(circle at 30% 70%, rgba(168, 85, 247, 0.15), transparent 50%), radial-gradient(circle at 70% 30%, rgba(234, 179, 8, 0.15), transparent 50%)',
+                  filter: 'blur(40px)',
+                }}
+              />
+            </div>
+          </div>
+
+
+          <div
+            className="relative w-full col-span-full max-w-[550px] md:max-w-[1150px] aspect-[14/9] md:aspect-[32/9] h-[240px] sm:h-[350px] md:h-[400px] rounded-[48px] overflow-hidden "
+            style={{
+              background: 'linear-gradient(76.91deg, #FFDE4D -0.16%, #C847FF 104.72%)',
+              padding: '2px',
+            }}
+          >
+            <div className="absolute inset-[2px] rounded-[46px] bg-black overflow-hidden">
+              <div className="relative z-10 h-full w-full flex flex-col md:flex-row  items-center justify-center text-center px-6">
+                <h2 className="text-white text-[min(4vw,38px)] font-bold leading-tight mb-4 mt-4 sm:mt-8">
+                  Find customised investors and startups according to your needs
+                </h2>
+                <Image
+                  src="/people.svg"
+                  alt="Customised search illustration"
+                  width={600}
+                  height={200}
+                  className="w-[220px] h-[220px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px]"
+                />
+              </div>
+              <div
+                className="absolute inset-0 z-0"
+                style={{
+                  background: 'radial-gradient(circle at 30% 70%, rgba(168, 85, 247, 0.15), transparent 50%), radial-gradient(circle at 70% 30%, rgba(234, 179, 8, 0.15), transparent 50%)',
+                  filter: 'blur(40px)',
+                }}
+              />
+            </div>
+          </div>
+
+
+          <div
+            className="relative w-full max-w-[550px] aspect-[14/9] 
+          sm:aspect-[14/9] rounded-[48px] overflow-hidden flex flex-col items-center"
+            style={{
+              background: 'linear-gradient(76.91deg, #FFDE4D -0.16%, #C847FF 104.72%)',
+              padding: '2px',
+            }}
+          >
+            <div className="absolute inset-[2px] rounded-[46px] bg-black overflow-hidden">
+              <div className="relative z-10 h-full w-full flex flex-col items-center justify-center text-center px-6">
+                <h2 className="text-white text-[22px] sm:text-[28px] font-bold leading-none mt-8">
+                  Easy transactions
+                </h2>
+                <Image
+                  src="/transactions.svg"
+                  alt="Transactions illustration"
+                  width={280}
+                  height={280}
+                  className="w-[150px] h-[150px] sm:w-[260px] sm:h-[260px] md:w-[220px] md:h-[220px] lg:w-[260px] lg:h-[260px]"
+                />
+              </div>
+              <div
+                className="absolute inset-0 z-0"
+                style={{
+                  background: 'radial-gradient(circle at 30% 70%, rgba(168, 85, 247, 0.15), transparent 50%), radial-gradient(circle at 70% 30%, rgba(234, 179, 8, 0.15), transparent 50%)',
+                  filter: 'blur(40px)',
+                }}
+              />
+            </div>
+          </div>
+
+          <div
+            className="relative w-full max-w-[550px] aspect-[14/9] 
+          sm:aspect-[14/9] rounded-[48px] overflow-hidden flex flex-col items-center"
+            style={{
+              background: 'linear-gradient(76.91deg, #FFDE4D -0.16%, #C847FF 104.72%)',
+              padding: '2px',
+            }}
+          >
+            <div className="absolute inset-[2px] rounded-[46px] bg-black overflow-hidden">
+              <div className="relative z-10 h-full w-full flex flex-col items-center justify-center text-center px-6">
+                <h2 className="text-white text-[22px] sm:text-[28px] font-bold leading-none mt-8">
+                  Grants and investments
+                </h2>
+                <Image
+                  src="/grants.svg"
+                  alt="Grants illustration"
+                  width={280}
+                  height={280}
+                  className="w-[150px] h-[150px] sm:w-[240px] sm:h-[240px] md:w-[190px] md:h-[190px] lg:w-[260px] lg:h-[260px]"
+                />
+              </div>
+              <div
+                className="absolute inset-0 z-0"
+                style={{
+                  background: 'radial-gradient(circle at 30% 70%, rgba(168, 85, 247, 0.15), transparent 50%), radial-gradient(circle at 70% 30%, rgba(234, 179, 8, 0.15), transparent 50%)',
+                  filter: 'blur(40px)',
+                }}
+              />
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <Footer/>
+    </>
   );
 }
