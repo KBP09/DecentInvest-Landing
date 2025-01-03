@@ -18,7 +18,7 @@ export default {
     },
   },
   plugins: [
-    function ({ addComponents }) {
+    function ({ addComponents }: { addComponents: Function }) {
       addComponents({
         '.border-gradient': {
           border: '5px solid',
