@@ -51,7 +51,7 @@ const AboutUsCards = () => {
 
     return (
         <>
-            <div className="max-w-7xl flex items-center justify-center grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="max-w-7xl flex items-center justify-center grid grid-cols-1 md:grid-cols-2 gap-6 overflow-hidden">
 
                 <div
                     className="relative animate-me w-full max-w-[550px] aspect-[14/9] rounded-[48px] overflow-hidden flex flex-col items-center animate-left"
