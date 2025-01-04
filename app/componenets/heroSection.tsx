@@ -13,9 +13,9 @@ const HeroSection = () => {
           objectPosition="center"
         />
       </div>
-      <div className="mt-24 h-[80vh] w-[80vw] bg-[#D9D9D91A] backdrop-blur-lg border-4 overflow-hidden flex items-center justify-center flex-col relative z-10 rounded-[48px]">
-        <h1 className="text-white text-[40px] sm:text-[60px] md:text-[100px] xl:text-[130px] font-bold mb-2 sm:mt-0 leading-none">
-          <span className="inline-block overflow-hidden whitespace-nowrap animate-typewriter">DecentInvest</span>
+      <div className="mt-24 h-[80vh] w-[80vw] bg-[#D9D9D91A] backdrop-blur-md border-4 overflow-hidden flex items-center justify-center flex-col relative z-10 rounded-[48px]">
+        <h1 className="text-white text-[40px] sm:text-[60px] md:text-[100px] xl:text-[130px] font-bold mb-2 sm:mt-0">
+          DecentInvest
         </h1>
         <h2 className="text-white text-[18px] md:text-[25px] xl:text-[40px] mb-2 sm:mb-0">
           Invest Decently, Invest Decentrally
