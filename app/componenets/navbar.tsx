@@ -43,7 +43,7 @@ const Navbar = () => {
                         <li>
                             <a href="#" className='px-[15px] py-[12px] flex items-center justify-center text-black cursor-pointer whitespace-nowrap font-bold relative'>
                                 Home
-                                
+
                             </a>
                         </li>
                         <li>
@@ -69,8 +69,8 @@ const Navbar = () => {
                         </li>
                     </ul>
                 </div>
-                {/* Menu Container */}
-                <ul className=" hidden justify-end lg:flex flex items-center justify-center space-x-8 text-black h-[8vh] w-[35vw] font-bold rounded-full ml-auto bg-white xl:w-[40vw] xl:space-x-8 lg:space-x-4 lg:w-[45vw] md:w-[45vw]">
+
+                <ul className="hidden justify-end lg:flex items-center space-x-4 text-black h-[8vh] font-bold rounded-full ml-auto bg-white px-6 lg:px-8 xl:px-11">
                     <li className="hover:text-yellow-400 transition-colors duration-300 cursor-pointer">
                         Home
                     </li>
@@ -83,10 +83,11 @@ const Navbar = () => {
                     <li className="hover:text-yellow-400 transition-colors duration-300 cursor-pointer">
                         Contact Us
                     </li>
-                    <button className="bg-[#FFB200] text-black font-semibold py-2 rounded-lg hover:bg-yellow-500 transition-colors duration-300 w-[100px]">
+                    <button className="bg-[#FFB200] text-black font-semibold py-2 px-4 rounded-lg hover:bg-yellow-500 transition-colors duration-300">
                         Login
                     </button>
                 </ul>
+
             </div>
         </nav>
     )

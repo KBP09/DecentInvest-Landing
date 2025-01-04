@@ -4,94 +4,71 @@ import Link from 'next/link'
 
 const FooterMobile = () => {
     return (
-        <footer className="lg:hidden flex flex-col w-full h-[600px]">
-            <div className="bg-[#1A1A1D] text-white py-12 flex items-center justify-center">
+        <footer className="lg:hidden flex flex-col w-full">
+            <div className="bg-[#1A1A1D] text-white py-8 flex items-center justify-center">
                 <div className="container flex flex-col justify-between items-center h-full">
-                    <div className="flex items-center justify-center flex-grow mb-4">
+                    <div className="flex items-center justify-center mb-2">
                         <Image
                             src="/logo.svg"
                             alt="Logo"
-                            width={80}
-                            height={40}
-                            className="w-[70px] sm:w-[80px]"
+                            width={60}
+                            height={30}
+                            className="w-[60px] sm:w-[70px]"
                         />
-                        <h2 className="text-3xl font-semibold">DecentInvest</h2>
+                        <h2 className="text-2xl font-semibold ml-2">DecentInvest</h2>
                     </div>
-                    <p className="text-[#E7E7E7] text-xl xl:text-2xl leading-none">
+                    <p className="text-[#E7E7E7] text-lg xl:text-xl leading-snug text-center">
                         Invest Decently, Invest Decentrally
                     </p>
-                    <div className="mt-16 flex flex-col w-full px-8">
-                        <h3 className="text-[#E7E7E7] font-medium mb-2 text-left md:text-[18px] lg:text-[25px]">Subscribe to our newsletter</h3>
+                    <div className="mt-8 flex flex-col w-full px-4">
+                        <h3 className="text-[#E7E7E7] font-medium mb-2 text-left text-sm md:text-[16px] lg:text-[18px]">
+                            Subscribe to our newsletter
+                        </h3>
                         <div className="flex items-center w-full">
                             <input
                                 type="email"
                                 placeholder="Enter your Email Address"
-                                className="bg-[#E7E7E7] px-3 py-2 text-black rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 flex-grow h-[35px]"
+                                className="bg-[#E7E7E7] px-2 py-1 text-black rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 flex-grow h-[30px]"
                             />
                         </div>
                         <button
                             type="submit"
-                            className="bg-[#FFB200] text-black py-1 sm:py-2  rounded-xl hover:bg-yellow-400 mt-4 w-[120px] sm:w-[150px] ml-auto"
+                            className="bg-[#FFB200] text-black py-1 rounded-xl hover:bg-yellow-400 mt-3 w-[100px] sm:w-[120px] ml-auto"
                         >
                             Submit
                         </button>
                     </div>
                 </div>
-
             </div>
 
-            <div className="bg-black text-white w-full flex items-center justify-center flex-col">
-                <div className="grid grid-cols-2 gap-2 md:text-[18px] lg:text-[25px] w-full mt-8">
-                    <Link href="/" className="text-[#E7E7E7] hover:text-gray-300 text-center">Home</Link>
-                    <Link href="/about" className="text-[#E7E7E7] hover:text-gray-300 text-center">Startups</Link>
-                    <Link href="/newsletter" className="text-[#E7E7E7] hover:text-gray-300 text-center">Newsletter</Link>
-                    <Link href="/startups" className="text-[#E7E7E7] hover:text-gray-300 text-center">About</Link>
+            <div className="bg-black text-white w-full flex items-center justify-center flex-col py-6">
+                <div className="grid grid-cols-2 gap-1 text-center md:text-[16px] lg:text-[20px] w-full">
+                    <Link href="/" className="text-[#E7E7E7] hover:text-gray-300">Home</Link>
+                    <Link href="/about" className="text-[#E7E7E7] hover:text-gray-300">Startups</Link>
+                    <Link href="/newsletter" className="text-[#E7E7E7] hover:text-gray-300">Newsletter</Link>
+                    <Link href="/startups" className="text-[#E7E7E7] hover:text-gray-300">About</Link>
                 </div>
-                <p className="text-[#E7E7E7] text-center mt-8">Contact Us:</p>
+                <p className="text-[#E7E7E7] text-center mt-4 text-sm">Contact Us:</p>
                 <div className="flex items-center justify-center gap-2 mt-2">
-                        <Link href="#" className="hover:text-gray-300">
-                            <Image
-                                src="/twitter.svg"
-                                alt="Transactions illustration"
-                                width={25}
-                                height={25}
-                                className=""
-                            />
-                        </Link>
-                        <Link href="#" className="hover:text-gray-300">
-                            <Image
-                                src="/facebook.svg"
-                                alt="Transactions illustration"
-                                width={28}
-                                height={28}
-                                className=""
-                            />
-                        </Link>
-                        <Link href="#" className="hover:text-gray-300">
-                            <Image
-                                src="/linkedin.svg"
-                                alt="Transactions illustration"
-                                width={30}
-                                height={30}
-                                className=""
-                            />
-                        </Link>
-                        <Link href="#" className="hover:text-gray-300">
-                            <Image
-                                src="/youtube.svg"
-                                alt="Transactions illustration"
-                                width={30}
-                                height={30}
-                                className=""
-                            />
-                        </Link>
-                    </div>
-                    <p className="text-[#E7E7E7] text-sm leading-none self-center mt-8">
-                        © 2024 Brand, Inc. • Privacy • Terms
-                    </p>
+                    <Link href="#" className="hover:text-gray-300">
+                        <Image src="/twitter.svg" alt="Twitter" width={20} height={20} />
+                    </Link>
+                    <Link href="#" className="hover:text-gray-300">
+                        <Image src="/facebook.svg" alt="Facebook" width={22} height={22} />
+                    </Link>
+                    <Link href="#" className="hover:text-gray-300">
+                        <Image src="/linkedin.svg" alt="LinkedIn" width={24} height={24} />
+                    </Link>
+                    <Link href="#" className="hover:text-gray-300">
+                        <Image src="/youtube.svg" alt="YouTube" width={24} height={24} />
+                    </Link>
+                </div>
+                <p className="text-[#E7E7E7] text-xs mt-4">
+                    © 2024 Brand, Inc. • Privacy • Terms
+                </p>
             </div>
-
         </footer>
+
     )
 }
 

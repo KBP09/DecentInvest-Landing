@@ -52,8 +52,8 @@ const AboutUsCards = () => {
     return (
         <>
             <div className="min-h-screen bg-black bg-[url('../public/BG1.svg')] bg-cover bg-center p-6 md:p-8 flex items-center justify-center flex-col overflow-hidden">
-                <h1 className="text-white text-[50px] sm:text-[80px] mt-16 text-center mb-8">About Us</h1>
-                <div className="max-w-7xl flex items-center justify-center grid grid-cols-1 md:grid-cols-2 gap-6">
+                <h1 className="text-white text-[50px] sm:text-[70px] mt-16 text-center mb-8">About Us</h1>
+                <div className="max-w-5xl flex items-center justify-center grid grid-cols-1 md:grid-cols-2 gap-6">
 
                     <div
                         className="relative animate-me w-full max-w-[550px] aspect-[14/9] rounded-[48px] overflow-hidden flex flex-col items-center animate-left"
@@ -64,7 +64,7 @@ const AboutUsCards = () => {
                     >
                         <div className="absolute inset-[2px] rounded-[46px] bg-black overflow-hidden">
                             <div className="relative z-10 h-full w-full flex flex-col items-center justify-center text-center px-6">
-                                <h2 className="text-white text-[22px] sm:text-[min(3vw,38px)] font-bold leading-none mt-8">
+                                <h2 className="text-white text-[22px] sm:text-[min(3vw,30px)] font-bold leading-none mt-8">
                                     Marketplace for startups and investors
                                 </h2>
                                 <Image
@@ -94,7 +94,7 @@ const AboutUsCards = () => {
                     >
                         <div className="absolute inset-[2px] rounded-[46px] bg-black overflow-hidden">
                             <div className="relative z-10 h-full w-full flex flex-col items-center justify-center text-center px-6 sm:mt-8">
-                                <h2 className="text-white text-[18px] sm:text-[min(3vw,38px)] font-bold leading-none">
+                                <h2 className="text-white text-[18px] sm:text-[min(3vw,30px)] font-bold leading-none">
                                     All startups in one place for investors and all investors in one place for startups
                                 </h2>
                                 <Image
@@ -124,7 +124,7 @@ const AboutUsCards = () => {
                     >
                         <div className="absolute inset-[2px] rounded-[46px] bg-black overflow-hidden">
                             <div className="relative z-10 h-full w-full flex flex-col items-center justify-center text-center">
-                                <h2 className="text-white text-[22px] sm:text-[min(3vw,38px)] font-bold leading-none mt-16">
+                                <h2 className="text-white text-[22px] sm:text-[min(3vw,30px)] font-bold leading-none mt-16">
                                     NFT for your startups
                                 </h2>
                                 <Image
@@ -155,7 +155,7 @@ const AboutUsCards = () => {
                     >
                         <div className="absolute inset-[2px] rounded-[46px] bg-black overflow-hidden">
                             <div className="relative z-10 h-full w-full flex flex-col md:flex-row  items-center justify-center text-center px-6">
-                                <h2 className="text-white text-[min(4vw,38px)] font-bold leading-tight mb-4 mt-4 sm:mt-8">
+                                <h2 className="text-white sm:text-[min(3vw,30px)] font-bold leading-tight mb-4 mt-4">
                                     Find customised investors and startups according to your needs
                                 </h2>
                                 <Image
@@ -187,7 +187,7 @@ const AboutUsCards = () => {
                     >
                         <div className="absolute inset-[2px] rounded-[46px] bg-black overflow-hidden">
                             <div className="relative z-10 h-full w-full flex flex-col items-center justify-center text-center px-6">
-                                <h2 className="text-white text-[22px] sm:text-[min(3vw,38px)] font-bold leading-none mt-8">
+                                <h2 className="text-white text-[22px] sm:text-[min(3vw,30px)] font-bold leading-none mt-8">
                                     Easy transactions
                                 </h2>
                                 <Image
@@ -218,7 +218,7 @@ const AboutUsCards = () => {
                     >
                         <div className="absolute inset-[2px] rounded-[46px] bg-black overflow-hidden">
                             <div className="relative z-10 h-full w-full flex flex-col items-center justify-center text-center px-6">
-                                <h2 className="text-white text-[22px] sm:text-[min(3vw,38px)] font-bold leading-none mt-8">
+                                <h2 className="text-white text-[22px] sm:text-[min(3vw,30px)] font-bold leading-none mt-8">
                                     Grants and investments
                                 </h2>
                                 <Image

@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const HeroSection = () => {
   return (
-    <div className="h-[80vh] sm:h-screen w-full relative flex items-center justify-center flex-col">
+    <div className="h-[75vh] sm:h-screen w-full relative flex items-center justify-center flex-col mb-8 sm:mb-0">
       <div className="absolute inset-0 z-0">
         <Image
           src="./homebg.svg"
