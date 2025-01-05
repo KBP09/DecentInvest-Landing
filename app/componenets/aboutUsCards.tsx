@@ -7,9 +7,9 @@ import Image from "next/image";
 gsap.registerPlugin(ScrollTrigger);
 
 const AboutUsCards = () => {
-    const [clickedCard, setClickedCard] = useState(null);
+    const [clickedCard, setClickedCard] = useState<number|null>(null);
 
-    const handleCardClick = (cardId: any) => {
+    const handleCardClick = (cardId:number) => {
         setClickedCard(prev => (prev === cardId ? null : cardId));
     };
     useEffect(() => {
