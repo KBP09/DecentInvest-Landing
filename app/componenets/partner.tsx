@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useRef } from "react"
+import React, { useRef } from "react"
 import gsap from "gsap";
 import Image from "next/image";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -23,7 +23,6 @@ const logos = [
 const Partner = () => {
     const rcontainer = useRef(null);
     const txt2 = useRef(null);
-    const txt1 = useRef(null);
     const logosRef = useRef(null);
 
     return (
