@@ -56,7 +56,7 @@ const AboutUsCards = () => {
 
     return (
         <>
-            <div className="min-h-screen bg-black bg-[url('../public/BG1.svg')] bg-cover bg-center p-6 md:p-8 flex items-center justify-center flex-col overflow-hidden">
+            <div id="aboutus" className="min-h-screen bg-black bg-[url('../public/BG1.svg')] bg-cover bg-center p-6 md:p-8 flex items-center justify-center flex-col overflow-hidden">
                 <h1 className="text-white text-[50px] sm:text-[70px] mt-16 text-center mb-8">About Us</h1>
                 <div className="max-w-5xl flex items-center justify-center grid grid-cols-1 md:grid-cols-2 gap-6">
 
@@ -92,7 +92,7 @@ const AboutUsCards = () => {
                                         }`}
                                 >
                                     <p className="text-white text-[18px] sm:text-[min(3vw,24px)] font-medium leading-normal">
-                                        Our marketplace brings together innovative startups and visionary investors, creating a dynamic ecosystem for growth and collaboration. Discover unique opportunities and forge powerful partnerships that drive success in the startup world.
+                                        Our marketplace brings together innovative startups and visionary investors, creating a dynamic ecosystem for growth and collaboration.
                                     </p>
                                 </div>
                             </div>

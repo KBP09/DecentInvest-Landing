@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link';
 import { useState } from 'react';
 
 const Navbar = () => {
@@ -41,48 +42,50 @@ const Navbar = () => {
                 >
                     <ul className="font-bold flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-white md:bg-transparent dark:bg-white dark:border-gray-700">
                         <li>
-                            <a href="#" className='px-[15px] py-[12px] flex items-center justify-center text-black cursor-pointer whitespace-nowrap font-bold relative'>
+                            <Link href='/' className='px-[15px] py-[12px] flex items-center justify-center text-black cursor-pointer whitespace-nowrap font-bold relative'>
                                 Home
-
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="#register" className='px-[15px] py-[12px] flex items-center justify-center text-black  cursor-pointer whitespace-nowrap'>
-                                Register
-                            </a>
+                            <Link href="/#aboutus" className='px-[15px] py-[12px] flex items-center justify-center text-black  cursor-pointer whitespace-nowrap'>
+                                About Us
+                            </Link>
                         </li>
                         <li>
-                            <a href="#startups" className='px-[15px] py-[12px] flex items-center justify-center text-black cursor-pointer whitespace-nowrap'>
-                                Startups
-                            </a>
-
-                        </li>
-                        <li>
-                            <a href="#review" className='px-[15px] py-[12px] flex items-center justify-center text-black  cursor-pointer whitespace-nowrap'>
-                                Reviews
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#news" className='px-[15px] py-[12px] flex items-center justify-center text-black cursor-pointer whitespace-nowrap'>
+                            <Link href="/#newsletter" className='px-[15px] py-[12px] flex items-center justify-center text-black cursor-pointer whitespace-nowrap'>
                                 NewsLetter
-                            </a>
+                            </Link>
+
+                        </li>
+                        <li>
+                            <Link href='/startups' className='px-[15px] py-[12px] flex items-center justify-center text-black cursor-pointer whitespace-nowrap'>
+                                Startups
+                            </Link>
                         </li>
                     </ul>
                 </div>
 
                 <ul className="hidden justify-end lg:flex items-center space-x-4 text-black h-[8vh] font-bold rounded-full ml-auto bg-white px-6 lg:px-8 xl:px-11">
-                    <li className="hover:text-yellow-400 transition-colors duration-300 cursor-pointer">
-                        Home
-                    </li>
-                    <li className="hover:text-yellow-400 transition-colors duration-300 cursor-pointer">
-                        Startups
-                    </li>
-                    <li className="hover:text-yellow-400 transition-colors duration-300 cursor-pointer">
-                        Newsletter
-                    </li>
-                    <li className="hover:text-yellow-400 transition-colors duration-300 cursor-pointer">
-                        Contact Us
-                    </li>
+                    <Link href='/'>
+                        <li className="hover:text-yellow-400 transition-colors duration-300 cursor-pointer">
+                            Home
+                        </li>
+                    </Link>
+                    <Link href='/#aboutus'>
+                        <li className="hover:text-yellow-400 transition-colors duration-300 cursor-pointer">
+                            About Us
+                        </li>
+                    </Link>
+                    <Link href='/#newsletter'>
+                        <li className="hover:text-yellow-400 transition-colors duration-300 cursor-pointer">
+                            Newsletter
+                        </li>
+                    </Link>
+                    <Link href='/startups'>
+                        <li className="hover:text-yellow-400 transition-colors duration-300 cursor-pointer">
+                            Startups
+                        </li>
+                    </Link>
                     <button className="bg-[#FFB200] text-black font-semibold py-2 px-4 rounded-lg hover:bg-yellow-500 transition-colors duration-300">
                         Login
                     </button>
