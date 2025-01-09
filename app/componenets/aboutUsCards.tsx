@@ -121,7 +121,7 @@ const AboutUsCards = () => {
                                     className={`absolute inset-0 flex flex-col items-center justify-center text-center px-6 sm:mt-8 transition-all duration-500 ${clickedCard === 2 ? 'opacity-0 scale-95 pointer-events-none' : 'opacity-100 scale-100'
                                         }`}
                                 >
-                                    <h2 className="text-white text-[18px] sm:text-[min(3vw,30px)] font-bold leading-none">
+                                    <h2 className="text-white text-[18px] sm:text-[min(3vw,30px)] font-bold leading-none mt-2">
                                         All startups in one place for investors and all investors in one place for startups
                                     </h2>
                                     <Image

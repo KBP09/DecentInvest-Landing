@@ -23,7 +23,7 @@ const HeroSection = () => {
         <h2 className="text-white text-[12px] md:text-[15px] xl:text-[30px] mb-2 sm:mb-0">
           Secure, transparent, and fair investments
         </h2>
-        <button className="bg-[#FFB200] text-black font-medium w-[147px] h-[35px] sm:h-[54px] sm:w-[220px] rounded-2xl hover:bg-yellow-500 transition-colors duration-300 text-[25px] mt-8 ">
+        <button className="bg-[#FFB200] text-black font-medium w-[155px] h-[42px] sm:h-[54px] sm:w-[220px] rounded-2xl hover:bg-yellow-500 transition-colors duration-300 text-[25px] mt-8 ">
           Get Started
         </button>
       </div>
