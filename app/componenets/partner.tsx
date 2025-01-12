@@ -1,29 +1,28 @@
 'use client'
 import React, { useRef } from "react"
 import gsap from "gsap";
-import Image from "next/image";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const logos = [
-	{ src: "/solana_logo.svg", alt: "Solana", width: 200, height: 28 },
-	{ src: "/zora_logo.svg", alt: "Zora", width: 150, height: 28 },
-	{ src: "/decent_logo.svg", alt: "Decent", width: 200, height: 28 },
-	{ src: "/gcp_logo.svg", alt: "Google Cloud", width: 250, height: 28 },
-	{
-		src: "/backdropbuild_logo.svg",
-		alt: "Backdrop Build",
-		width: 230,
-		height: 28,
-	},
-];
+// const logos = [
+// 	{ src: "/solana_logo.svg", alt: "Solana", width: 200, height: 28 },
+// 	{ src: "/zora_logo.svg", alt: "Zora", width: 150, height: 28 },
+// 	{ src: "/decent_logo.svg", alt: "Decent", width: 200, height: 28 },
+// 	{ src: "/gcp_logo.svg", alt: "Google Cloud", width: 250, height: 28 },
+// 	{
+// 		src: "/backdropbuild_logo.svg",
+// 		alt: "Backdrop Build",
+// 		width: 230,
+// 		height: 28,
+// 	},
+// ];
 
 
 const Partner = () => {
     const rcontainer = useRef(null);
-    const txt2 = useRef(null);
-    const logosRef = useRef(null);
+    // const txt2 = useRef(null);
+    // const logosRef = useRef(null);
 
     return (
         <div ref={rcontainer} className="bg-[#1A1A1D] h-[50vh] w-full flex flex-col items-center justify-center">

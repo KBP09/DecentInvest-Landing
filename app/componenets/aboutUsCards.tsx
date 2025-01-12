@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
@@ -7,11 +7,11 @@ import Image from "next/image";
 gsap.registerPlugin(ScrollTrigger);
 
 const AboutUsCards = () => {
-    const [clickedCard, setClickedCard] = useState<number | null>(null);
+    // const [clickedCard, setClickedCard] = useState<number | null>(null);
 
-    const handleCardClick = (cardId: number) => {
-        setClickedCard(prev => (prev === cardId ? null : cardId));
-    };
+    // const handleCardClick = (cardId: number) => {
+    //     setClickedCard(prev => (prev === cardId ? null : cardId));
+    // };
     useEffect(() => {
         const elements = gsap.utils.toArray('.animate-left') as HTMLElement[];
         elements.forEach((element) => {
