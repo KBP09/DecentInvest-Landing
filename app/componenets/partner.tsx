@@ -27,7 +27,7 @@ const Partner = () => {
 
     return (
         <div ref={rcontainer} className="bg-[#1A1A1D] h-[50vh] w-full flex flex-col items-center justify-center">
-            <div ref={txt2} className="flex flex-col">
+            {/* <div ref={txt2} className="flex flex-col">
                 <h6 className="text-lg md:text-5xl font-semibold">
                     Our Partners
                 </h6>
@@ -48,7 +48,7 @@ const Partner = () => {
 							className="w-2/5 md:h-2/3 md:w-fit"
 						/>
 					))}
-					{/* Duplicate the items to create a seamless loop */}
+					
 					{logos.map((logo, index) => (
 						<Image
 							key={index + logos.length}
@@ -60,7 +60,7 @@ const Partner = () => {
 						/>
 					))}
 				</div>
-			</div>
+			</div> */}
         </div>
     );
 }
