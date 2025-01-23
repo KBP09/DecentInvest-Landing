@@ -3,17 +3,33 @@ import Image from 'next/image';
 
 const HeroSection = () => {
   return (
-    <div className="h-[75vh] sm:h-screen w-full relative flex items-center justify-center flex-col mb-8 sm:mb-0">
+    <div className="mt-8 h-[65vh] sm:h-screen w-full relative flex items-center justify-center flex-col mb-8 sm:mb-0">
       <div className="absolute inset-0 z-0">
         <Image
           src="./homebg.svg"
           alt="Background Image"
-          layout="fill" 
+          layout="fill"
           objectFit="cover"
           objectPosition="center"
         />
       </div>
-      <div className="mt-24 h-[80vh] w-[80vw] bg-[#D9D9D91A] backdrop-blur-md border-4 overflow-hidden flex items-center justify-center flex-col relative z-10 rounded-[48px]">
+      <div className="min-h-screen w-full overflow-hidden flex items-center justify-center flex-col z-10">
+        <div className="absolute inset-0 z-0 hidden md:flex sm:h-screen lg:h-auto bg-cover bg-center"
+          style={{
+            backgroundImage: 'url("rectbg.svg")',
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "85% 85%",
+          }}
+        />
+        <div className="absolute inset-0 z-0 flex md:hidden sm:h-screen lg:h-auto bg-cover bg-center"
+          style={{
+            backgroundImage: 'url("rectmob.svg")',
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "90% 90%",
+          }}
+        />
         <h1 className="text-white text-[40px] sm:text-[60px] md:text-[100px] xl:text-[130px] font-bold mb-2 sm:mt-0">
           DecentInvest
         </h1>
