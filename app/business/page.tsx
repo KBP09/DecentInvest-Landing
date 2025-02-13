@@ -3,7 +3,7 @@ import React from "react";
 import { GradientCard } from "../componenets/gradientCard";
 import BusinessCards from "../componenets/businessCards";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+
 const Page = () => {
     const handleClick = () => {
         window.open("https://calendly.com/your-link", "_blank");
