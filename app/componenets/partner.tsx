@@ -2,66 +2,34 @@
 import React, { useRef } from "react"
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
-// const logos = [
-// 	{ src: "/solana_logo.svg", alt: "Solana", width: 200, height: 28 },
-// 	{ src: "/zora_logo.svg", alt: "Zora", width: 150, height: 28 },
-// 	{ src: "/decent_logo.svg", alt: "Decent", width: 200, height: 28 },
-// 	{ src: "/gcp_logo.svg", alt: "Google Cloud", width: 250, height: 28 },
-// 	{
-// 		src: "/backdropbuild_logo.svg",
-// 		alt: "Backdrop Build",
-// 		width: 230,
-// 		height: 28,
-// 	},
-// ];
-
-
 const Partner = () => {
-    const rcontainer = useRef(null);
-    // const txt2 = useRef(null);
-    // const logosRef = useRef(null);
+	const rcontainer = useRef(null);
 
-    return (
-        <div ref={rcontainer} className="bg-[#1A1A1D] h-[50vh] w-full flex flex-col items-center justify-center">
-            {/* <div ref={txt2} className="flex flex-col">
-                <h6 className="text-lg md:text-5xl font-semibold">
-                    Our Partners
-                </h6>
-            </div>
 
-            <div
-				ref={logosRef}
-				className="logos-container flex items-center space-x-6 md:space-x-10 lg:space-x-20 overflow-hidden h-14 md:h-16"
-			>
-				<div className="flex animate-scroll gap-x-6 md:gap-x-10 lg:gap-x-20">
-					{logos.map((logo, index) => (
-						<Image
-							key={index}
-							src={logo.src}
-							alt={logo.alt}
-							width={logo.width}
-							height={logo.height}
-							className="w-2/5 md:h-2/3 md:w-fit"
-						/>
-					))}
-					
-					{logos.map((logo, index) => (
-						<Image
-							key={index + logos.length}
-							src={logo.src}
-							alt={logo.alt}
-							width={logo.width}
-							height={logo.height}
-							className="w-2/5 md:h-2/3 md:w-fit"
-						/>
-					))}
+	return (
+		<div ref={rcontainer} className="bg-[#1A1A1D] h-auto min-h-[50vh] w-full flex flex-col items-center justify-center px-4 py-6">
+			<h1 className="text-white text-[32px] sm:text-[40px] md:text-[50px] text-center mb-6">Coming Soon On</h1>
+			<div className="grid grid-cols-2 sm:flex sm:flex-wrap justify-center items-center gap-6 w-full max-w-[900px]">
+				<div className="flex justify-center items-center w-full max-w-[160px] sm:max-w-[200px] mx-auto">
+					<Image src={"/pol.webp"} alt="Polygon" width={160} height={80} className="w-full h-auto max-h-[80px] object-contain" />
 				</div>
-			</div> */}
-        </div>
-    );
+				<div className="flex justify-center items-center w-full max-w-[160px] sm:max-w-[200px] mx-auto">
+					<Image src={"/base.png"} alt="Base" width={160} height={80} className="w-full h-auto max-h-[80px] object-contain" />
+				</div>
+				<div className="flex justify-center items-center w-full max-w-[160px] sm:max-w-[200px] mx-auto">
+					<Image src={"/arb.png"} alt="Arbitrum" width={160} height={80} className="w-full h-auto max-h-[80px] object-contain" />
+				</div>
+				<div className="flex justify-center items-center w-full max-w-[160px] sm:max-w-[200px] mx-auto">
+					<Image src={"/op.webp"} alt="Optimism" width={160} height={80} className="w-full h-auto max-h-[80px] object-contain" />
+				</div>
+			</div>
+		</div>
+
+	);
 }
 
 export default Partner;
