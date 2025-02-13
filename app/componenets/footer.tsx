@@ -30,12 +30,12 @@ const Footer = () => {
             <div className="bg-[#1A1A1D] text-white w-full flex items-center justify-center flex-col">
                 <div className="grid grid-cols-3 gap-2 md:text-[18px] lg:text-[25px] w-full">
                     <Link href="/" className="text-[#E7E7E7] hover:text-gray-300 text-center">Home</Link>
-                    <Link href="/about" className="text-[#E7E7E7] hover:text-gray-300 text-center">Startups</Link>
+                    <Link href="/startups" className="text-[#E7E7E7] hover:text-gray-300 text-center">Startups</Link>
                     <p className="text-[#E7E7E7] text-center">Contact Us:</p>
-                    <Link href="/newsletter" className="text-[#E7E7E7] hover:text-gray-300 text-center">Newsletter</Link>
-                    <Link href="/startups" className="text-[#E7E7E7] hover:text-gray-300 text-center">About</Link>
+                    <Link href="/business" className="text-[#E7E7E7] hover:text-gray-300 text-center">Business</Link>
+                    <Link href="/#about" className="text-[#E7E7E7] hover:text-gray-300 text-center">About</Link>
                     <div className="flex items-center justify-center gap-2">
-                        <Link href="#" className="hover:text-gray-300">
+                        <Link href="https://x.com/DecentInvest24" className="hover:text-gray-300">
                             <Image
                                 src="/twitter.svg"
                                 alt="Transactions illustration"
@@ -44,7 +44,7 @@ const Footer = () => {
                                 className=""
                             />
                         </Link>
-                        <Link href="#" className="hover:text-gray-300">
+                        <Link href="https://x.com/DecentInvest24" className="hover:text-gray-300">
                             <Image
                                 src="/facebook.svg"
                                 alt="Transactions illustration"
@@ -53,7 +53,7 @@ const Footer = () => {
                                 className=""
                             />
                         </Link>
-                        <Link href="#" className="hover:text-gray-300">
+                        <Link href="https://x.com/DecentInvest24" className="hover:text-gray-300">
                             <Image
                                 src="/linkedin.svg"
                                 alt="Transactions illustration"
@@ -62,7 +62,7 @@ const Footer = () => {
                                 className=""
                             />
                         </Link>
-                        <Link href="#" className="hover:text-gray-300">
+                        <Link href="https://x.com/DecentInvest24" className="hover:text-gray-300">
                             <Image
                                 src="/youtube.svg"
                                 alt="Transactions illustration"

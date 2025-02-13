@@ -1,7 +1,7 @@
 'use client'
 import React from "react";
 import { GradientCard } from "../componenets/gradientCard";
-import AboutUsCards from "../componenets/aboutUsCards";
+import BusinessCards from "../componenets/businessCards";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 const Page = () => {
@@ -20,7 +20,7 @@ const Page = () => {
                     </div>
                 </GradientCard>
             </div>
-            <AboutUsCards />
+            <BusinessCards />
             <div className="mb-32 pt-32 flex justify-center">
                 <GradientCard
                     className="aspect-[128/16] flex justify-center items-center max-w-[90%] h-[300px] cursor-pointer"
