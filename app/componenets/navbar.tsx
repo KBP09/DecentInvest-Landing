@@ -20,13 +20,13 @@ const Navbar = () => {
                         alt="Logo"
                         width={100}
                         height={50}
-                        className='w-[80px] sm:w-[100px]'
+                        className='w-[60px] sm:w-[100px]'
                     />
                 </div>
 
                 <button
                     type="button"
-                    className="inline-flex items-center w-12 p-2 h-12 text-sm text-gray-500 rounded-lg lg:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400"
+                    className="inline-flex items-center w-10 p-2 h-10 text-sm text-gray-500 rounded-lg lg:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400"
                     aria-controls="navbar-default"
                     aria-expanded={isOpen}
                     onClick={handleToggle}

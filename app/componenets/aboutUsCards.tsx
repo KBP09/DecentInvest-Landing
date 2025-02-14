@@ -27,7 +27,7 @@ const cardData: CardData[] = [
         imageAlt: "Marketplace illustration",
         imageWidth: 220,
         imageHeight: 220,
-        imageClassName: "w-[150px] h-[150px] sm:w-[150px] sm:h-[150px] md:w-[200px] md:h-[200px] lg:w-[250px] lg:h-[250px]",
+        imageClassName: "w-[140px] h-[140px] sm:w-[150px] sm:h-[150px] md:w-[200px] md:h-[200px] lg:w-[250px] lg:h-[250px]",
         expandedContent: "Our marketplace brings together innovative startups and visionary investors, creating a dynamic ecosystem for growth and collaboration. Discover unique opportunities and forge powerful partnerships that drive success in the startup world."
     },
     {
@@ -47,7 +47,7 @@ const cardData: CardData[] = [
         imageAlt: "NFT illustration",
         imageWidth: 280,
         imageHeight: 280,
-        imageClassName: "w-[180px] h-[180px] sm:w-[180px] sm:h-[180px] md:w-[220px] md:h-[220px] lg:w-[460px] lg:h-[260px]",
+        imageClassName: "w-[150px] h-[150px] sm:w-[180px] sm:h-[180px] md:w-[220px] md:h-[220px] lg:w-[460px] lg:h-[260px]",
         expandedContent: "Leverage the power of NFTs to tokenize your startup's assets, intellectual property, or even equity. This innovative approach opens up new avenues for funding, engagement, and value creation in the digital age."
     },
     {
@@ -57,7 +57,7 @@ const cardData: CardData[] = [
         imageAlt: "Customised search illustration",
         imageWidth: 200,
         imageHeight: 200,
-        imageClassName: "w-[150px] h-[150px] sm:w-[180px] sm:h-[150px] md:w-[200px] md:h-[200px] lg:w-[250px] lg:h-[250px]",
+        imageClassName: "w-[140px] h-[140px] sm:w-[180px] sm:h-[150px] md:w-[200px] md:h-[200px] lg:w-[250px] lg:h-[250px]",
         expandedContent: "Our advanced matching algorithm ensures that you find the perfect fit, whether you're a startup seeking specific expertise or an investor looking for opportunities in niche markets. Tailored connections lead to stronger partnerships and better outcomes."
     },
     {

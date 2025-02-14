@@ -6,7 +6,7 @@ const FooterMobile = () => {
     return (
         <footer className="lg:hidden flex flex-col w-full">
             <div className="bg-[#1A1A1D] text-white py-8 flex items-center justify-center">
-                <div className="container flex flex-col justify-between items-center h-full">
+                <div className="container flex flex-col justify-between items-center max-h-[300px]">
                     <div className="flex items-center justify-center mb-2">
                         <Image
                             src="/logo.svg"
@@ -41,7 +41,7 @@ const FooterMobile = () => {
                 </div>
             </div>
 
-            <div className="bg-black text-white w-full flex items-center justify-center flex-col py-6">
+            <div className="bg-black text-white w-full flex items-center justify-center flex-col py-6 ">
                 <div className="grid grid-cols-2 gap-1 text-center md:text-[16px] lg:text-[20px] w-full">
                     <Link href="/" className="text-[#E7E7E7] hover:text-gray-300">Home</Link>
                     <Link href="/about" className="text-[#E7E7E7] hover:text-gray-300">Startups</Link>
