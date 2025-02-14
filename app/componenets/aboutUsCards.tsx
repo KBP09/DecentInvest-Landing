@@ -1,343 +1,166 @@
-"use client"
-import { useEffect } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Image from "next/image";
+'use client'
 
-gsap.registerPlugin(ScrollTrigger);
+import React, { useState, useEffect, useRef } from 'react'
+import Image from 'next/image'
+import { motion, AnimatePresence } from 'framer-motion'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-const AboutUsCards = () => {
-    // const [clickedCard, setClickedCard] = useState<number | null>(null);
+gsap.registerPlugin(ScrollTrigger)
 
-    // const handleCardClick = (cardId: number) => {
-    //     setClickedCard(prev => (prev === cardId ? null : cardId));
-    // };
+interface CardData {
+    id: number
+    title: string
+    imageSrc: string
+    imageAlt: string
+    imageWidth: number
+    imageHeight: number
+    imageClassName: string
+    expandedContent: string
+}
+
+const cardData: CardData[] = [
+    {
+        id: 1,
+        title: "Marketplace for startups and investors",
+        imageSrc: "/Bitcoin.svg",
+        imageAlt: "Marketplace illustration",
+        imageWidth: 220,
+        imageHeight: 220,
+        imageClassName: "w-[150px] h-[150px] sm:w-[150px] sm:h-[150px] md:w-[200px] md:h-[200px] lg:w-[250px] lg:h-[250px]",
+        expandedContent: "Our marketplace brings together innovative startups and visionary investors, creating a dynamic ecosystem for growth and collaboration. Discover unique opportunities and forge powerful partnerships that drive success in the startup world."
+    },
+    {
+        id: 2,
+        title: "Connecting startups with investors seamlessly",
+        imageSrc: "/startups.svg",
+        imageAlt: "Startups illustration",
+        imageWidth: 200,
+        imageHeight: 200,
+        imageClassName: "w-[150px] h-[150px] sm:w-[150px] sm:h-[150px] md:w-[200px] md:h-[200px] lg:w-[250px] lg:h-[250px]",
+        expandedContent: "We've created a centralized hub where startups and investors can easily find each other. This streamlined approach saves time and resources, allowing for more efficient connections and collaborations in the entrepreneurial ecosystem."
+    },
+    {
+        id: 3,
+        title: "NFT for your startups",
+        imageSrc: "/nfts.svg",
+        imageAlt: "NFT illustration",
+        imageWidth: 280,
+        imageHeight: 280,
+        imageClassName: "w-[180px] h-[180px] sm:w-[180px] sm:h-[180px] md:w-[220px] md:h-[220px] lg:w-[460px] lg:h-[260px]",
+        expandedContent: "Leverage the power of NFTs to tokenize your startup's assets, intellectual property, or even equity. This innovative approach opens up new avenues for funding, engagement, and value creation in the digital age."
+    },
+    {
+        id: 4,
+        title: "Tailored matches for startups and investors",
+        imageSrc: "/people.svg",
+        imageAlt: "Customised search illustration",
+        imageWidth: 200,
+        imageHeight: 200,
+        imageClassName: "w-[150px] h-[150px] sm:w-[180px] sm:h-[150px] md:w-[200px] md:h-[200px] lg:w-[250px] lg:h-[250px]",
+        expandedContent: "Our advanced matching algorithm ensures that you find the perfect fit, whether you're a startup seeking specific expertise or an investor looking for opportunities in niche markets. Tailored connections lead to stronger partnerships and better outcomes."
+    },
+    {
+        id: 5,
+        title: "Easy transactions",
+        imageSrc: "/transactions.svg",
+        imageAlt: "Transactions illustration",
+        imageWidth: 280,
+        imageHeight: 280,
+        imageClassName: "w-[150px] h-[150px] sm:w-[180px] sm:h-[180px] md:w-[220px] md:h-[220px] lg:w-[260px] lg:h-[260px]",
+        expandedContent: "We've simplified the investment process with our secure and user-friendly transaction system. From initial interest to final agreement, our platform facilitates smooth, transparent, and efficient financial interactions between startups and investors."
+    },
+    {
+        id: 6,
+        title: "Grants and investments",
+        imageSrc: "/grants.svg",
+        imageAlt: "Grants illustration",
+        imageWidth: 280,
+        imageHeight: 280,
+        imageClassName: "w-[150px] h-[150px] sm:w-[150px] sm:h-[150px] md:w-[220px] md:h-[220px] lg:w-[260px] lg:h-[260px]",
+        expandedContent: "Access a wide range of funding options, from traditional investments to grants and alternative financing methods. Our platform aggregates diverse opportunities, helping startups find the right financial support to fuel their growth and innovation."
+    }
+]
+
+const ExpandableCard: React.FC<{ card: CardData; isExpanded: boolean; onClick: () => void }> = ({ card, isExpanded, onClick }) => {
+    const imageRef = useRef(null)
+
     useEffect(() => {
-        const elements = gsap.utils.toArray('.animate-left') as HTMLElement[];
-        elements.forEach((element) => {
-            gsap.fromTo(
-                element,
-                { x: '-100%', opacity: 0 },
-                {
-                    x: 0,
-                    opacity: 1,
-                    duration: 1,
-                    ease: 'power3.out',
-                    scrollTrigger: {
-                        trigger: element,
-                        start: 'top 100%',
-                        toggleActions: 'play none none none',
-                    },
-                }
-            );
-        });
-    }, []);
-
-    useEffect(() => {
-        const elements2 = gsap.utils.toArray('.animate-right') as HTMLElement[];
-        elements2.forEach((element) => {
-            gsap.fromTo(
-                element,
-                { x: '100%', opacity: 0 },
-                {
-                    x: 0,
-                    opacity: 1,
-                    duration: 1,
-                    ease: 'power3.out',
-                    scrollTrigger: {
-                        trigger: element,
-                        start: 'top 100%',
-                        toggleActions: 'play none none none'
-                    },
-                }
-            );
-        })
-    }, []);
+        gsap.fromTo(
+            imageRef.current,
+            { y: -10 },
+            { y: 0, repeat: -1, yoyo: true, duration: 1.5, ease: "power1.inOut" }
+        )
+    }, [])
 
     return (
-        <>
-            <div id="aboutus" className="min-h-screen bg-black bg-[url('../public/BG1.svg')] bg-cover bg-center p-6 md:p-8 flex items-center justify-center flex-col overflow-hidden">
-                <h1 className="text-white text-[50px] sm:text-[70px] mt-16 text-center mb-8">About Us</h1>
-                <div className="max-w-5xl flex items-center justify-center grid grid-cols-1 md:grid-cols-2 gap-6">
-
-                    <div
-                        className="group relative animate-me w-full max-w-[550px] h-[250px] sm:h-full aspect-[14/9] rounded-[48px] overflow-hidden flex flex-col items-center cursor-pointer"
-                        style={{
-                            background: 'linear-gradient(76.91deg, #FFDE4D -0.16%, #C847FF 104.72%)',
-                            padding: '2px',
-                        }}
-                    >
-                        <div className="absolute inset-[2px] rounded-[46px] bg-black overflow-hidden">
-                            <div className="relative h-full w-full">
-
-                                <div
-                                    className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 transition-all duration-500 opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-95"
-                                >
-                                    <h2 className="text-white text-[22px] sm:text-[min(3vw,30px)] font-bold leading-none mt-8">
-                                        Marketplace for startups and investors
-                                    </h2>
-                                    <Image
-                                        src="/Bitcoin.svg"
-                                        alt="Marketplace illustration"
-                                        width={260}
-                                        height={260}
-                                        className="w-[180px] h-[180px] sm:w-[200px] sm:h-[200px] lg:w-[220px] lg:h-[220px] xl:w-[260px] xl:h-[260px]"
-                                    />
-                                </div>
-
-                                <div
-                                    className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 transition-all duration-500 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100"
-                                >
-                                    <p className="text-white text-[18px] sm:text-[min(3vw,24px)] font-medium leading-normal">
-                                        Our marketplace brings together innovative startups and visionary investors, creating a dynamic ecosystem for growth and collaboration.
-                                    </p>
-                                </div>
-                            </div>
-                            <div
-                                className="absolute inset-0 z-0"
-                                style={{
-                                    background: 'radial-gradient(circle at 30% 70%, rgba(168, 85, 247, 0.15), transparent 50%), radial-gradient(circle at 70% 30%, rgba(234, 179, 8, 0.15), transparent 50%)',
-                                    filter: 'blur(40px)',
-                                }}
-                            />
-                        </div>
-                    </div>
-
-
-                    <div
-                        className="group relative w-full max-w-[550px] aspect-[14/9]  h-[250px] sm:h-full md:aspect-[14/19] rounded-[48px] overflow-hidden flex flex-col items-center row-span-2 animate-right cursor-pointer"
-                        style={{
-                            background: 'linear-gradient(76.91deg, #FFDE4D -0.16%, #C847FF 104.72%)',
-                            padding: '2px',
-                        }}
-                    >
-                        <div className="absolute inset-[2px] rounded-[46px] bg-black overflow-hidden">
-                            <div className="relative h-full w-full">
-
-                                <div
-                                    className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 sm:mt-8 transition-all duration-500 opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-95"
-                                >
-                                    <h2 className="text-white text-[18px] sm:text-[min(3vw,30px)] font-bold leading-none mt-2">
-                                        All startups in one place for investors and all investors in one place for startups
-                                    </h2>
-                                    <Image
-                                        src="/startups.svg"
-                                        alt="Startups illustration"
-                                        width={600}
-                                        height={200}
-                                        className="ml-8 md:ml-16 w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] md:w-[500px] md:h-[500px]"
-                                    />
-                                </div>
-
-
-                                <div
-                                    className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 transition-all duration-500 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100"
-                                >
-                                    <p className="text-white text-[18px] sm:text-[min(3vw,24px)] font-medium leading-normal">
-                                        Explore a unified platform connecting innovative startups with potential investors. Build networks, invest smartly, and grow together.
-                                    </p>
-                                </div>
-                            </div>
-                            <div
-                                className="absolute inset-0 z-0"
-                                style={{
-                                    background: 'radial-gradient(circle at 30% 70%, rgba(168, 85, 247, 0.15), transparent 50%), radial-gradient(circle at 70% 30%, rgba(234, 179, 8, 0.15), transparent 50%)',
-                                    filter: 'blur(40px)',
-                                }}
-                            />
-                        </div>
-                    </div>
-
-
-                    <div
-                        className="group relative w-full max-w-[550px] aspect-[14/9] h-[250px] sm:h-full rounded-[48px] overflow-hidden flex flex-col items-center animate-left cursor-pointer"
-                        style={{
-                            background: 'linear-gradient(76.91deg, #FFDE4D -0.16%, #C847FF 104.72%)',
-                            padding: '2px',
-                        }}
-                    >
-                        <div className="absolute inset-[2px] rounded-[46px] bg-black overflow-hidden">
-                            <div className="relative z-10 h-full w-full flex flex-col items-center justify-center text-center">
-
-
-                                <div
-                                    className="absolute inset-0 flex flex-col items-center justify-center text-center transition-all duration-500 opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-95"
-                                >
-                                    <h2 className="text-white text-[22px] sm:text-[min(3vw,30px)] font-bold leading-none mt-16">
-                                        NFT for your startups
-                                    </h2>
-                                    <Image
-                                        src="/nfts.svg"
-                                        alt="NFT illustration"
-                                        width={280}
-                                        height={280}
-                                        className="w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] md:w-[200px] md:h-[250px] lg:w-[260px] lg:h-[260px] mb-8"
-                                    />
-                                </div>
-
-
-                                <div
-                                    className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 transition-all duration-500 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100"
-                                >
-                                    <p className="text-white text-[18px] sm:text-[min(3vw,24px)] font-medium leading-normal">
-                                        Showcase your startup with NFTs and open new doors for investments in the blockchain world.
-                                    </p>
-                                </div>
-                            </div>
-                            <div
-                                className="absolute inset-0 z-0"
-                                style={{
-                                    background: 'radial-gradient(circle at 30% 70%, rgba(168, 85, 247, 0.15), transparent 50%), radial-gradient(circle at 70% 30%, rgba(234, 179, 8, 0.15), transparent 50%)',
-                                    filter: 'blur(40px)',
-                                }}
-                            />
-                        </div>
-                    </div>
-
-
-
-                    <div
-                        className="group relative w-full col-span-full max-w-[550px] md:max-w-[1150px] aspect-[14/9] md:aspect-[32/9] h-[250px] sm:h-[350px] md:h-[400px] rounded-[48px] overflow-hidden animate-right cursor-pointer"
-                        style={{
-                            background: 'linear-gradient(76.91deg, #FFDE4D -0.16%, #C847FF 104.72%)',
-                            padding: '2px',
-                        }}
-                    >
-                        <div className="absolute inset-[2px] rounded-[46px] bg-black overflow-hidden">
-                            <div className="relative z-10 h-full w-full flex flex-col md:flex-row items-center justify-center text-center px-6">
-
-                                <div
-                                    className="absolute inset-0 flex flex-col md:flex-row items-center justify-center text-center transition-all duration-500 opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-95"
-                                >
-                                    <h2 className="text-white sm:text-[min(3vw,30px)] font-bold leading-tight mb-4 mt-4">
-                                        Find customised investors and startups according to your needs
-                                    </h2>
-                                    <Image
-                                        src="/people.svg"
-                                        alt="Customised search illustration"
-                                        width={600}
-                                        height={200}
-                                        className="w-[220px] h-[220px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px]"
-                                    />
-                                </div>
-
-
-                                <div
-                                    className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 transition-all duration-500 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100"
-                                >
-                                    <p className="text-white text-[18px] sm:text-[min(3vw,24px)] font-medium leading-normal">
-                                        Showcase your startup with NFTs and open new doors for investments in the blockchain world.
-                                    </p>
-                                </div>
-                            </div>
-                            <div
-                                className="absolute inset-0 z-0"
-                                style={{
-                                    background: 'radial-gradient(circle at 30% 70%, rgba(168, 85, 247, 0.15), transparent 50%), radial-gradient(circle at 70% 30%, rgba(234, 179, 8, 0.15), transparent 50%)',
-                                    filter: 'blur(40px)',
-                                }}
-                            />
-                        </div>
-                    </div>
-
-
-
-                    <div
-                        className="group relative w-full max-w-[550px] aspect-[14/9] 
-              sm:aspect-[14/9] h-[250px] sm:h-full rounded-[48px] overflow-hidden flex flex-col items-center animate-left cursor-pointer"
-                        style={{
-                            background: 'linear-gradient(76.91deg, #FFDE4D -0.16%, #C847FF 104.72%)',
-                            padding: '2px',
-                        }}
-                    >
-                        <div className="absolute inset-[2px] rounded-[46px] bg-black overflow-hidden">
-
-                            <div
-                                className="absolute inset-0 flex flex-col items-center justify-center text-center transition-all duration-500 opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-95"
-                            >
-                                <h2 className="text-white text-[22px] sm:text-[min(3vw,30px)] font-bold leading-none mt-8">
-                                    Easy transactions
-                                </h2>
-                                <Image
-                                    src="/transactions.svg"
-                                    alt="Transactions illustration"
-                                    width={280}
-                                    height={280}
-                                    className="w-[150px] h-[150px] sm:w-[260px] sm:h-[260px] md:w-[220px] md:h-[220px] lg:w-[260px] lg:h-[260px]"
-                                />
-                            </div>
-
-
-                            <div
-                                className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 transition-all duration-500 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100"
-                            >
-                                <p className="text-white text-[18px] sm:text-[min(3vw,24px)] font-medium leading-normal">
-                                    Showcase your startup with NFTs and open new doors for investments in the blockchain world.
-                                </p>
-                            </div>
-
-
-                            <div
-                                className="absolute inset-0 z-0"
-                                style={{
-                                    background: 'radial-gradient(circle at 30% 70%, rgba(168, 85, 247, 0.15), transparent 50%), radial-gradient(circle at 70% 30%, rgba(234, 179, 8, 0.15), transparent 50%)',
-                                    filter: 'blur(40px)',
-                                }}
-                            />
-                        </div>
-                    </div>
-
-
-
-                    <div
-                        className="group relative w-full max-w-[550px] aspect-[14/9] 
-              sm:aspect-[14/9] h-[250px] sm:h-full rounded-[48px] overflow-hidden flex flex-col items-center animate-right cursor-pointer"
-                        style={{
-                            background: 'linear-gradient(76.91deg, #FFDE4D -0.16%, #C847FF 104.72%)',
-                            padding: '2px',
-                        }}
-                    >
-                        <div className="absolute inset-[2px] rounded-[46px] bg-black overflow-hidden">
-
-                            <div
-                                className="absolute inset-0 flex flex-col items-center justify-center text-center transition-all duration-500 opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-95"
-                            >
-                                <h2 className="text-white text-[22px] sm:text-[min(3vw,30px)] font-bold leading-none mt-8">
-                                    Grants and investments
-                                </h2>
-                                <Image
-                                    src="/grants.svg"
-                                    alt="Grants illustration"
-                                    width={280}
-                                    height={280}
-                                    className="w-[150px] h-[150px] sm:w-[240px] sm:h-[240px] md:w-[190px] md:h-[190px] lg:w-[260px] lg:h-[260px]"
-                                />
-                            </div>
-
-
-                            <div
-                                className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 transition-all duration-500 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100"
-                            >
-                                <p className="text-white text-[18px] sm:text-[min(3vw,24px)] font-medium leading-normal">
-                                    Showcase your startup with NFTs and open new doors for investments in the blockchain world.
-                                </p>
-                            </div>
-
-
-                            <div
-                                className="absolute inset-0 z-0"
-                                style={{
-                                    background: 'radial-gradient(circle at 30% 70%, rgba(168, 85, 247, 0.15), transparent 50%), radial-gradient(circle at 70% 30%, rgba(234, 179, 8, 0.15), transparent 50%)',
-                                    filter: 'blur(40px)',
-                                }}
-                            />
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </>
+        <motion.div
+            layout
+            onClick={onClick}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0.5, scale: 0.9 }}
+            transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
+            className={`relative w-full max-w-full rounded-[24px] sm:rounded-[48px] overflow-hidden flex flex-col items-center cursor-pointer 
+                ${isExpanded ? 'aspect-[3/4] sm:aspect-[10/4] md:aspect-[10/4] col-span-full' : 'aspect-[5/3] sm:aspect-[14/9]'}`}
+            style={{
+                background: 'linear-gradient(76.91deg, #FFDE4D -0.16%, #C847FF 104.72%)',
+                padding: '2px',
+            }}
+        >
+            <motion.div layout className="absolute inset-[2px] rounded-[22px] sm:rounded-[46px] bg-black overflow-hidden">
+                <motion.div layout className={`relative z-10 h-full w-full flex items-center justify-center text-center p-4 sm:px-6 ${isExpanded ? 'flex-col sm:flex-row' : 'flex-col'}`}>                
+                    <motion.div layout className="flex items-center flex-col">
+                        <motion.h2 layout transition={{ duration: 0.3, ease: 'easeOut' }} className="text-white text-[18px] sm:text-[15px] md:text-[min(3vw,20px)] font-bold leading-tight mt-2 sm:mt-8">
+                            {card.title}
+                        </motion.h2>
+                        <motion.div ref={imageRef} layout>
+                            <Image src={card.imageSrc} alt={card.imageAlt} width={card.imageWidth} height={card.imageHeight} className={card.imageClassName} />
+                        </motion.div>
+                    </motion.div>
+                    {isExpanded && (
+                        <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.4, ease: 'easeInOut' }} className="overflow-hidden">
+                            <p className="text-white text-sm sm:text-base md:text-lg mt-2 sm:mt-4 mb-4 sm:mb-8 px-2 sm:px-8">
+                                {card.expandedContent}
+                            </p>
+                        </motion.div>
+                    )}
+                </motion.div>
+            </motion.div>
+        </motion.div>
     );
 };
 
-export default AboutUsCards;
+const ExpandableCards: React.FC = () => {
+    const [expandedId, setExpandedId] = useState<number | null>(null)
+    const containerRef = useRef(null)
+
+    useEffect(() => {
+        gsap.fromTo(
+            containerRef.current,
+            { opacity: 0, y: 50 },
+            { opacity: 1, y: 0, duration: 1, ease: "power3.out", stagger: 0.2 }
+        )
+    }, [])
+
+    const handleCardClick = (id: number) => {
+        setExpandedId(expandedId === id ? null : id)
+    }
+
+    return (
+        <div ref={containerRef} className="min-h-screen bg-black bg-[url('../public/BG1.svg')] bg-cover bg-center p-6 md:p-8 flex items-center justify-center flex-col overflow-hidden">
+            <h1 className="text-white text-[50px] sm:text-[70px] mt-16 text-center mb-8">About Us</h1>
+            <div className="max-w-5xl w-full grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                <AnimatePresence>
+                    {cardData.map((card) => (
+                        <ExpandableCard key={card.id} card={card} isExpanded={expandedId === card.id} onClick={() => handleCardClick(card.id)} />
+                    ))}
+                </AnimatePresence>
+            </div>
+        </div>
+    )
+}
+
+export default ExpandableCards;
