@@ -57,7 +57,7 @@ const HeroSection = () => {
       {/* Animated Card */}
       <div
         ref={containerRef}
-        className="mt-24 h-[80vh] w-[80vw] backdrop-blur-md border-4 border-[#FFB200] overflow-hidden flex items-center justify-center flex-col relative z-10 rounded-[48px] will-change-auto"
+        className="mt-24 h-[80vh] w-[80vw] border-4 border-[#FFB200] overflow-hidden flex items-center justify-center flex-col relative z-10 rounded-[48px] will-change-auto"
       >
 
         <div ref={textRef} className="text-center">
