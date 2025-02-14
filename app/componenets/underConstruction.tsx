@@ -10,6 +10,7 @@ const UnderConstruction = () => {
                 layout="fill"
                 objectFit="cover"
                 objectPosition="center"
+                priority
             />
             <div className="absolute flex flex-col items-center justify-center w-full h-full">
                 <h2 className="text-white text-[30px] sm:text-[56px]">

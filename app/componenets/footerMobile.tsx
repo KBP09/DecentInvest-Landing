@@ -14,6 +14,7 @@ const FooterMobile = () => {
                             width={60}
                             height={30}
                             className="w-[60px] sm:w-[70px]"
+                            priority
                         />
                         <h2 className="text-2xl font-semibold ml-2">DecentInvest</h2>
                     </div>

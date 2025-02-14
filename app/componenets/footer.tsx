@@ -14,6 +14,7 @@ const Footer = () => {
                             width={100}
                             height={50}
                             className="w-[80px] sm:w-[100px]"
+                            priority
                         />
                         <h2 className="text-4xl font-semibold">DecentInvest</h2>
                         <p className="text-[#E7E7E7] text-lg xl:text-xl leading-none">
