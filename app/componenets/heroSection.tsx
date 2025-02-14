@@ -2,47 +2,58 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import Image from 'next/image';
+import { FaLock, FaChartLine } from 'react-icons/fa';
 
 const HeroSection = () => {
   const containerRef = useRef(null);
-  const textRef = useRef<HTMLDivElement>(null); // Explicitly typed as an HTMLDivElement
+  const textRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef(null);
+  const iconsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const tl = gsap.timeline({ defaults: { ease: 'power3.out', duration: 1 } });
+    const tl = gsap.timeline({ defaults: { ease: 'power3.out', duration: 1.2 } });
 
-    // Fade-in & Scale-up Effect for Card
+    // Fade & scale-in effect for the entire container
     if (containerRef.current) {
       tl.fromTo(
         containerRef.current,
-        { opacity: 0, scale: 0.8 },
-        { opacity: 1, scale: 1, duration: 1.2 }
+        { opacity: 0, y: 50, scale: 0.9 },
+        { opacity: 1, y: 0, scale: 1 }
       );
     }
 
-    // Slide-in from Bottom for Text (Ensuring textRef exists)
+    // Staggered fade-in effect for text elements
     if (textRef.current) {
       gsap.fromTo(
         textRef.current.children,
-        { opacity: 0, y: 50 },
-        { opacity: 1, y: 0, stagger: 0.3, delay: 0.5, duration: 1, ease: 'power3.out' }
+        { opacity: 0, y: 40 },
+        { opacity: 1, y: 0, stagger: 0.2, delay: 0.5 }
       );
     }
 
-    // Button Hover Scale Effect
+    // Floating animation for icons
+    if (iconsRef.current) {
+      gsap.fromTo(
+        iconsRef.current.children,
+        { y: 5 },
+        { y: -5, repeat: -1, yoyo: true, duration: 1.5, ease: 'power1.inOut' }
+      );
+    }
+
+    // Bounce effect on the button
     if (buttonRef.current) {
       gsap.to(buttonRef.current, {
         scale: 1.05,
         repeat: -1,
         yoyo: true,
         duration: 1.2,
-        ease: 'power1.inOut'
+        ease: 'power1.inOut',
       });
     }
   }, []);
 
   return (
-    <div className="h-[65vh] sm:h-screen w-full relative flex items-center justify-center flex-col mb-8 sm:mb-0">
+    <div className="h-[65vh] sm:h-screen w-full flex items-center justify-center flex-col relative mb-8 sm:mb-0">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -57,25 +68,28 @@ const HeroSection = () => {
       {/* Animated Card */}
       <div
         ref={containerRef}
-        className="mt-24 h-[80vh] w-[80vw] border-4 border-[#FFB200] overflow-hidden flex items-center justify-center flex-col relative z-10 rounded-[48px] will-change-auto"
+        className="mt-24 h-[80vh] w-[80vw] flex flex-col items-center justify-center relative z-10 rounded-[48px] shadow-lg p-6 sm:p-10 border-4 border-white backdrop-blur-md"
       >
-
-        <div ref={textRef} className="text-center">
-          <h1 className="text-white text-[40px] sm:text-[60px] md:text-[100px] xl:text-[120px] font-bold mb-2 sm:mt-0">
+        <div className="text-center">
+          <h1 className="text-white text-[42px] sm:text-[64px] md:text-[100px] xl:text-[120px] font-extrabold mb-2 sm:mt-0 leading-tight tracking-wide drop-shadow-[0_0_20px_rgba(255,255,255,0.5)]">
             DecentInvest
           </h1>
-          <h2 className="text-white text-[18px] p-4 md:text-[25px] xl:text-[40px] mb-2 sm:mb-0">
-            Invest Decently, Invest Decentrally
-          </h2>
-          <h2 className="text-white text-[12px] md:text-[15px] xl:text-[30px] mb-2 sm:mb-0">
-            Secure, transparent, and fair investments
-          </h2>
+          <div className="flex flex-col gap-3">
+            <h2 className="text-[#FFD700] text-[20px] md:text-[30px] xl:text-[40px] font-semibold flex items-center justify-center gap-2">
+              <FaChartLine className="text-yellow-400" />
+              Invest Decently, Invest Decentrally
+            </h2>
+            <h2 className="text-gray-300 text-[14px] md:text-[18px] xl:text-[25px] italic flex items-center justify-center gap-2">
+              <FaLock className="text-green-400" />
+              Secure, Transparent, and Fair Investments
+            </h2>
+          </div>
         </div>
 
         {/* Animated Button */}
         <button
           ref={buttonRef}
-          className="bg-[#FFB200] text-black font-medium w-[147px] h-[35px] sm:h-[54px] sm:w-[220px] rounded-3xl hover:bg-yellow-500 transition-colors duration-300 sm:text-[25px] mt-8"
+          className="bg-[#FFB200] text-black font-medium w-[160px] h-[50px] sm:h-[60px] sm:w-[230px] rounded-3xl hover:bg-yellow-500 transition-all duration-300 sm:text-[25px] mt-8 shadow-md transform hover:scale-105"
         >
           Get Started
         </button>
