@@ -75,10 +75,12 @@ const HeroSection = () => {
             DecentInvest
           </h1>
           <div className="flex flex-col gap-3">
-            <h2 className="text-[#FFD700] text-[20px] md:text-[30px] xl:text-[40px] font-semibold flex items-center justify-center gap-2">
+            <h2 className="text-[#FFD700] text-[12px] md:text-[30px] xl:text-[40px] font-semibold flex items-center justify-center gap-2">
+              <FaChartLine className="text-yellow-400" />
               Invest Decently, Invest Decentrally
             </h2>
-            <h2 className="text-gray-300 text-[14px] md:text-[18px] xl:text-[25px] italic flex items-center justify-center gap-2">
+            <h2 className="text-gray-300 text-[10px] md:text-[18px] xl:text-[25px] italic flex items-center justify-center gap-2">
+              <FaLock className="text-green-400" />
               Secure, Transparent, and Fair Investments
             </h2>
           </div>
@@ -87,7 +89,7 @@ const HeroSection = () => {
         {/* Animated Button */}
         <button
           ref={buttonRef}
-          className="bg-[#FFB200] text-black font-medium w-[160px] h-[50px] sm:h-[60px] sm:w-[230px] rounded-3xl hover:bg-yellow-500 transition-all duration-300 sm:text-[25px] mt-8 shadow-md transform hover:scale-105"
+          className="bg-[#FFB200] text-black font-medium w-[120px] h-[30px] sm:h-[60px] sm:w-[230px] rounded-3xl hover:bg-yellow-500 transition-all duration-300 sm:text-[25px] mt-8 shadow-md transform hover:scale-105"
         >
           Get Started
         </button>
