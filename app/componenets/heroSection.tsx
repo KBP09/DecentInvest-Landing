@@ -62,13 +62,14 @@ const HeroSection = () => {
           layout="fill"
           objectFit="cover"
           objectPosition="center"
+          priority
         />
       </div>
 
       {/* Animated Card */}
       <div
         ref={containerRef}
-        className="mt-24 h-[80vh] w-[80vw] flex flex-col items-center justify-center relative z-10 rounded-[48px] shadow-lg p-6 sm:p-10 border-4 border-white backdrop-blur-md"
+        className="mt-24 h-[80vh] w-[80vw] max-w-[1500px] flex flex-col items-center justify-center relative z-10 rounded-[48px] shadow-lg p-6 sm:p-10 border-[3px] sm:border-[4px] border-white"
       >
         <div className="text-center">
           <h1 className="text-white text-[35px] sm:text-[64px] md:text-[100px] xl:text-[100px] font-extrabold mb-2 sm:mt-0 leading-tight tracking-wide drop-shadow-[0_0_20px_rgba(255,255,255,0.5)]">

@@ -117,7 +117,7 @@ const ExpandableCard: React.FC<{ card: CardData; isExpanded: boolean; onClick: (
                             {card.title}
                         </motion.h2>
                         <motion.div ref={imageRef} layout>
-                            <Image src={card.imageSrc} alt={card.imageAlt} width={card.imageWidth} height={card.imageHeight} className={card.imageClassName} />
+                            <Image src={card.imageSrc} alt={card.imageAlt} width={card.imageWidth} height={card.imageHeight} className={card.imageClassName} priority/>
                         </motion.div>
                     </motion.div>
                     {isExpanded && (
