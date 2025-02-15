@@ -2,7 +2,6 @@
 import React, { useRef } from "react"
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,7 +13,7 @@ const Partner = () => {
 		<div
   ref={rcontainer}
   className="h-auto min-h-[50vh] w-full flex flex-col items-center justify-center px-4 py-6"
-  style={{ background: "linear-gradient(94.03deg, #652774 9.44%, #17081B 91.16%)" }}
+  style={{ background: "linear-gradient(360deg, #652774 9.44%, #000000 91.16%)" }}
 >
   {/* <h1 className="text-white text-[32px] sm:text-[40px] md:text-[50px] text-center mb-6">
     Coming Soon On

@@ -26,8 +26,8 @@ export default function NftSection() {
     }
 
     return (
-        <div className="h-auto min-h-[80vh] w-full py-20"
-            style={{ background: "linear-gradient(94.03deg, #652774 9.44%, #17081B 91.16%)" }}
+        <div className="h-auto min-h-[80vh] w-full py-20 overflow-hidden"
+            style={{ background: "linear-gradient(360deg, #652774 9.44%,#000000 91.16%)" }}
         >
             <div className="container mx-auto px-4">
                 <h1 className="text-white text-[32px] sm:text-[40px] md:text-[50px] text-center">

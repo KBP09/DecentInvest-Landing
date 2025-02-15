@@ -111,13 +111,13 @@ const ExpandableCard: React.FC<{ card: CardData; isExpanded: boolean; onClick: (
             }}
         >
             <motion.div layout className="absolute inset-[2px] rounded-[22px] sm:rounded-[46px] bg-black overflow-hidden">
-                <motion.div layout className={`relative z-10 h-full w-full flex items-center justify-center text-center p-4 sm:px-6 ${isExpanded ? 'flex-col sm:flex-row' : 'flex-col'}`}>                
+                <motion.div layout className={`relative z-10 h-full w-full flex items-center justify-center text-center p-4 sm:px-6 ${isExpanded ? 'flex-col sm:flex-row' : 'flex-col'}`}>
                     <motion.div layout className="flex items-center flex-col">
                         <motion.h2 layout transition={{ duration: 0.3, ease: 'easeOut' }} className="text-white text-[18px] sm:text-[15px] md:text-[min(3vw,20px)] font-bold leading-tight mt-2 sm:mt-8">
                             {card.title}
                         </motion.h2>
                         <motion.div ref={imageRef} layout>
-                            <Image src={card.imageSrc} alt={card.imageAlt} width={card.imageWidth} height={card.imageHeight} className={card.imageClassName} priority/>
+                            <Image src={card.imageSrc} alt={card.imageAlt} width={card.imageWidth} height={card.imageHeight} className={card.imageClassName} priority />
                         </motion.div>
                     </motion.div>
                     {isExpanded && (
@@ -150,7 +150,10 @@ const ExpandableCards: React.FC = () => {
     }
 
     return (
-        <div ref={containerRef} className="min-h-screen bg-black bg-[url('../public/BG1.svg')] bg-cover bg-center p-6 md:p-8 flex items-center justify-center flex-col overflow-hidden">
+        <div
+            ref={containerRef}
+            className="min-h-screen bg-black bg-[url('../public/Vector.svg')] bg-no-repeat bg-cover bg-center p-6 md:p-8 flex items-center justify-center flex-col overflow-hidden"
+        >
             <h1 className="text-white text-[50px] sm:text-[70px] mt-16 text-center mb-8">About Us</h1>
             <div className="max-w-5xl w-full grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 <AnimatePresence>

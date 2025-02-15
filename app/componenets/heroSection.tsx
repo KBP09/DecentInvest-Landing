@@ -1,91 +1,69 @@
 'use client'
-import { useEffect, useRef } from 'react';
+import { useRef, useEffect } from "react";
 import gsap from 'gsap';
 import Image from 'next/image';
 import { FaLock, FaChartLine } from 'react-icons/fa';
 
-const HeroSection = () => {
+
+export default function Home() {
   const containerRef = useRef(null);
   const textRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef(null);
   const iconsRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
-    const tl = gsap.timeline({ defaults: { ease: 'power3.out', duration: 1.2 } });
+    const video = videoRef.current;
+    if (!video) return;
 
-    // Fade & scale-in effect for the entire container
-    if (containerRef.current) {
-      tl.fromTo(
-        containerRef.current,
-        { opacity: 0, y: 50, scale: 0.9 },
-        { opacity: 1, y: 0, scale: 1 }
-      );
-    }
+    const handleTimeUpdate = () => {
+      if (video.currentTime >= 9) {
+        video.pause();
+        video.currentTime = 9;
+      }
+    };
 
-    // Staggered fade-in effect for text elements
-    if (textRef.current) {
-      gsap.fromTo(
-        textRef.current.children,
-        { opacity: 0, y: 40 },
-        { opacity: 1, y: 0, stagger: 0.2, delay: 0.5 }
-      );
-    }
+    video.addEventListener("timeupdate", handleTimeUpdate);
 
-    // Floating animation for icons
-    if (iconsRef.current) {
-      gsap.fromTo(
-        iconsRef.current.children,
-        { y: 5 },
-        { y: -5, repeat: -1, yoyo: true, duration: 1.5, ease: 'power1.inOut' }
-      );
-    }
-
-    // Bounce effect on the button
-    if (buttonRef.current) {
-      gsap.to(buttonRef.current, {
-        scale: 1.1,
-        repeat: -1,
-        yoyo: true,
-        duration: 1,
-        ease: 'power1.inOut',
-      });
-    }
+    return () => {
+      video.removeEventListener("timeupdate", handleTimeUpdate);
+    };
   }, []);
 
   return (
-    <div className="h-[65vh] sm:h-screen w-full flex items-center justify-center flex-col relative mb-8 sm:mb-0">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="./homebg.svg"
-          alt="Background Image"
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
-          priority
-        />
-      </div>
+    <div className="h-[65vh] sm:h-screen w-full flex items-center justify-center flex-col relative mb-8 sm:mb-0 overflow-hidden">
+      {/* Background Video */}
+      <video
+        autoPlay
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-0"
+      >
+        <source src="/homebg3.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
-      {/* Animated Card */}
+      {/* Content */}
+      <div className="absolute inset-0 bg-black/30 z-0"></div>
       <div
         ref={containerRef}
-        className="mt-24 h-[80vh] w-[80vw] max-w-[1500px] flex flex-col items-center justify-center relative z-10 rounded-[48px] shadow-lg p-6 sm:p-10 border-[3px] sm:border-[4px] border-white"
+        className="mt-24 h-[80vh] w-[80vw] max-w-[1500px] flex flex-col items-center justify-center relative z-10 rounded-[48px] shadow-lg p-6 sm:p-10 "
       >
         <div ref={textRef} className="text-center">
-          <h1 className="text-white text-[35px] sm:text-[64px] md:text-[100px] xl:text-[100px] font-extrabold mb-2 sm:mt-0 leading-tight tracking-wide drop-shadow-[0_0_20px_rgba(255,255,255,0.5)]">
+          <h1 className="text-white text-[35px] sm:text-[64px] md:text-[95px] font-extrabold mb-2 sm:mt-0 leading-tight uppercase tracking-wide drop-shadow-[0_0_20px_rgba(255,255,255,0.5)]">
             DecentInvest
           </h1>
           <div className="flex flex-col gap-3">
-            <h2 className="text-[#FFD700] text-[12px] md:text-[30px] xl:text-[40px] font-semibold flex items-center justify-center gap-2">
-              <FaChartLine className="text-yellow-400" />
-              Invest Decently, Invest Decentrally
+            <h2 className="text-[#FFD700] text-[14px] md:text-[32px] xl:text-[42px] font-bold flex flex-col items-center justify-center gap-2 text-center">
+              Powering The Future <br /> Of Startup Investments
             </h2>
-            <h2 className="text-gray-300 text-[10px] md:text-[18px] xl:text-[25px] italic flex items-center justify-center gap-2">
-              <FaLock className="text-green-400" />
-              Secure, Transparent, and Fair Investments
+
+            <h2 className="text-gray-300 text-[12px] md:text-[20px] xl:text-[28px] italic flex items-center justify-center gap-2">
+              Tokenized Equity. Transparent Growth. Decentralized Wealth.
             </h2>
           </div>
         </div>
+
 
         <button
           ref={buttonRef}
@@ -96,6 +74,4 @@ const HeroSection = () => {
       </div>
     </div>
   );
-};
-
-export default HeroSection;
+}
