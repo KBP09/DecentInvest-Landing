@@ -1,15 +1,11 @@
 'use client'
 import { useRef, useEffect } from "react";
-import gsap from 'gsap';
-import Image from 'next/image';
-import { FaLock, FaChartLine } from 'react-icons/fa';
 
 
 export default function Home() {
   const containerRef = useRef(null);
   const textRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef(null);
-  const iconsRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {

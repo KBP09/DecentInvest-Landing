@@ -1,6 +1,5 @@
 "use client"
 
-import { useRef, useState } from "react"
 import { GradientCard } from "./gradientCard"
 import Image from "next/image"
 
@@ -10,16 +9,6 @@ const investors = [
 ]
 
 export default function InvestorSection() {
-    const [activeIndex, setActiveIndex] = useState(2)
-    const containerRef = useRef<HTMLDivElement>(null)
-
-    const handlePrevious = () => {
-        setActiveIndex((prev) => (prev > 0 ? prev - 1 : investors.length - 1))
-    }
-
-    const handleNext = () => {
-        setActiveIndex((prev) => (prev < investors.length - 1 ? prev + 1 : 0))
-    }
 
     return (
         <div className="h-auto min-h-[80vh] w-full py-20 bg-black bg-[url('../public/BG1.svg')] bg-cover bg-center">
