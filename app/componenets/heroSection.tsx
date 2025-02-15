@@ -69,7 +69,7 @@ const HeroSection = () => {
       {/* Animated Card */}
       <div
         ref={containerRef}
-        className="mt-24 h-[80vh] w-[80vw] backdrop-blur-md max-w-[1500px] flex flex-col items-center justify-center relative z-10 rounded-[48px] shadow-lg p-6 sm:p-10 border-[3px] sm:border-[4px] border-white"
+        className="mt-24 h-[80vh] w-[80vw] max-w-[1500px] flex flex-col items-center justify-center relative z-10 rounded-[48px] shadow-lg p-6 sm:p-10 border-[3px] sm:border-[4px] border-white"
       >
         <div ref={textRef} className="text-center">
           <h1 className="text-white text-[35px] sm:text-[64px] md:text-[100px] xl:text-[100px] font-extrabold mb-2 sm:mt-0 leading-tight tracking-wide drop-shadow-[0_0_20px_rgba(255,255,255,0.5)]">
@@ -87,7 +87,6 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Animated Button */}
         <button
           ref={buttonRef}
           className="bg-[#FFB200] text-black font-medium w-[120px] h-[30px] sm:h-[60px] sm:w-[230px] rounded-3xl hover:bg-yellow-500 transition-all duration-300 sm:text-[25px] mt-8 shadow-md transform hover:scale-105"

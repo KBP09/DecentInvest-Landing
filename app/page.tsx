@@ -1,7 +1,8 @@
 import AboutUsCards from "./componenets/aboutUsCards";
 import HeroSection from "./componenets/heroSection";
 import Partner from "./componenets/partner";
-import Nftsection from "./componenets/nftSection";
+import NftSection from "./componenets/nftSection";
+import InvestorSection from "./componenets/investorSection";
 export default function Home() {
 
 
@@ -10,7 +11,8 @@ export default function Home() {
       <HeroSection />
       <Partner/>
       <AboutUsCards />
-      <Nftsection/>
+      <NftSection/>
+      <InvestorSection/>
     </>
   );
 }

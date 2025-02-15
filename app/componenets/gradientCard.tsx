@@ -32,4 +32,4 @@ export const GradientCard = forwardRef<HTMLDivElement, GradientCardProps>(
   }
 );
 
-GradientCard.displayName = "GradientCard"; // Required for debugging in React DevTools
+GradientCard.displayName = "GradientCard"; 
