@@ -1,15 +1,14 @@
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import { GradientCard } from "@/app/componenets/gradientCard";
 import { ProfileCard } from "@/app/componenets/profileCard";
 import NftSection from "@/app/componenets/nftSection";
-import Image from "next/image";
 
 interface InvestorPageProps {
-  params: { id: string } | Promise<{ id: string }>;
+  params: { id: string }; // Keep params synchronous
 }
 
-export default async function InvestorPage({ params }: InvestorPageProps) {
-  const resolvedParams = await params; // Ensures compatibility with Next.js
+export default function InvestorPage({ params }: InvestorPageProps) {
   const investors = [
     {
       id: "1",
@@ -37,7 +36,8 @@ export default async function InvestorPage({ params }: InvestorPageProps) {
     },
   ];
 
-  const investor = investors.find((i) => i.id === resolvedParams.id);
+  // Ensure params.id is a string before finding the investor
+  const investor = investors.find((i) => i.id === params.id);
   if (!investor) return notFound();
 
   return (
