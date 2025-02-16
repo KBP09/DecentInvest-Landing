@@ -5,10 +5,14 @@ import { ProfileCard } from "@/app/componenets/profileCard";
 import NftSection from "@/app/componenets/nftSection";
 
 interface InvestorPageProps {
-  params: { id: string }; // Keep params synchronous
+  params: { id: string }; // Ensure this is NOT a Promise
 }
 
 export default function InvestorPage({ params }: InvestorPageProps) {
+  if (!params || typeof params.id !== "string") {
+    return notFound();
+  }
+
   const investors = [
     {
       id: "1",
@@ -36,7 +40,7 @@ export default function InvestorPage({ params }: InvestorPageProps) {
     },
   ];
 
-  // Ensure params.id is a string before finding the investor
+  // Find investor based on the ID from params
   const investor = investors.find((i) => i.id === params.id);
   if (!investor) return notFound();
 
