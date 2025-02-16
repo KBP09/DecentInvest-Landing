@@ -1,8 +1,12 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { GradientCard } from "../../componenets/gradientCard";
-import { ProfileCard } from "../../componenets/profileCard";
-import NftSection from "../../componenets/nftSection";
+import { GradientCard } from "@/app/componenets/gradientCard";
+import { ProfileCard } from "@/app/componenets/profileCard";
+import NftSection from "@/app/componenets/nftSection";
+
+interface InvestorPageProps {
+    params: { id: string };
+}
 
 const investors = [
     {
@@ -15,7 +19,7 @@ const investors = [
         equity: [
             { title: "Completed", value: "0.45" },
             { title: "In Progress", value: "0.25" },
-        ]
+        ],
     },
     {
         id: "2",
@@ -27,14 +31,14 @@ const investors = [
         equity: [
             { title: "Completed", value: "0.60" },
             { title: "In Progress", value: "0.40" },
-        ]
-    }
+        ],
+    },
 ];
 
-export default function InvestorPage({ params }: { params: { id: string } }) {
-    const investor = investors.find(i => i.id === params.id);
+export default function InvestorPage({ params }: InvestorPageProps) {
+    const investor = investors.find((i) => i.id === params.id);
 
-    if (!investor) return notFound(); // Show 404 if ID is invalid
+    if (!investor) return notFound();
 
     return (
         <div className="pt-[15vh] min-h-screen bg-black">
@@ -47,30 +51,34 @@ export default function InvestorPage({ params }: { params: { id: string } }) {
                             layout="fill"
                             objectFit="cover"
                             className="rounded-lg"
-                            priority
                         />
                     </div>
                 </ProfileCard>
 
-                <GradientCard bgColor="#1A1A1D" className="aspect-[45/20] text-white flex items-center justify-center max-w-full h-[100px] sm:h-[400px]">
-                    <div className="flex flex-col justify-center w-full h-full p-8">
-                        <p className="text-[45px] font-bold mb-4">{investor.name}</p>
-                        <p className="text-[30px] mb-4">Company: {investor.company}</p>
+                <GradientCard
+                    bgColor="#1A1A1D"
+                    className="aspect-[45/20] text-white flex items-center justify-center max-w-full h-[100px] sm:h-[400px]"
+                >
+                    <div className="flex flex-col items-left justify-center w-full h-full p-8">
+                        <p className="text-[45px] font-bold top-0 mb-8">{investor.name}</p>
+                        <p className="text-[30px] mb-8">Company: {investor.company}</p>
                         <p className="text-[30px]">{investor.description}</p>
                     </div>
                 </GradientCard>
             </div>
 
             <div className="w-full min-h-screen mt-8 bg-[url('/Vector.svg')] bg-cover bg-center flex items-center justify-center relative">
-                <div className="absolute inset-0 bg-[#1A1A1D] bg-opacity-50 flex flex-col items-center justify-center gap-8 px-4">
-
-                    <div className="bg-white p-8 text-[30px] w-[80%] rounded-2xl">
-                        <p className='text-black font-bold mb-4'>Amount Invested (in $)</p>
-                        <div className="flex flex-wrap gap-4 justify-center">
+                <div className="absolute inset-0 bg-[#1A1A1D] bg-opacity-50 flex flex-col items-center justify-center gap-8">
+                    <div className="bg-white p-8 text-[30px] h-[238px] w-[80%] rounded-2xl">
+                        <p className="text-black font-bold">Amount Invested (in $)</p>
+                        <div className="w-full h-full flex gap-4">
                             {investor.amountInvested.map((num, i) => (
-                                <GradientCard key={i} bgColor="linear-gradient(180deg, #300C3B 0%, #48114C 50%, #B3278C 100%)" 
-                                    className="text-white flex items-center justify-center w-[90px] h-[90px] sm:w-[110px] sm:h-[110px]">
-                                    <h1 className="text-[50px] sm:text-[70px] text-center">{num}</h1>
+                                <GradientCard
+                                    key={i}
+                                    bgColor="linear-gradient(180deg, #300C3B 0%, #48114C 50%, #B3278C 100%)"
+                                    className="text-white flex items-center justify-center w-[110px] h-[110px]"
+                                >
+                                    <h1 className="text-[70px] text-center">{num}</h1>
                                 </GradientCard>
                             ))}
                         </div>
@@ -78,17 +86,24 @@ export default function InvestorPage({ params }: { params: { id: string } }) {
 
                     <div className="flex justify-center w-full">
                         <div className="w-[80%] flex flex-col items-center">
-                            <GradientCard bgColor="#1A1A1D" className="w-full text-white flex flex-col items-center justify-center h-[200px] sm:h-[300px]">
-                                <h2 className="text-white w-[80%] text-[30px] sm:text-[35px] mb-4">Equity Gained</h2>
-                                <div className="flex flex-wrap gap-8 justify-center w-full">
-                                    {investor.equity.map((item, i) => (
-                                        <GradientCard key={i}
-                                            bgColor="linear-gradient(180deg, rgba(48, 12, 59, 0.7) 0%, rgba(72, 17, 76, 0.7) 50%, rgba(179, 39, 140, 0.7) 100%)"
-                                            className="text-white flex flex-col items-center justify-center w-[45%] sm:w-[40%] h-[130px] sm:h-[150px]">
-                                            <h1 className="text-[30px] sm:text-[40px] text-center font-bold">{item.title}</h1>
-                                            <p className="text-[30px] sm:text-[40px] text-center mt-2">{item.value}</p>
-                                        </GradientCard>
-                                    ))}
+                            <GradientCard
+                                bgColor="#1A1A1D"
+                                className="w-full text-white flex flex-col items-center justify-center h-[150px] sm:h-[300px]"
+                            >
+                                <div className="w-full h-full flex flex-col items-center justify-center">
+                                    <h2 className="text-white w-[80%] text-[35px]">Equity Gained</h2>
+                                    <div className="flex gap-8 justify-center w-full mt-4">
+                                        {investor.equity.map((item, i) => (
+                                            <GradientCard
+                                                key={i}
+                                                bgColor="linear-gradient(180deg, rgba(48, 12, 59, 0.7) 0%, rgba(72, 17, 76, 0.7) 50%, rgba(179, 39, 140, 0.7) 100%)"
+                                                className="text-white flex flex-col items-center justify-center w-[40%] h-[150px]"
+                                            >
+                                                <h1 className="text-[40px] text-center font-bold">{item.title}</h1>
+                                                <p className="text-[40px] text-center mt-4">{item.value}</p>
+                                            </GradientCard>
+                                        ))}
+                                    </div>
                                 </div>
                             </GradientCard>
                         </div>
@@ -97,8 +112,8 @@ export default function InvestorPage({ params }: { params: { id: string } }) {
             </div>
 
             <div className="w-full flex flex-col items-center justify-start mt-16">
-                <h1 className='text-white text-[40px] sm:text-[50px] w-[80%] mb-4'>Startups Invested In:</h1>
-                <NftSection background='black' />
+                <h1 className="text-white text-[50px] w-[80%]">Startups Invested In:</h1>
+                <NftSection background="black" />
             </div>
         </div>
     );
