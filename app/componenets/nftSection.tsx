@@ -1,9 +1,9 @@
 "use client"
 
-import { useRef, useState } from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
-import { GradientCard } from "./gradientCard"
-import { motion, AnimatePresence } from "framer-motion"
+import { useRef, useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { GradientCard } from "./gradientCard";
+import { motion, AnimatePresence } from "framer-motion";
 
 const investors = [
     { id: 1, name: "Startup One", description: "Innovation in Tech" },
@@ -11,35 +11,33 @@ const investors = [
     { id: 3, name: "Startup Three", description: "Healthcare Solutions" },
     { id: 4, name: "Startup Four", description: "Green Energy" },
     { id: 5, name: "Startup Five", description: "AI Revolution" },
-]
+];
 
-export default function NftSection() {
-    const [activeIndex, setActiveIndex] = useState(2)
-    const containerRef = useRef<HTMLDivElement>(null)
+interface NftSectionProps {
+    background: string;
+}
+
+export default function NftSection({ background }: NftSectionProps) {
+    const [activeIndex, setActiveIndex] = useState(2);
+    const containerRef = useRef<HTMLDivElement>(null);
 
     const handlePrevious = () => {
-        setActiveIndex((prev) => (prev > 0 ? prev - 1 : investors.length - 1))
-    }
+        setActiveIndex((prev) => (prev > 0 ? prev - 1 : investors.length - 1));
+    };
 
     const handleNext = () => {
-        setActiveIndex((prev) => (prev < investors.length - 1 ? prev + 1 : 0))
-    }
+        setActiveIndex((prev) => (prev < investors.length - 1 ? prev + 1 : 0));
+    };
 
     return (
-        <div className="h-auto min-h-[80vh] w-full py-20 overflow-hidden"
-            style={{ background: "linear-gradient(360deg, #652774 9.44%,#000000 91.16%)" }}
-        >
+        <div className="h-auto min-h-[70vh] w-full py-20 overflow-hidden" style={{ background }}>
             <div className="container mx-auto px-4">
-                <h1 className="text-white text-[32px] sm:text-[40px] md:text-[50px] text-center">
-                    Trending Nfts
-                </h1>
-                <p className="text-[#E7E7E7] md:text-[20px] text-center mb-6">Discover the trending NFTs of the Startups</p>
                 <div className="relative" ref={containerRef}>
                     <div className="flex items-center justify-center gap-4 overflow-hidden py-56">
                         <AnimatePresence initial={false}>
                             {investors.map((investor, index) => {
-                                const isActive = index === activeIndex
-                                const offset = index - activeIndex
+                                const isActive = index === activeIndex;
+                                const offset = index - activeIndex;
 
                                 return (
                                     <motion.div
@@ -55,8 +53,7 @@ export default function NftSection() {
                                         className="absolute"
                                     >
                                         <GradientCard
-                                            className={`transition-all duration-300 ${isActive ? "w-[250px] h-[400px]" : "w-[250px] h-[400px] opacity-60"
-                                                }`}
+                                            className={`transition-all duration-300 ${isActive ? "w-[250px] h-[400px]" : "w-[250px] h-[400px] opacity-60"}`}
                                             bgColor="linear-gradient(180deg, rgba(60, 13, 75, 0.6) 0%, rgba(77, 15, 96, 0.6) 50%, rgba(179, 39, 140, 0.6) 100%)"
                                         >
                                             <div className="p-6 flex flex-col h-full">
@@ -66,7 +63,7 @@ export default function NftSection() {
                                             </div>
                                         </GradientCard>
                                     </motion.div>
-                                )
+                                );
                             })}
                         </AnimatePresence>
                     </div>
@@ -86,6 +83,5 @@ export default function NftSection() {
                 </div>
             </div>
         </div>
-    )
+    );
 }
-
