@@ -101,7 +101,7 @@ const ExpandableCard: React.FC<{ card: CardData; isExpanded: boolean; onClick: (
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0.5, scale: 0.9 }}
             transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
-            whileHover={{ scale: 1.03 }}
+            whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
             className={`relative w-full max-w-full rounded-[24px] sm:rounded-[48px] overflow-hidden flex flex-col items-center cursor-pointer 
                 ${isExpanded ? 'aspect-[3/4] sm:aspect-[10/4] md:aspect-[10/4] col-span-full' : 'aspect-[5/3] sm:aspect-[14/9]'}`}

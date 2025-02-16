@@ -1,61 +1,40 @@
 'use client'
-import { useRef, useEffect } from "react";
-
+import { useRef} from "react";
+import Image from "next/image";
 
 export default function Home() {
   const containerRef = useRef(null);
   const textRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef(null);
-  const videoRef = useRef<HTMLVideoElement | null>(null);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    const handleTimeUpdate = () => {
-      if (video.currentTime >= 10) {
-        video.pause();
-        video.currentTime = 10;
-      }
-    };
-
-    video.addEventListener("timeupdate", handleTimeUpdate);
-
-    return () => {
-      video.removeEventListener("timeupdate", handleTimeUpdate);
-    };
-  }, []);
 
   return (
     <div className="h-[65vh] sm:h-screen w-full flex items-center justify-center flex-col relative mb-8 sm:mb-0 overflow-hidden">
-      {/* Background Video */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full mt-8 h-full object-cover z-0 filter grayscale"
-      >
-        <source src="/homebg3.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      
+      <Image
+        src="/homebg.svg"
+        alt="Marketplace illustration"
+        layout="fill"
+        objectFit="cover" 
+        objectPosition="center"
+        className="absolute inset-0 w-full h-full"
+      />
 
-      {/* Content */}
+      
       <div className="absolute inset-0 bg-black/30 z-0"></div>
       <div
         ref={containerRef}
-        className="mt-24 h-[80vh] w-[80vw] max-w-[1500px] flex flex-col items-center justify-center relative z-10 rounded-[48px] shadow-lg p-6 sm:p-10 "
+        className="mt-24 h-[80vh] backdrop-blur-lg border-4 w-[80vw] max-w-[1500px] flex flex-col items-center justify-center relative z-10 rounded-[48px] shadow-lg p-6 sm:p-10 "
       >
         <div ref={textRef} className="text-center">
           <h1 className="text-white text-[35px] sm:text-[64px] md:text-[95px] font-extrabold mb-2 sm:mt-0 leading-tight uppercase tracking-wide drop-shadow-[0_0_20px_rgba(255,255,255,0.5)]">
             DecentInvest
           </h1>
           <div className="flex flex-col gap-3">
-            <h2 className="text-[#FFD700] text-[14px] md:text-[32px] xl:text-[42px] font-bold flex flex-col items-center justify-center gap-2 text-center">
-              Powering The Future <br /> Of Startup Investments
+            <h2 className="text-white text-[14px] md:text-[25px] xl:text-[35px] flex flex-col items-center justify-center gap-2 text-center">
+              Invest Decently, Invest Decentrally
             </h2>
 
-            <h2 className="text-gray-300 text-[12px] md:text-[20px] xl:text-[28px] italic flex items-center justify-center gap-2">
+            <h2 className="text-gray-300 text-[12px] md:text-[15px] xl:text-[23px] flex items-center justify-center gap-2">
               Tokenized Equity. Transparent Growth. Decentralized Wealth.
             </h2>
           </div>
