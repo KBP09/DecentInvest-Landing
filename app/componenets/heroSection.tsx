@@ -13,9 +13,9 @@ export default function Home() {
     if (!video) return;
 
     const handleTimeUpdate = () => {
-      if (video.currentTime >= 9) {
+      if (video.currentTime >= 10) {
         video.pause();
-        video.currentTime = 9;
+        video.currentTime = 10;
       }
     };
 
@@ -31,6 +31,7 @@ export default function Home() {
       {/* Background Video */}
       <video
         autoPlay
+        loop
         muted
         playsInline
         className="absolute inset-0 w-full h-full object-cover z-0"
