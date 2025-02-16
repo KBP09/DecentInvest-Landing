@@ -1,44 +1,44 @@
 import { notFound } from "next/navigation";
-import Image from "next/image";
 import { GradientCard } from "@/app/componenets/gradientCard";
 import { ProfileCard } from "@/app/componenets/profileCard";
 import NftSection from "@/app/componenets/nftSection";
+import Image from "next/image";
 
 interface InvestorPageProps {
-  params: { id: string };
+  params: { id: string } | Promise<{ id: string }>;
 }
 
-const investors = [
-  {
-    id: "1",
-    name: "Anushka Gupta",
-    company: "DecentInvest",
-    description: "Believe in either a home run or running back home.",
-    image: "/akg.jpg",
-    amountInvested: [1, 0, 0, 0, 0],
-    equity: [
-      { title: "Completed", value: "0.45" },
-      { title: "In Progress", value: "0.25" },
-    ],
-  },
-  {
-    id: "2",
-    name: "Kanak B Pandey",
-    company: "DecentInvest",
-    description: "Innovation drives progress and transforms ideas into reality.",
-    image: "/kbp.jpg",
-    amountInvested: [1, 0, 0, 0, 0],
-    equity: [
-      { title: "Completed", value: "0.60" },
-      { title: "In Progress", value: "0.40" },
-    ],
-  },
-];
+export default async function InvestorPage({ params }: InvestorPageProps) {
+  const resolvedParams = await params; // Ensures compatibility with Next.js
+  const investors = [
+    {
+      id: "1",
+      name: "Anushka Gupta",
+      company: "DecentInvest",
+      description: "Believe in either a home run or running back home.",
+      image: "/akg.jpg",
+      amountInvested: [1, 0, 0, 0, 0],
+      equity: [
+        { title: "Completed", value: "0.45" },
+        { title: "In Progress", value: "0.25" },
+      ],
+    },
+    {
+      id: "2",
+      name: "Kanak B Pandey",
+      company: "DecentInvest",
+      description: "Innovation drives progress and transforms ideas into reality.",
+      image: "/kbp.jpg",
+      amountInvested: [1, 0, 0, 0, 0],
+      equity: [
+        { title: "Completed", value: "0.60" },
+        { title: "In Progress", value: "0.40" },
+      ],
+    },
+  ];
 
-export default function InvestorPage({ params }: InvestorPageProps) {
-  const investor = investors.find((i) => i.id === params.id);
-
-  if (!investor) return notFound(); // Show 404 if ID is invalid
+  const investor = investors.find((i) => i.id === resolvedParams.id);
+  if (!investor) return notFound();
 
   return (
     <div className="pt-[15vh] min-h-screen bg-black">
