@@ -18,7 +18,7 @@ export default function InvestorSection() {
                 </h1>
                 <div className="flex sm:flex-row flex-col items-center w-full justify-center gap-8 mt-8">
                     {investors.map((investor) => (
-                        <Link key={investor.id} href={`/investor/${investor.id}`} passHref>
+                        <Link key={investor.id} href={`/anushkagupta`} passHref>
                             <GradientCard className="w-[300px] h-[400px] flex flex-col items-center justify-center gap-4 cursor-pointer transition-transform transform hover:scale-105" bgColor="rgba(37, 29, 39, 1)">
                                 <div className="w-full h-full flex flex-col items-center justify-center gap-4 relative bg-[#1A1A1A] rounded-2xl p-4 shadow-lg">
                                     <div
