@@ -109,7 +109,7 @@ export default function ReviewsSection() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             What people are saying
           </h2>
-          <p className="text-xl md:text-2xl text-gray-300">Our users' reviews</p>
+          <p className="text-xl md:text-2xl text-gray-300">Our users reviews</p>
         </div>
 
         <div className="relative overflow-hidden">
