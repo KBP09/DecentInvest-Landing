@@ -29,7 +29,7 @@ const Page = () => {
                     </div>
                 </ProfileCard>
 
-                <GradientCard bgColor="#1A1A1D" className="aspect-[40/20] text-white flex items-center justify-center max-w-[400px] sm:max-w-[700px] h-[280px] sm:h-[350px]">
+                <GradientCard bgColor="#1A1A1D" className="aspect-[40/20] text-white flex items-center justify-center max-w-[400px] sm:max-w-[700px] h-[350px] sm:h-[350px]">
                     <div className="flex flex-col items-left justify-center w-full h-full p-6">
                         <p className="text-[28px] font-bold top-0 mb-4">Anushka Gupta</p>
                         <p className="text-[20px] mb-4">Company: DecentInvest</p>
@@ -45,7 +45,7 @@ const Page = () => {
             <div className="w-full min-h-[60vh] mt-8 bg-[url('/Vector.svg')] bg-cover bg-center flex items-center justify-center relative">
                 <div className="absolute inset-0 bg-[#1A1A1D] bg-opacity-50 flex flex-col items-center justify-center gap-6 p-4">
 
-                    <div className="bg-white p-6 text-[24px] flex flex-col items-center justify-center h-[180px] sm:h-[200px] w-[90%] sm:w-[50%] rounded-xl">
+                    <div className="bg-white p-6 text-[24px] flex flex-col items-center justify-center h-[180px] sm:h-[200px] w-full sm:w-[45%] rounded-xl">
                         <p className='text-black font-bold text-center'>Amount Invested (in $)</p>
                         <div className="w-full h-full flex items-center justify-center gap-3">
                             {values.map((num, i) => (
@@ -58,7 +58,7 @@ const Page = () => {
 
                     {/* Equity Gained */}
                     <div className="flex justify-center w-full">
-                        <div className="w-[90%] sm:w-[65%] flex flex-col items-center">
+                        <div className="w-full sm:w-[65%] flex flex-col items-center">
                             <GradientCard bgColor="#1A1A1D" className="w-full text-white flex flex-col items-center justify-center h-[120px] sm:h-[180px]">
                                 <div className='w-full h-full flex flex-col items-center justify-center'>
                                     <h2 className="text-white w-[80%] text-[24px] sm:text-[28px]">Equity Gained</h2>
