@@ -5,8 +5,8 @@ import Image from "next/image"
 import Link from "next/link"
 
 const investors = [
-    { id: 1, name: "Anushka Gupta", description: "DecentInvest", AmountInvested: "1000$", image: "/akg.jpg" },
-    { id: 2, name: "Kanak B Pandey", description: "DecentInvest", AmountInvested: "1000$", image: "/kbp.jpg"},
+    { id: 1, name: "Anushka Gupta", description: "DecentInvest", AmountInvested: "1000$", image: "/akg.jpg",link:"/anushkagupta" },
+    { id: 2, name: "Kanak B Pandey", description: "DecentInvest", AmountInvested: "1000$", image: "/kbp.jpg",link:"/kanakbpandey"},
 ]
 
 export default function InvestorSection() {
@@ -18,7 +18,7 @@ export default function InvestorSection() {
                 </h1>
                 <div className="flex sm:flex-row flex-col items-center w-full justify-center gap-8 mt-8">
                     {investors.map((investor) => (
-                        <Link key={investor.id} href={`/anushkagupta`} passHref>
+                        <Link key={investor.id} href={investor.link} passHref>
                             <GradientCard className="w-[300px] h-[400px] flex flex-col items-center justify-center gap-4 cursor-pointer transition-transform transform hover:scale-105" bgColor="rgba(37, 29, 39, 1)">
                                 <div className="w-full h-full flex flex-col items-center justify-center gap-4 relative bg-[#1A1A1A] rounded-2xl p-4 shadow-lg">
                                     <div
