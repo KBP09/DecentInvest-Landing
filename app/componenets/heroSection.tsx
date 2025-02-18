@@ -17,16 +17,17 @@ export default function Home() {
         objectFit="cover" 
         objectPosition="center"
         className="absolute inset-0 w-full h-full"
+        priority
       />
 
       
       <div className="absolute inset-0 bg-black/30 z-0"></div>
       <div
         ref={containerRef}
-        className="mt-24 h-[80vh] backdrop-blur-lg border-4 w-[80vw] max-w-[1500px] flex flex-col items-center justify-center relative z-10 rounded-[48px] shadow-lg p-6 sm:p-10 "
+        className="mt-24 h-[80vh] backdrop-blur-lg border-4 w-full sm:w-[80vw] max-w-[1500px] flex flex-col items-center justify-center relative z-10 rounded-[48px] shadow-lg p-6 sm:p-10 "
       >
         <div ref={textRef} className="text-center">
-          <h1 className="text-white text-[35px] sm:text-[64px] md:text-[95px] font-extrabold mb-2 sm:mt-0 leading-tight uppercase tracking-wide drop-shadow-[0_0_20px_rgba(255,255,255,0.5)]">
+          <h1 className="text-white text-[30px] sm:text-[60px] md:text-[80px] font-extrabold mb-2 sm:mt-0 leading-tight uppercase tracking-wide drop-shadow-[0_0_20px_rgba(255,255,255,0.5)]">
             DecentInvest
           </h1>
           <div className="flex flex-col gap-3">
@@ -43,7 +44,7 @@ export default function Home() {
 
         <button
           ref={buttonRef}
-          className="bg-[#FFB200] text-black font-medium w-[120px] h-[30px] sm:h-[60px] sm:w-[230px] rounded-3xl hover:bg-yellow-500 transition-all duration-300 sm:text-[25px] mt-8 shadow-md transform hover:scale-105"
+          className="bg-[#FFB200] text-black font-medium w-[120px] h-[30px] sm:h-[56px] sm:w-[210px] rounded-3xl hover:bg-yellow-500 transition-all duration-300 sm:text-[25px] mt-8 shadow-md transform hover:scale-105"
         >
           Get Started
         </button>

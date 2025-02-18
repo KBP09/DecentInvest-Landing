@@ -51,7 +51,6 @@ const Page = () => {
                         </div>
                     </div>
 
-                    {/* Equity Gained */}
                     <div className="flex justify-center w-full">
                         <div className="w-[80%] flex flex-col items-center">
                             <GradientCard bgColor="#1A1A1D" className="w-full text-white flex flex-col items-center justify-center h-[150px] sm:h-[300px]">

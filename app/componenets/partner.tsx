@@ -149,8 +149,6 @@ export default function ReviewsSection() {
             ))}
           </div>
         </div>
-
-        {/* Navigation Buttons */}
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-4">
           <button
             onClick={previousReview}
@@ -165,10 +163,6 @@ export default function ReviewsSection() {
             <ChevronRight className="w-8 h-8" />
           </button>
         </div>
-
-
-
-        {/* Dots Indicator */}
         <div className="flex justify-center gap-2 mt-6">
           {Array.from({ length: totalGroups }).map((_, index) => (
             <button

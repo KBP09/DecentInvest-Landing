@@ -6,12 +6,11 @@ interface GradientCardProps {
   bgColor?: string;
 }
 
-// Using forwardRef to allow parent components to pass a ref
 export const GradientCard = forwardRef<HTMLDivElement, GradientCardProps>(
   ({ children, className = "", bgColor = "#363636" }, ref) => {
     return (
       <div
-        ref={ref} // Now accepts ref
+        ref={ref} 
         className={`relative rounded-[24px] overflow-hidden ${className}`}
         style={{
           background: "linear-gradient(76.91deg, #FFDE4D -0.16%, #C847FF 104.72%)",

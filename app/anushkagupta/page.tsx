@@ -15,7 +15,6 @@ const Page = () => {
     return (
         <div className="pt-[10vh] min-h-screen bg-black">
 
-            {/* Profile Section */}
             <div className="flex gap-6 justify-center w-full p-6 flex-col md:flex-row items-center">
                 <ProfileCard className="aspect-[30/39] max-w-[300px] sm:max-w-[300px] h-[280px] sm:h-[350px] flex items-center justify-center overflow-hidden">
                     <div className="relative w-full h-full">
@@ -41,7 +40,6 @@ const Page = () => {
                 </GradientCard>
             </div>
 
-            {/* Investment Section */}
             <div className="w-full min-h-[60vh] mt-8 bg-[url('/Vector.svg')] bg-cover bg-center flex items-center justify-center relative">
                 <div className="absolute inset-0 bg-[#1A1A1D] bg-opacity-50 flex flex-col items-center justify-center gap-6 p-4">
 
@@ -56,7 +54,6 @@ const Page = () => {
                         </div>
                     </div>
 
-                    {/* Equity Gained */}
                     <div className="flex justify-center w-full">
                         <div className="w-full sm:w-[65%] flex flex-col items-center">
                             <GradientCard bgColor="#1A1A1D" className="w-full text-white flex flex-col items-center justify-center h-[120px] sm:h-[180px]">
@@ -79,7 +76,6 @@ const Page = () => {
                 </div>
             </div>
 
-            {/* NFT Section */}
             <div className="w-full flex flex-col items-center justify-start mt-12">
                 <h1 className='text-white text-[32px] sm:text-[36px] w-[90%] sm:w-[80%]'>Startups Invested In:</h1>
                 <NftSection background='black' />
