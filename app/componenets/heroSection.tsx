@@ -27,7 +27,7 @@ export default function Home() {
         className="mt-24 h-[80vh] backdrop-blur-lg border-4 w-full sm:w-[80vw] max-w-[1500px] flex flex-col items-center justify-center relative z-10 rounded-[48px] shadow-lg p-6 sm:p-10 "
       >
         <div ref={textRef} className="text-center">
-          <h1 className="text-white text-[30px] sm:text-[60px] md:text-[80px] font-extrabold mb-2 sm:mt-0 leading-tight uppercase tracking-wide drop-shadow-[0_0_20px_rgba(255,255,255,0.5)]">
+          <h1 className="text-white text-[30px] sm:text-[50px] md:text-[70px] font-extrabold mb-2 sm:mt-0 leading-tight uppercase tracking-wide drop-shadow-[0_0_20px_rgba(255,255,255,0.5)]">
             DecentInvest
           </h1>
           <div className="flex flex-col gap-3">

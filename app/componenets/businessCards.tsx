@@ -57,7 +57,7 @@ const BusinessCards = () => {
     return (
         <>
             <div id="aboutus" className="min-h-screen bg-black bg-[url('../public/BG1.svg')] bg-cover bg-center p-6 md:p-8 flex items-center justify-center flex-col overflow-hidden">
-                <h1 className="text-white text-[50px] sm:text-[70px] mt-16 text-center mb-8">Services we offer</h1>
+                <h1 className="text-white text-[50px] sm:text-[60px] mt-16 text-center mb-8">Services we offer</h1>
                 <div className="max-w-5xl flex items-center justify-center grid grid-cols-1 md:grid-cols-2 gap-6">
 
                     <div
@@ -73,7 +73,7 @@ const BusinessCards = () => {
                                 <div
                                     className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 transition-all duration-500 opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-95"
                                 >
-                                    <h2 className="text-white text-[22px] sm:text-[min(3vw,30px)] font-bold leading-none mt-8">
+                                    <h2 className="text-white text-[22px] sm:text-[min(3vw,25px)] font-bold leading-none mt-8">
                                         Marketplace for startups and investors
                                     </h2>
                                     <Image
@@ -88,7 +88,7 @@ const BusinessCards = () => {
                                 <div
                                     className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 transition-all duration-500 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100"
                                 >
-                                    <p className="text-white text-[18px] sm:text-[min(3vw,24px)] font-medium leading-normal">
+                                    <p className="text-white text-[18px] sm:text-[min(3vw,22px)] font-medium leading-normal">
                                         Our marketplace brings together innovative startups and visionary investors, creating a dynamic ecosystem for growth and collaboration.
                                     </p>
                                 </div>
@@ -117,7 +117,7 @@ const BusinessCards = () => {
                                 <div
                                     className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 sm:mt-8 transition-all duration-500 opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-95"
                                 >
-                                    <h2 className="text-white text-[18px] sm:text-[min(3vw,30px)] font-bold leading-none mt-2">
+                                    <h2 className="text-white text-[18px] sm:text-[min(3vw,25px)] font-bold leading-none mt-2">
                                         All startups in one place for investors and all investors in one place for startups
                                     </h2>
                                     <Image
@@ -133,7 +133,7 @@ const BusinessCards = () => {
                                 <div
                                     className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 transition-all duration-500 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100"
                                 >
-                                    <p className="text-white text-[18px] sm:text-[min(3vw,24px)] font-medium leading-normal">
+                                    <p className="text-white text-[18px] sm:text-[min(3vw,22px)] font-medium leading-normal">
                                         Explore a unified platform connecting innovative startups with potential investors. Build networks, invest smartly, and grow together.
                                     </p>
                                 </div>
@@ -163,7 +163,7 @@ const BusinessCards = () => {
                                 <div
                                     className="absolute inset-0 flex flex-col items-center justify-center text-center transition-all duration-500 opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-95"
                                 >
-                                    <h2 className="text-white text-[22px] sm:text-[min(3vw,30px)] font-bold leading-none mt-16">
+                                    <h2 className="text-white text-[22px] sm:text-[min(3vw,25px)] font-bold leading-none mt-16">
                                         NFT for your startups
                                     </h2>
                                     <Image
@@ -179,7 +179,7 @@ const BusinessCards = () => {
                                 <div
                                     className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 transition-all duration-500 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100"
                                 >
-                                    <p className="text-white text-[18px] sm:text-[min(3vw,24px)] font-medium leading-normal">
+                                    <p className="text-white text-[18px] sm:text-[min(3vw,22px)] font-medium leading-normal">
                                         Showcase your startup with NFTs and open new doors for investments in the blockchain world.
                                     </p>
                                 </div>
@@ -209,7 +209,7 @@ const BusinessCards = () => {
                                 <div
                                     className="absolute inset-0 flex flex-col md:flex-row items-center justify-center text-center transition-all duration-500 opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-95"
                                 >
-                                    <h2 className="text-white sm:text-[min(3vw,30px)] font-bold leading-tight mb-4 mt-4">
+                                    <h2 className="text-white sm:text-[min(3vw,25px)] font-bold leading-tight mb-4 mt-4">
                                         Find customised investors and startups according to your needs
                                     </h2>
                                     <Image
@@ -225,7 +225,7 @@ const BusinessCards = () => {
                                 <div
                                     className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 transition-all duration-500 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100"
                                 >
-                                    <p className="text-white text-[18px] sm:text-[min(3vw,24px)] font-medium leading-normal">
+                                    <p className="text-white text-[18px] sm:text-[min(3vw,22px)] font-medium leading-normal">
                                         Showcase your startup with NFTs and open new doors for investments in the blockchain world.
                                     </p>
                                 </div>
@@ -255,7 +255,7 @@ const BusinessCards = () => {
                             <div
                                 className="absolute inset-0 flex flex-col items-center justify-center text-center transition-all duration-500 opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-95"
                             >
-                                <h2 className="text-white text-[22px] sm:text-[min(3vw,30px)] font-bold leading-none mt-8">
+                                <h2 className="text-white text-[22px] sm:text-[min(3vw,25px)] font-bold leading-none mt-8">
                                     Easy transactions
                                 </h2>
                                 <Image
@@ -271,7 +271,7 @@ const BusinessCards = () => {
                             <div
                                 className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 transition-all duration-500 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100"
                             >
-                                <p className="text-white text-[18px] sm:text-[min(3vw,24px)] font-medium leading-normal">
+                                <p className="text-white text-[18px] sm:text-[min(3vw,22px)] font-medium leading-normal">
                                     Showcase your startup with NFTs and open new doors for investments in the blockchain world.
                                 </p>
                             </div>
@@ -302,7 +302,7 @@ const BusinessCards = () => {
                             <div
                                 className="absolute inset-0 flex flex-col items-center justify-center text-center transition-all duration-500 opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-95"
                             >
-                                <h2 className="text-white text-[22px] sm:text-[min(3vw,30px)] font-bold leading-none mt-8">
+                                <h2 className="text-white text-[22px] sm:text-[min(3vw,25px)] font-bold leading-none mt-8">
                                     Grants and investments
                                 </h2>
                                 <Image
@@ -318,7 +318,7 @@ const BusinessCards = () => {
                             <div
                                 className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 transition-all duration-500 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100"
                             >
-                                <p className="text-white text-[18px] sm:text-[min(3vw,24px)] font-medium leading-normal">
+                                <p className="text-white text-[18px] sm:text-[min(3vw,22px)] font-medium leading-normal">
                                     Showcase your startup with NFTs and open new doors for investments in the blockchain world.
                                 </p>
                             </div>

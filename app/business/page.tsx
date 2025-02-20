@@ -12,9 +12,9 @@ const Page = () => {
     return (
         <>
             <div className="mb-32 pt-32 flex justify-center">
-                <GradientCard className="aspect-[128/16] flex justify-center items-center max-w-[90%] h-[300px]">
+                <GradientCard className="aspect-[100/14] flex justify-center items-center max-w-[85%] h-[300px]">
                     <div className="flex justify-center items-center h-full">
-                        <h1 className="text-white text-[30px] md:text-[50px] font-bold leading-tight text-center">
+                        <h1 className="text-white text-[30px] md:text-[40px] font-bold leading-tight text-center">
                             Our exclusive enterprise features for your business need
                         </h1>
                     </div>
@@ -23,7 +23,7 @@ const Page = () => {
             <BusinessCards />
             <div className="mb-32 pt-32 flex justify-center">
                 <GradientCard
-                    className="aspect-[128/16] flex justify-center items-center max-w-[90%] h-[300px] cursor-pointer"
+                    className="aspect-[100/14] flex justify-center items-center max-w-[85%]  h-[300px] cursor-pointer"
                 >
                     <div className="flex justify-center items-center h-full p-4" onClick={handleClick}>
                         <div className="flex flex-col">

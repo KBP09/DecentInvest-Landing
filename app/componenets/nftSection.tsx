@@ -6,11 +6,11 @@ import { GradientCard } from "./gradientCard";
 import { motion, AnimatePresence } from "framer-motion";
 
 const investors = [
-    { id: 1, name: "Startup One", description: "Innovation in Tech" },
-    { id: 2, name: "Startup Two", description: "Future of Finance" },
-    { id: 3, name: "Startup Three", description: "Healthcare Solutions" },
-    { id: 4, name: "Startup Four", description: "Green Energy" },
-    { id: 5, name: "Startup Five", description: "AI Revolution" },
+    { id: 1, name: "DecentInvest", description: "Decentralized Investment Bank", image: "/logo.svg" },
+    { id: 2, name: "Threaded Tales", description: "Tokenize your stories", image: "/threadedtales.svg" },
+    { id: 3, name: "DecentInvest", description: "Decentralized Investment Bank", image: "/logo.svg" },
+    { id: 4, name: "Zenith", description: "Track your online activity", image: "/zenith.png" },
+    { id: 5, name: "HealthX360", description: "All in one medical platform", image: "/health.png" },
 ];
 
 interface NftSectionProps {
@@ -57,11 +57,15 @@ export default function NftSection({ background }: NftSectionProps) {
                                             bgColor="linear-gradient(180deg, rgba(60, 13, 75, 0.6) 0%, rgba(77, 15, 96, 0.6) 50%, rgba(179, 39, 140, 0.6) 100%)"
                                         >
                                             <div className="p-6 flex flex-col h-full">
-                                                <div className="w-full aspect-square bg-white to-transparent rounded-lg mb-4" />
+                                                <div
+                                                    className="w-full aspect-square rounded-lg mb-4 bg-cover bg-center"
+                                                    style={{ backgroundImage: `url(${investor.image})` }}
+                                                />
                                                 <h3 className="text-white text-xl font-semibold mb-2">{investor.name}</h3>
                                                 <p className="text-gray-400">{investor.description}</p>
                                             </div>
                                         </GradientCard>
+
                                     </motion.div>
                                 );
                             })}
