@@ -106,7 +106,7 @@ export default function ReviewsSection() {
     >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
             What people are saying
           </h2>
           <p className="text-xl md:text-2xl text-gray-300">Our users reviews</p>
@@ -167,7 +167,7 @@ export default function ReviewsSection() {
           {Array.from({ length: totalGroups }).map((_, index) => (
             <button
               key={index}
-              className={`w-3 h-3 rounded-full transition-colors ${Math.floor(currentIndex / cardsPerView) === index ? "bg-[#B98D3C]" : "bg-gray-400"
+              className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-colors ${Math.floor(currentIndex / cardsPerView) === index ? "bg-[#B98D3C]" : "bg-gray-400"
                 }`}
               onClick={() => setCurrentIndex(index * cardsPerView)}
               aria-label={`Go to review group ${index + 1}`}

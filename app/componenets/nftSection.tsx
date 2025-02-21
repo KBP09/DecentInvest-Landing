@@ -76,13 +76,13 @@ export default function NftSection({ background }: NftSectionProps) {
                         onClick={handlePrevious}
                         className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 p-2 rounded-full text-white transition-colors"
                     >
-                        <ChevronLeft className="w-6 h-6" />
+                        <ChevronLeft className="h-4 w-4 sm:w-6 sm:h-6" />
                     </button>
                     <button
                         onClick={handleNext}
                         className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 p-2 rounded-full text-white transition-colors"
                     >
-                        <ChevronRight className="w-6 h-6" />
+                        <ChevronRight className="h-4 w-4 sm:w-6 sm:h-6" />
                     </button>
                 </div>
             </div>
