@@ -13,9 +13,8 @@ export default function Home() {
       <Image
         src="/homebg.svg"
         alt="Marketplace illustration"
-        layout="fill"
-        objectFit="cover" 
-        objectPosition="center"
+        fill
+        style={{ objectFit: "cover", objectPosition: "center" }}
         className="absolute inset-0 w-full h-full"
         priority
       />

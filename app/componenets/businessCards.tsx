@@ -57,9 +57,8 @@ const BusinessCards = () => {
     return (
         <>
             <div id="aboutus" className="min-h-screen bg-black bg-[url('../public/BG1.svg')] bg-cover bg-center p-6 md:p-8 flex items-center justify-center flex-col overflow-hidden">
-                <h1 className="text-white text-[50px] sm:text-[60px] mt-16 text-center mb-8">Services we offer</h1>
+                <h1 className="text-white text-[40px] sm:text-[55px] mt-16 text-center mb-8">Services we offer</h1>
                 <div className="max-w-5xl flex items-center justify-center grid grid-cols-1 md:grid-cols-2 gap-6">
-
                     <div
                         className="group relative animate-me w-full max-w-[550px] h-[250px] sm:h-full aspect-[14/9] rounded-[48px] overflow-hidden flex flex-col items-center cursor-pointer"
                         style={{
@@ -73,8 +72,8 @@ const BusinessCards = () => {
                                 <div
                                     className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 transition-all duration-500 opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-95"
                                 >
-                                    <h2 className="text-white text-[22px] sm:text-[min(3vw,25px)] font-bold leading-none mt-8">
-                                        Marketplace for startups and investors
+                                    <h2 className="text-white sm:text-[min(3vw,20px)] lg:text-[min(3vw,22px)] font-bold leading-none mt-8">
+                                        Tokenized Fundraising & Startup NFTs
                                     </h2>
                                     <Image
                                         src="/Bitcoin.svg"
@@ -88,8 +87,8 @@ const BusinessCards = () => {
                                 <div
                                     className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 transition-all duration-500 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100"
                                 >
-                                    <p className="text-white text-[18px] sm:text-[min(3vw,22px)] font-medium leading-normal">
-                                        Our marketplace brings together innovative startups and visionary investors, creating a dynamic ecosystem for growth and collaboration.
+                                    <p className="text-white text-[15px] sm:text-[min(3vw,22px)] font-medium leading-normal">
+                                        We enable startups to tokenize their equity and raise funds through blockchain-based assets. By minting a unique NFT for each startup, founders can showcase their business on our marketplace, making investment opportunities more transparent and accessible. Investors can acquire these NFTs to gain equity or trade them in the secondary market.
                                     </p>
                                 </div>
                             </div>
@@ -117,8 +116,8 @@ const BusinessCards = () => {
                                 <div
                                     className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 sm:mt-8 transition-all duration-500 opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-95"
                                 >
-                                    <h2 className="text-white text-[18px] sm:text-[min(3vw,25px)] font-bold leading-none mt-2">
-                                        All startups in one place for investors and all investors in one place for startups
+                                    <h2 className="text-white sm:text-[min(3vw,20px)] lg:text-[min(3vw,22px)] font-bold leading-none mt-2">
+                                        Security Token Offerings (STO) for Equity
                                     </h2>
                                     <Image
                                         src="/startups.svg"
@@ -133,8 +132,8 @@ const BusinessCards = () => {
                                 <div
                                     className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 transition-all duration-500 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100"
                                 >
-                                    <p className="text-white text-[18px] sm:text-[min(3vw,22px)] font-medium leading-normal">
-                                        Explore a unified platform connecting innovative startups with potential investors. Build networks, invest smartly, and grow together.
+                                    <p className="text-white text-[15px] sm:text-[min(3vw,22px)] font-medium leading-normal">
+                                        DecentInvest introduces a cutting-edge approach to investment through security tokens, allowing startups to distribute equity in a legally compliant and decentralized manner. These blockchain-based security tokens provide investors with a stake in the company, ensuring transparent ownership records and automated dividends where applicable.
                                     </p>
                                 </div>
                             </div>
@@ -163,8 +162,8 @@ const BusinessCards = () => {
                                 <div
                                     className="absolute inset-0 flex flex-col items-center justify-center text-center transition-all duration-500 opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-95"
                                 >
-                                    <h2 className="text-white text-[22px] sm:text-[min(3vw,25px)] font-bold leading-none mt-16">
-                                        NFT for your startups
+                                    <h2 className="text-white sm:text-[min(3vw,20px)] lg:text-[min(3vw,22px)] font-bold leading-none mt-16">
+                                        Decentralized Marketplace & Liquidity Solutions
                                     </h2>
                                     <Image
                                         src="/nfts.svg"
@@ -179,8 +178,8 @@ const BusinessCards = () => {
                                 <div
                                     className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 transition-all duration-500 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100"
                                 >
-                                    <p className="text-white text-[18px] sm:text-[min(3vw,22px)] font-medium leading-normal">
-                                        Showcase your startup with NFTs and open new doors for investments in the blockchain world.
+                                    <p className="text-white text-[15px] sm:text-[min(3vw,22px)] font-medium leading-normal">
+                                        Our platform offers a seamless marketplace for buying, selling, and trading startup NFTs and security tokens. We provide liquidity solutions, including peer-to-peer investor trading and liquidity pools, ensuring that investments remain accessible and tradable beyond the initial fundraising phase.
                                     </p>
                                 </div>
                             </div>
@@ -209,8 +208,8 @@ const BusinessCards = () => {
                                 <div
                                     className="absolute inset-0 flex flex-col md:flex-row items-center justify-center text-center transition-all duration-500 opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-95"
                                 >
-                                    <h2 className="text-white sm:text-[min(3vw,25px)] font-bold leading-tight mb-4 mt-4">
-                                        Find customised investors and startups according to your needs
+                                    <h2 className="text-white sm:text-[min(3vw,20px)] lg:text-[min(3vw,22px)] font-bold leading-tight mb-4 mt-4">
+                                        Web3 Startup Identity & On-Chain Governance
                                     </h2>
                                     <Image
                                         src="/people.svg"
@@ -225,8 +224,8 @@ const BusinessCards = () => {
                                 <div
                                     className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 transition-all duration-500 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100"
                                 >
-                                    <p className="text-white text-[18px] sm:text-[min(3vw,22px)] font-medium leading-normal">
-                                        Showcase your startup with NFTs and open new doors for investments in the blockchain world.
+                                    <p className="text-white text-[15px] sm:text-[min(3vw,22px)] font-medium leading-normal">
+                                        We help businesses establish a verifiable on-chain identity, ensuring transparency and credibility for investors. Additionally, our decentralized governance tools allow startups to implement DAO-based decision-making, enabling community-driven development through smart voting mechanisms.
                                     </p>
                                 </div>
                             </div>
@@ -255,15 +254,15 @@ const BusinessCards = () => {
                             <div
                                 className="absolute inset-0 flex flex-col items-center justify-center text-center transition-all duration-500 opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-95"
                             >
-                                <h2 className="text-white text-[22px] sm:text-[min(3vw,25px)] font-bold leading-none mt-8">
-                                    Easy transactions
+                                <h2 className="text-white sm:text-[min(3vw,20px)] lg:text-[min(3vw,22px)] font-bold leading-none mt-8">
+                                    Regulatory Compliance & Smart Contract Audits
                                 </h2>
                                 <Image
                                     src="/transactions.svg"
                                     alt="Transactions illustration"
                                     width={280}
                                     height={280}
-                                    className="w-[150px] h-[150px] sm:w-[260px] sm:h-[260px] md:w-[220px] md:h-[220px] lg:w-[260px] lg:h-[260px]"
+                                    className="w-[150px] h-[150px] sm:w-[240px] sm:h-[240px] md:w-[180px] md:h-[180px] lg:w-[260px] lg:h-[260px]"
                                 />
                             </div>
 
@@ -271,8 +270,8 @@ const BusinessCards = () => {
                             <div
                                 className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 transition-all duration-500 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100"
                             >
-                                <p className="text-white text-[18px] sm:text-[min(3vw,22px)] font-medium leading-normal">
-                                    Showcase your startup with NFTs and open new doors for investments in the blockchain world.
+                                <p className="text-white text-[15px] sm:text-[min(3vw,22px)] font-medium leading-normal">
+                                    We simplify blockchain compliance by integrating regulatory-compliant KYC/AML processes into fundraising mechanisms. Our smart contract auditing services ensure that startup tokenization, investment flows, and automated agreements remain secure and legally robust.
                                 </p>
                             </div>
 
@@ -302,15 +301,15 @@ const BusinessCards = () => {
                             <div
                                 className="absolute inset-0 flex flex-col items-center justify-center text-center transition-all duration-500 opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-95"
                             >
-                                <h2 className="text-white text-[22px] sm:text-[min(3vw,25px)] font-bold leading-none mt-8">
-                                    Grants and investments
+                                <h2 className="text-white sm:text-[min(3vw,20px)] lg:text-[min(3vw,22px)] font-bold leading-none mt-8">
+                                    Blockchain-Powered Treasury & Payment Solutions
                                 </h2>
                                 <Image
                                     src="/grants.svg"
                                     alt="Grants illustration"
                                     width={280}
                                     height={280}
-                                    className="w-[150px] h-[150px] sm:w-[240px] sm:h-[240px] md:w-[190px] md:h-[190px] lg:w-[260px] lg:h-[260px]"
+                                    className="w-[150px] h-[150px] sm:w-[240px] sm:h-[240px] md:w-[180px] md:h-[180px] lg:w-[260px] lg:h-[260px]"
                                 />
                             </div>
 
@@ -318,8 +317,8 @@ const BusinessCards = () => {
                             <div
                                 className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 transition-all duration-500 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100"
                             >
-                                <p className="text-white text-[18px] sm:text-[min(3vw,22px)] font-medium leading-normal">
-                                    Showcase your startup with NFTs and open new doors for investments in the blockchain world.
+                                <p className="text-white text-[15px] sm:text-[min(3vw,22px)] font-medium leading-normal">
+                                    DecentInvest enables startups to manage their treasury efficiently with blockchain-based financial tools. From accepting crypto payments to setting up smart contract-powered vesting schedules and escrow services, we provide secure, automated, and efficient financial operations tailored to the Web3 ecosystem.
                                 </p>
                             </div>
 

@@ -21,8 +21,9 @@ const Page = () => {
                         <Image
                             src="/akg.jpg"
                             alt="Profile Image"
-                            layout="fill"
-                            objectFit="cover"
+                            fill
+                            sizes="(max-width: 640px) 300px, (max-width: 1024px) 350px, 300px"
+                            style={{ objectFit: "cover", objectPosition: "center" }}
                             className="rounded-lg"
                         />
                     </div>

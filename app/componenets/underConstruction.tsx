@@ -7,9 +7,8 @@ const UnderConstruction = () => {
             <Image
                 src="./BG5.svg"
                 alt="Background Image"
-                layout="fill"
-                objectFit="cover"
-                objectPosition="center"
+                fill
+                style={{ objectFit: "cover", objectPosition: "center" }}
                 priority
             />
             <div className="absolute flex flex-col items-center justify-center w-full h-full">

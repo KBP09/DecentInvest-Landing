@@ -13,7 +13,7 @@ export default function InvestorSection() {
     return (
         <div className="h-auto min-h-[70vh] w-full py-20 bg-black bg-[url('../public/BG1.svg')] bg-cover bg-center">
             <div className="container mx-auto px-4">
-                <h1 className="text-white text-[32px] sm:text-[40px] md:text-[50px] text-center">
+                <h1 className="text-white text-[32px] sm:text-[40px] md:text-[45px] text-center">
                     Top Investors
                 </h1>
                 <div className="flex sm:flex-row flex-col items-center w-full justify-center gap-8 mt-8">
@@ -33,8 +33,9 @@ export default function InvestorSection() {
                                         <Image
                                             src={investor.image}
                                             alt={investor.name}
-                                            objectFit="cover"
-                                            layout="fill"
+                                            fill
+                                            sizes="(max-width: 640px) 300px, (max-width: 1024px) 350px, 300px"
+                                            style={{ objectFit: "cover", objectPosition: "center" }}
                                             className="rounded-full"
                                         />
                                     </div>
