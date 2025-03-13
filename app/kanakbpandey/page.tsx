@@ -6,16 +6,16 @@ import NftSection from '../componenets/nftSection';
 
 const Page = () => {
     const gradientStyle = "linear-gradient(180deg, #300C3B 0%, #48114C 50%, #B3278C 100%)";
-    const values = [1, 0, 0, 0, 0,];
+    const values = ['*', '*', '*', '2', '3'];
     const cardData = [
-        { title: "Completed", value: "0.45" },
-        { title: "In Progress", value: "0.25" }
+        { title: "Completed", value: "*.1*%" },
+        { title: "In Progress", value: "*9%" }
     ];
 
     return (
         <div className="pt-[15vh] min-h-screen bg-black">
             <div className="flex gap-8 justify-center w-full p-8 flex-col md:flex-row items-center">
-                <ProfileCard className="aspect-[30/39] max-w-[300px] sm:max-w-[300px] h-[280px] sm:h-[350px] flex items-center justify-center overflow-hidden">
+                <ProfileCard className="aspect-[30/39] max-w-[300px] sm:max-w-[300px] h-[280px] sm:h-[320px] flex items-center justify-center overflow-hidden">
                     <div className="relative w-full h-full">
                         <Image
                             src="/kbp.jpg"
@@ -28,11 +28,13 @@ const Page = () => {
                     </div>
                 </ProfileCard>
 
-                <GradientCard bgColor="#1A1A1D" className="aspect-[40/20] text-white flex items-center justify-center w-full md:max-w-[700px] h-[250px] sm:h-[350px] px-4">
+                <GradientCard bgColor="#1A1A1D" className="aspect-[40/20] text-white flex items-center justify-center w-full md:max-w-[700px] h-[250px] sm:h-[320px] px-4">
                     <div className="flex flex-col items-left justify-center w-full h-full p-4">
                         <p className="text-[20px] sm:text-[28px] font-bold top-0 mb-4">KanaK B Pandey</p>
                         <p className="text-[15px] sm:text-[20px] mb-4">Company: DecentInvest</p>
-                        <p className="text-[15px] sm:text-[16px] leading-6">I believe in nothing.I believe in nothing.v..I believe in nothingv.I believe in nothingI believe in nothingI believe in nothingI believe in nothing.I believe in nothing.v..I believe in nothingv.</p>
+                        <p className="text-[15px] sm:text-[20px] mb-4">Education: None</p>
+                        <p className="text-[15px] sm:text-[20px] mb-2">About:</p>
+                        <p className="text-[15px] sm:text-[16px] leading-6">I believe in nothing.I believe in nothing...I believe in nothing.I believe in nothingI believe in nothing I believe in nothing I believe in nothing.I believe in nothing...I believe in nothing.</p>
                     </div>
                 </GradientCard>
             </div>
@@ -73,7 +75,7 @@ const Page = () => {
             </div>
 
             <div className="w-full flex flex-col items-center justify-start mt-12">
-                <h1 className='text-white text-[32px] sm:text-[36px] w-[90%] sm:w-[80%]'>Startups Invested In:</h1>
+                <h1 className='text-white text-[28px] sm:text-[36px] w-[90%] sm:w-[80%]'>Startups Invested In:</h1>
                 <NftSection background='black' />
             </div>
         </div>

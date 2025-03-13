@@ -141,6 +141,7 @@ export default function ReviewsSection() {
                         alt={review.name}
                         fill
                         className="object-cover"
+                        priority
                       />
                     </div>
                     <div className="ml-4">

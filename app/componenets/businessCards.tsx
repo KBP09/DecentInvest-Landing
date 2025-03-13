@@ -20,7 +20,7 @@ const BusinessCards = () => {
                     ease: 'power3.out',
                     scrollTrigger: {
                         trigger: element,
-                        start: 'top 100%',
+                        start: 'top 50%',
                         toggleActions: 'play none none none',
                     },
                 }
@@ -41,7 +41,7 @@ const BusinessCards = () => {
                     ease: 'power3.out',
                     scrollTrigger: {
                         trigger: element,
-                        start: 'top 100%',
+                        start: 'top 50%',
                         toggleActions: 'play none none none'
                     },
                 }
@@ -55,7 +55,7 @@ const BusinessCards = () => {
                 <h1 className="text-white text-[40px] sm:text-[55px] mt-16 text-center mb-8">Services we offer</h1>
                 <div className="max-w-5xl flex items-center justify-center grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div
-                        className="group relative animate-me w-full max-w-[550px] h-[250px] sm:h-full aspect-[14/9] rounded-[48px] overflow-hidden flex flex-col items-center cursor-pointer"
+                        className="group relative animate-me w-full max-w-[550px] h-[250px] sm:h-full aspect-[14/9] rounded-[48px] overflow-hidden flex flex-col items-center cursor-pointer animate-left"
                         style={{
                             background: 'linear-gradient(76.91deg, #FFDE4D -0.16%, #C847FF 104.72%)',
                             padding: '2px',

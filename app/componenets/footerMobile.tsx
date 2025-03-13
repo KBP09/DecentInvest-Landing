@@ -1,8 +1,29 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
 const FooterMobile = () => {
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setMessage("");
+
+        try {
+            const response = await fetch("https://script.google.com/macros/s/AKfycbxpfdwzeQW-tTvV6CCjEyOadkvUVjUeidOy-3iHyiGTZqS6MhP4xcQL0ccDleDHRbSn/exec", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email }),
+            });
+
+            const data = await response.json();
+            setMessage(data.message || "Something went wrong!");
+        } catch (error) {
+            setMessage("Failed to subscribe. Try again later.");
+        }
+    };
     return (
         <footer className="lg:hidden flex flex-col w-full">
             <div className="bg-[#1A1A1D] text-white py-8 flex items-center justify-center">
@@ -28,12 +49,15 @@ const FooterMobile = () => {
                         <div className="flex items-center w-full">
                             <input
                                 type="email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
                                 placeholder="Enter your Email Address"
                                 className="bg-[#E7E7E7] px-2 py-1 text-black rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 flex-grow h-[30px]"
                             />
                         </div>
                         <button
                             type="submit"
+                            onClick={handleSubmit}
                             className="bg-[#FFB200] text-black py-1 rounded-xl hover:bg-yellow-400 mt-3 w-[100px] sm:w-[120px] ml-auto"
                         >
                             Submit

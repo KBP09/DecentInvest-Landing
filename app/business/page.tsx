@@ -11,7 +11,7 @@ const Page = () => {
 
     return (
         <>
-            <div className="mt-8 mb-32 pt-32 flex justify-center">
+            <div className="mt-8 mb-52 pt-32 flex justify-center">
                 <GradientCard className="aspect-[100/14] flex justify-center items-center max-w-[80%] h-[250px]">
                     <div className="flex justify-center items-center h-full">
                         <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold leading-tight text-center">

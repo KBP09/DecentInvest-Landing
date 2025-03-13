@@ -5,8 +5,8 @@ import Image from "next/image"
 import Link from "next/link"
 
 const investors = [
-    { id: 1, name: "Anushka Gupta", description: "DecentInvest", AmountInvested: "1000$", image: "/akg.jpg",link:"/anushkagupta" },
-    { id: 2, name: "Kanak B Pandey", description: "DecentInvest", AmountInvested: "1000$", image: "/kbp.jpg",link:"/kanakbpandey"},
+    { id: 1, name: "Anushka Gupta", description: "DecentInvest", AmountInvested: "**58$", image: "/akg.jpg",link:"/anushkagupta" },
+    { id: 2, name: "Kanak B Pandey", description: "DecentInvest", AmountInvested: "**23$", image: "/kbp.jpg",link:"/kanakbpandey"},
 ]
 
 export default function InvestorSection() {
@@ -42,6 +42,7 @@ export default function InvestorSection() {
 
                                     <h2 className="text-white text-lg sm:text-xl font-bold text-center">{investor.name}</h2>
                                     <p className="text-gray-300 text-sm sm:text-lg">{investor.description}</p>
+                                    <h2 className="text-white text-lg sm:text-lg font-bold text-center">Amount Invested: {investor.AmountInvested}</h2>
                                 </div>
                             </GradientCard>
                         </Link>
