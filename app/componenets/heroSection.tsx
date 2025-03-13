@@ -17,6 +17,7 @@ export default function Home() {
         style={{ objectFit: "cover", objectPosition: "center" }}
         className="absolute inset-0 w-full h-full"
         priority
+        loading="eager"
       />
 
       
