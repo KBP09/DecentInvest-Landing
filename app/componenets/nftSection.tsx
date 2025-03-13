@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { GradientCard } from "./gradientCard";
 import { motion, AnimatePresence } from "framer-motion";
@@ -20,6 +20,11 @@ interface NftSectionProps {
 export default function NftSection({ background }: NftSectionProps) {
     const [activeIndex, setActiveIndex] = useState(2);
     const containerRef = useRef<HTMLDivElement>(null);
+    const [isMounted, setIsMounted] = useState(false);
+
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
 
     const handlePrevious = () => {
         setActiveIndex((prev) => (prev > 0 ? prev - 1 : investors.length - 1));
@@ -29,8 +34,10 @@ export default function NftSection({ background }: NftSectionProps) {
         setActiveIndex((prev) => (prev < investors.length - 1 ? prev + 1 : 0));
     };
 
+    if (!isMounted) return null;
+
     return (
-        <div className="h-auto min-h-[70vh] w-full sm:py-20 overflow-hidden" style={{ background }}>
+        <div className="h-auto min-h-[70vh] w-full sm:py-16 overflow-hidden" style={{ background }}>
             <div className="container mx-auto px-4">
                 <div className="relative" ref={containerRef}>
                     <div className="flex items-center justify-center gap-4 overflow-hidden py-56">
@@ -65,7 +72,6 @@ export default function NftSection({ background }: NftSectionProps) {
                                                 <p className="text-gray-400">{investor.description}</p>
                                             </div>
                                         </GradientCard>
-
                                     </motion.div>
                                 );
                             })}

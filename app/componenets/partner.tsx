@@ -1,32 +1,32 @@
-"use client"
+"use client";
 
-import { useCallback, useState, useEffect } from "react"
-import Image from "next/image"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { useCallback, useState, useEffect } from "react";
+import Image from "next/image";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface Review {
-  id: number
-  name: string
-  title: string
-  content: string
-  avatar: string
+  id: number;
+  name: string;
+  title: string;
+  content: string;
+  avatar: string;
 }
 
 const reviews: Review[] = [
   {
     id: 1,
-    name: "Sarah Chen",
-    title: "Product Manager, Innovation Labs",
+    name: "CryptoRebel",
+    title: "A twitter user",
     content:
-      "The attention to detail and user experience is outstanding. This product has transformed how our team collaborates and delivers results.",
+      "Traditional banks take days to process transactions, charge insane fees, and block payments when they feel like it. Meanwhile, DeFi does it in seconds with full transparency. The choice is obvious. #Decentralization #DeFi",
     avatar: "/kbp.jpg",
   },
   {
     id: 2,
-    name: "Marcus Rodriguez",
-    title: "Technical Lead, Future Systems",
+    name: "Web3Maxi",
+    title: "A twitter user",
     content:
-      "Implementation was seamless, and the support team has been exceptional. This solution has exceeded our expectations in every way.",
+      "Investment banks decide who gets access to capital based on their own interests. In a decentralized world, funding should be open, fair, and trustless. #DeFi #PowerToThePeople",
     avatar: "/kbp.jpg",
   },
   {
@@ -34,7 +34,7 @@ const reviews: Review[] = [
     name: "Emily Thompson",
     title: "Operations Director, Next Wave Tech",
     content:
-      "A game-changer for our organization. The platform's capabilities have significantly improved our workflow efficiency.",
+      "Ever tried moving large amounts internationally? Investment banks will flag your transaction, hold your money for 'verification,' and charge a ridiculous fee. Crypto solves this. #Decentralization",
     avatar: "/kbp.jpg",
   },
   {
@@ -42,7 +42,7 @@ const reviews: Review[] = [
     name: "David Park",
     title: "Senior Developer, Cloud Solutions",
     content:
-      "The scalability and reliability of this system are impressive. It's been crucial in helping us meet our growing demands.",
+      "Investment banking is just a fancy way of saying 'we control the money and you don’t.' Blockchain gives us financial independence. #DeFi #CryptoRevolution",
     avatar: "/kbp.jpg",
   },
   {
@@ -50,7 +50,7 @@ const reviews: Review[] = [
     name: "Olivia Martinez",
     title: "UX Researcher, Design Innovations",
     content:
-      "The intuitive interface and robust features have significantly enhanced our team's productivity. It's a pleasure to work with.",
+      "Why should a handful of banks decide who gets funding? Why should they take massive cuts from every transaction? Decentralized finance puts that power back in OUR hands. #DecentralizationNow",
     avatar: "/kbp.jpg",
   },
   {
@@ -58,44 +58,49 @@ const reviews: Review[] = [
     name: "Alex Johnson",
     title: "CTO, Emerging Technologies Inc.",
     content:
-      "This solution has been instrumental in our digital transformation journey. The ROI has been substantial and immediate.",
+      "Investment banks profit from exclusivity and insider deals while everyday investors get crumbs. DeFi levels the playing field. #Blockchain #OpenFinance",
     avatar: "/kbp.jpg",
   },
-]
+];
 
 export default function ReviewsSection() {
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [cardsPerView, setCardsPerView] = useState(1)
+  const [isMounted, setIsMounted] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [cardsPerView, setCardsPerView] = useState(1);
 
   useEffect(() => {
+    setIsMounted(true);
+
     const handleResize = () => {
       if (window.innerWidth >= 1280) {
-        setCardsPerView(3)
+        setCardsPerView(3);
       } else if (window.innerWidth >= 768) {
-        setCardsPerView(2)
+        setCardsPerView(2);
       } else {
-        setCardsPerView(1)
+        setCardsPerView(1);
       }
-    }
+    };
 
-    handleResize()
-    window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
-  }, [])
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const nextReview = useCallback(() => {
     setCurrentIndex((prevIndex) =>
       prevIndex + cardsPerView >= reviews.length ? 0 : prevIndex + cardsPerView
-    )
-  }, [cardsPerView])
+    );
+  }, [cardsPerView]);
 
   const previousReview = useCallback(() => {
     setCurrentIndex((prevIndex) =>
       prevIndex - cardsPerView < 0 ? reviews.length - cardsPerView : prevIndex - cardsPerView
-    )
-  }, [cardsPerView])
+    );
+  }, [cardsPerView]);
 
-  const totalGroups = Math.ceil(reviews.length / cardsPerView)
+  const totalGroups = Math.ceil(reviews.length / cardsPerView);
+
+  if (!isMounted) return null; 
 
   return (
     <section
@@ -176,5 +181,5 @@ export default function ReviewsSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

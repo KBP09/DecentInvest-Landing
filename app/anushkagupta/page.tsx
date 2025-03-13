@@ -1,3 +1,4 @@
+'use clients'
 import React from 'react'
 import Image from 'next/image';
 import { GradientCard } from '../componenets/gradientCard';
@@ -6,10 +7,10 @@ import NftSection from '../componenets/nftSection';
 
 const Page = () => {
     const gradientStyle = "linear-gradient(180deg, #300C3B 0%, #48114C 50%, #B3278C 100%)";
-    const values = [1, 0, 0, 0, 0];
+    const values = ['*', '*', '*', '5', '8'];
     const cardData = [
-        { title: "Completed", value: "0.45" },
-        { title: "In Progress", value: "0.25" }
+        { title: "Completed", value: "*.4*" },
+        { title: "In Progress", value: "*.2*" }
     ];
 
     return (

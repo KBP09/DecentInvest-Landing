@@ -154,7 +154,7 @@ const ExpandableCards: React.FC = () => {
             ref={containerRef}
             className="min-h-screen bg-black bg-[url('../public/Vector.svg')] bg-no-repeat bg-cover bg-center p-6 md:p-8 flex items-center justify-center flex-col overflow-hidden"
         >
-            <h1 className="text-white text-[50px] sm:text-[55px] mt-16 text-center mb-8">About Us</h1>
+            <h1 className="text-white text-[50px] sm:text-[53px] mt-16 text-center mb-8">About Us</h1>
             <div className="max-w-5xl w-full grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 <AnimatePresence>
                     {cardData.map((card) => (
