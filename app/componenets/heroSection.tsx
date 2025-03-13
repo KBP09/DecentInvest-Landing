@@ -11,7 +11,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="h-[65vh] sm:h-screen w-full flex items-center justify-center flex-col relative mb-8 sm:mb-0 overflow-hidden">
+    <div className="h-[70vh] sm:h-screen w-full flex items-center justify-center flex-col relative mb-8 sm:mb-0 overflow-hidden">
       {isClient && (
         <Image
           src="/homebg.svg"
@@ -24,7 +24,7 @@ export default function Home() {
 
       <div className="absolute inset-0 bg-black/30 z-0"></div>
 
-      <div className="mt-24 h-[50vh] sm:h-[78vh] backdrop-blur-lg border-4 w-[90vw] sm:w-[78vw] max-w-[1500px] flex flex-col items-center justify-center relative z-10 rounded-[48px] shadow-lg p-6 sm:p-10">
+      <div className="mt-24 h-[50vh] sm:h-[80vh] backdrop-blur-lg border-4 w-[90vw] sm:w-[80vw] max-w-[1500px] flex flex-col items-center justify-center relative z-10 rounded-[48px] shadow-lg p-6 sm:p-10">
         <div className="text-center">
           <h1
             className="text-white font-extrabold mb-2 sm:mt-0 leading-tight uppercase tracking-wide drop-shadow-[0_0_20px_rgba(255,255,255,0.5)]"

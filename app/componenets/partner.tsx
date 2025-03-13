@@ -19,7 +19,7 @@ const reviews: Review[] = [
     title: "A twitter user",
     content:
       "Traditional banks take days to process transactions, charge insane fees, and block payments when they feel like it. Meanwhile, DeFi does it in seconds with full transparency. The choice is obvious. #Decentralization #DeFi",
-    avatar: "/kbp.jpg",
+    avatar: "/users.svg",
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ const reviews: Review[] = [
     title: "A twitter user",
     content:
       "Investment banks decide who gets access to capital based on their own interests. In a decentralized world, funding should be open, fair, and trustless. #DeFi #PowerToThePeople",
-    avatar: "/kbp.jpg",
+    avatar: "/users.svg",
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ const reviews: Review[] = [
     title: "Operations Director, Next Wave Tech",
     content:
       "Ever tried moving large amounts internationally? Investment banks will flag your transaction, hold your money for 'verification,' and charge a ridiculous fee. Crypto solves this. #Decentralization",
-    avatar: "/kbp.jpg",
+    avatar: "/users.svg",
   },
   {
     id: 4,
@@ -43,7 +43,7 @@ const reviews: Review[] = [
     title: "Senior Developer, Cloud Solutions",
     content:
       "Investment banking is just a fancy way of saying 'we control the money and you don’t.' Blockchain gives us financial independence. #DeFi #CryptoRevolution",
-    avatar: "/kbp.jpg",
+    avatar: "/users.svg",
   },
   {
     id: 5,
@@ -51,7 +51,7 @@ const reviews: Review[] = [
     title: "UX Researcher, Design Innovations",
     content:
       "Why should a handful of banks decide who gets funding? Why should they take massive cuts from every transaction? Decentralized finance puts that power back in OUR hands. #DecentralizationNow",
-    avatar: "/kbp.jpg",
+    avatar: "/users.svg",
   },
   {
     id: 6,
@@ -59,7 +59,7 @@ const reviews: Review[] = [
     title: "CTO, Emerging Technologies Inc.",
     content:
       "Investment banks profit from exclusivity and insider deals while everyday investors get crumbs. DeFi levels the playing field. #Blockchain #OpenFinance",
-    avatar: "/kbp.jpg",
+    avatar: "/users.svg",
   },
 ];
 

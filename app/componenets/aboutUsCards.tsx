@@ -37,7 +37,7 @@ const cardData: CardData[] = [
         imageAlt: "Startups illustration",
         imageWidth: 200,
         imageHeight: 200,
-        imageClassName: "w-[150px] h-[150px] sm:w-[150px] sm:h-[150px] md:w-[200px] md:h-[200px] lg:w-[250px] lg:h-[250px]",
+        imageClassName: "w-[140px] h-[140px] sm:w-[150px] sm:h-[150px] md:w-[200px] md:h-[200px] lg:w-[250px] lg:h-[250px]",
         expandedContent: "We've created a centralized hub where startups and investors can easily find each other. This streamlined approach saves time and resources, allowing for more efficient connections and collaborations in the entrepreneurial ecosystem."
     },
     {
