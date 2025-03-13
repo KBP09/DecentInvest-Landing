@@ -18,10 +18,9 @@ const Footer = () => {
                 body: JSON.stringify({ email }),
                 mode: "cors", // Ensure CORS mode is enabled
             });
-                      
-
             const data = await response.json();
             setMessage(data.message || "Something went wrong!");
+            console.log(message);
         } catch (error) {
             setMessage("Failed to subscribe. Try again later.");
         }
