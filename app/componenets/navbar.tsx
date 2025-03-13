@@ -30,7 +30,6 @@ const Navbar = () => {
                     />
                 </div>
 
-                {/* Mobile Menu Button */}
                 <button
                     type="button"
                     className="inline-flex items-center w-10 p-2 h-10 text-sm text-gray-500 rounded-lg lg:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400"
@@ -47,16 +46,20 @@ const Navbar = () => {
                 {/* Mobile Menu */}
                 {hasMounted && (
                     <div
-                        className={`lg:hidden w-full transition-transform duration-300 transform ${
-                            isOpen ? 'translate-y-0 block' : '-translate-y-full hidden'
-                        }`}
+                        className={`lg:hidden w-full transition-transform duration-300 transform ${isOpen ? 'translate-y-0 block' : '-translate-y-full hidden'
+                            }`}
                         id="navbar-default"
                     >
-                        <ul className="font-bold flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-white md:bg-transparent dark:bg-white dark:border-gray-700">
+                        <ul className="font-bold flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-white dark:bg-white dark:border-gray-700">
                             <li><Link href='/' className='px-[15px] py-[12px] flex items-center justify-center text-black cursor-pointer whitespace-nowrap font-bold relative'>Home</Link></li>
                             <li><Link href="/#aboutus" className='px-[15px] py-[12px] flex items-center justify-center text-black cursor-pointer whitespace-nowrap'>About Us</Link></li>
                             <li><Link href="/#newsletter" className='px-[15px] py-[12px] flex items-center justify-center text-black cursor-pointer whitespace-nowrap'>NewsLetter</Link></li>
                             <li><Link href='/startups' className='px-[15px] py-[12px] flex items-center justify-center text-black cursor-pointer whitespace-nowrap'>Startups</Link></li>
+                            <li className='flex items-center justify-center'>
+                                <button className="bg-[#FFB200] text-black font-semibold py-2 px-4 rounded-lg hover:bg-yellow-500 transition-colors duration-300">
+                                    <Link href='/business'><li className="hover:text-yellow-400 transition-colors duration-300 cursor-pointer">Business</li></Link>
+                                </button>
+                            </li>
                         </ul>
                     </div>
                 )}

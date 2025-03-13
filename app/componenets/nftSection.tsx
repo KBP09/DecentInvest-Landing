@@ -37,7 +37,7 @@ export default function NftSection({ background }: NftSectionProps) {
     if (!isMounted) return null;
 
     return (
-        <div className="h-auto min-h-[70vh] w-full sm:py-16 overflow-hidden" style={{ background }}>
+        <div className="h-auto min-h-[65vh] w-full sm:py-16 overflow-hidden" style={{ background }}>
             <div className="container mx-auto px-4">
                 <div className="relative" ref={containerRef}>
                     <div className="flex items-center justify-center gap-4 overflow-hidden py-56">
@@ -60,7 +60,7 @@ export default function NftSection({ background }: NftSectionProps) {
                                         className="absolute"
                                     >
                                         <GradientCard
-                                            className={`transition-all duration-300 ${isActive ? "w-[220px] h-[380px] sm:w-[250px] sm:h-[400px]" : "w-[230px] h-[380px] sm:w-[250px] sm:h-[400px] opacity-60"}`}
+                                            className={`transition-all duration-300 ${isActive ? "w-[200px] h-[360px] sm:w-[250px] sm:h-[400px]" : "w-[210px] h-[360px] sm:w-[250px] sm:h-[400px] opacity-60"}`}
                                             bgColor="linear-gradient(180deg, rgba(60, 13, 75, 0.6) 0%, rgba(77, 15, 96, 0.6) 50%, rgba(179, 39, 140, 0.6) 100%)"
                                         >
                                             <div className="p-6 flex flex-col h-full">

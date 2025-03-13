@@ -7,11 +7,6 @@ import Image from "next/image";
 gsap.registerPlugin(ScrollTrigger);
 
 const BusinessCards = () => {
-    // const [clickedCard, setClickedCard] = useState<number | null>(null);
-
-    // const handleCardClick = (cardId: number) => {
-    //     setClickedCard(prev => (prev === cardId ? null : cardId));
-    // };
     useEffect(() => {
         const elements = gsap.utils.toArray('.animate-left') as HTMLElement[];
         elements.forEach((element) => {
@@ -56,7 +51,7 @@ const BusinessCards = () => {
 
     return (
         <>
-            <div id="aboutus" className="min-h-screen bg-black bg-[url('../public/BG1.svg')] bg-cover bg-center p-6 md:p-8 flex items-center justify-center flex-col overflow-hidden">
+            <div id="aboutus" className="min-h-screen bg-black bg-[url('../public/BG1.svg')] bg-cover bg-center p-6 md:p-16 flex items-center justify-center flex-col overflow-hidden">
                 <h1 className="text-white text-[40px] sm:text-[55px] mt-16 text-center mb-8">Services we offer</h1>
                 <div className="max-w-5xl flex items-center justify-center grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div

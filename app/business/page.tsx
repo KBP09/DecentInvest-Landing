@@ -11,11 +11,11 @@ const Page = () => {
 
     return (
         <>
-            <div className="mb-32 pt-32 flex justify-center">
+            <div className="mt-8 mb-32 pt-32 flex justify-center">
                 <GradientCard className="aspect-[100/14] flex justify-center items-center max-w-[80%] h-[250px]">
                     <div className="flex justify-center items-center h-full">
-                        <h1 className="text-white text-[30px] md:text-[40px] font-bold leading-tight text-center">
-                            Our exclusive enterprise features for your business need
+                        <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold leading-tight text-center">
+                            Our exclusive enterprise features for your business needs
                         </h1>
                     </div>
                 </GradientCard>
@@ -27,10 +27,10 @@ const Page = () => {
                 >
                     <div className="flex justify-center items-center h-full p-4" onClick={handleClick}>
                         <div className="flex flex-col">
-                            <h2 className="text-white text-[20px] md:text-[30px] font-bold leading-tight">
+                            <h2 className="hidden sm:flex text-white text-xl sm:text-2xl md:text-3xl font-bold leading-tight">
                                 Want to know more about us?
                             </h2>
-                            <h2 className="text-white text-[20px] md:text-[45px] font-bold leading-tight">
+                            <h2 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold leading-tight">
                                 Book a meeting with us on Calendly
                             </h2>
                         </div>

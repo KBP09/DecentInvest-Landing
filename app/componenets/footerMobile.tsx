@@ -60,9 +60,6 @@ const FooterMobile = () => {
                     <Link href="#" className="hover:text-gray-300">
                         <Image src="/linkedin.svg" alt="LinkedIn" width={24} height={24} />
                     </Link>
-                    <Link href="#" className="hover:text-gray-300">
-                        <Image src="/youtube.svg" alt="YouTube" width={24} height={24} />
-                    </Link>
                 </div>
                 <p className="text-[#E7E7E7] text-xs mt-4">
                     © 2024 Brand, Inc. • Privacy • Terms

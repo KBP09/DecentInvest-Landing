@@ -34,7 +34,7 @@ const Footer = () => {
                     <Link href="/startups" className="text-[#E7E7E7] hover:text-gray-300 text-center">Startups</Link>
                     <p className="text-[#E7E7E7] text-center">Contact Us:</p>
                     <Link href="/business" className="text-[#E7E7E7] hover:text-gray-300 text-center">Business</Link>
-                    <Link href="/#about" className="text-[#E7E7E7] hover:text-gray-300 text-center">About</Link>
+                    <Link href="/#aboutus" className="text-[#E7E7E7] hover:text-gray-300 text-center">About</Link>
                     <div className="flex items-center justify-center gap-2">
                         <Link href="https://x.com/DecentInvest24" className="hover:text-gray-300">
                             <Image
@@ -47,7 +47,7 @@ const Footer = () => {
                         </Link>
                         <Link href="https://x.com/DecentInvest24" className="hover:text-gray-300">
                             <Image
-                                src="/facebook.svg"
+                                src="/mail2.svg"
                                 alt="Transactions illustration"
                                 width={28}
                                 height={28}
@@ -57,15 +57,6 @@ const Footer = () => {
                         <Link href="https://x.com/DecentInvest24" className="hover:text-gray-300">
                             <Image
                                 src="/linkedin.svg"
-                                alt="Transactions illustration"
-                                width={30}
-                                height={30}
-                                className=""
-                            />
-                        </Link>
-                        <Link href="https://x.com/DecentInvest24" className="hover:text-gray-300">
-                            <Image
-                                src="/youtube.svg"
                                 alt="Transactions illustration"
                                 width={30}
                                 height={30}

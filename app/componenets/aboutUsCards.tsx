@@ -151,6 +151,7 @@ const ExpandableCards: React.FC = () => {
 
     return (
         <div
+        id='aboutus'
             ref={containerRef}
             className="min-h-screen bg-black bg-[url('../public/Vector.svg')] bg-no-repeat bg-cover bg-center p-6 md:p-8 flex items-center justify-center flex-col overflow-hidden"
         >
