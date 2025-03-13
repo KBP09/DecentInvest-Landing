@@ -23,6 +23,7 @@ const Footer = () => {
             console.log(message);
         } catch (error) {
             setMessage("Failed to subscribe. Try again later.");
+            console.log(error);
         }
     };
     return (
