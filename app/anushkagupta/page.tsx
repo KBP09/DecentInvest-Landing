@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { GradientCard } from '../componenets/gradientCard';
 import { ProfileCard } from '../componenets/profileCard';
 import NftSection from '../componenets/nftSection';
-
+import Link from 'next/link';
 const Page = () => {
     const gradientStyle = "linear-gradient(180deg, #300C3B 0%, #48114C 50%, #B3278C 100%)";
     const values = ['*', '*', '*', '5', '8'];
@@ -36,7 +36,7 @@ const Page = () => {
                         <p className="text-[14px] sm:text-[20px] mb-4">Company: DecentInvest</p>
                         <p className="text-[14px] sm:text-[20px] mb-2">About:</p>
                         <p className="text-[14px] sm:text-[16px] leading-6">
-                            Believe in either a home run or running back home. Believe in either a home run or running back home.Believe in either a home run or running back home. Believe in either a home run or running back home.
+                            Believe in either a home run or running back home. Believe in either a home run or running back home.Believe in either a home run or running back home
                         </p>
                     </div>
                 </GradientCard>
@@ -84,6 +84,37 @@ const Page = () => {
                 <NftSection background='black' />
             </div>
 
+            <div className="w-full flex flex-col items-center justify-start">
+                <h1 className="text-white text-[28px] sm:text-[36px] w-[90%] sm:w-[80%]">
+                    Contact them:
+                </h1>
+                <div className="w-full flex flex-col gap-4 sm:flex-row items-center justify-center mt-8 mb-8 ">
+                    <GradientCard className="w-[90vw] sm:w-[40vw] h-[120px] flex items-center justify-center" bgColor="rgba(26, 26, 29, 1)">
+                        <Link href={"https://www.linkedin.com/in/anushka-gupta-363213230/"} className="text-white font-bold text-[30px] hover:text-gray-300 flex items-center justify-center w-full h-full">
+                            <Image
+                                src="/linkedin.svg"
+                                alt="Transactions illustration"
+                                width={30}
+                                height={30}
+                                className=""
+                            />
+                            Linkedin
+                        </Link>
+                    </GradientCard>
+                    <GradientCard className="w-[90vw] sm:w-[40vw] h-[120px]" bgColor="rgba(26, 26, 29, 1)">
+                        <Link href={"https://x.com/AnushkaGupta333"} className="text-white font-bold text-[30px] hover:text-gray-300 flex items-center justify-center w-full h-full">
+                            <Image
+                                src="/linkedin.svg"
+                                alt="Transactions illustration"
+                                width={30}
+                                height={30}
+                                className=""
+                            />
+                            Twitter
+                        </Link>
+                    </GradientCard>
+                </div>
+            </div>
         </div>
     )
 }

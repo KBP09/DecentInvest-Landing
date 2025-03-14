@@ -37,7 +37,7 @@ const cardData: CardData[] = [
         imageAlt: "Startups illustration",
         imageWidth: 200,
         imageHeight: 200,
-        imageClassName: "w-[120px] h-[120px] sm:w-[150px] sm:h-[150px] md:w-[200px] md:h-[200px] lg:w-[250px] lg:h-[250px]",
+        imageClassName: "w-[130px] h-[130px] sm:w-[150px] sm:h-[150px] md:w-[200px] md:h-[200px] lg:w-[250px] lg:h-[250px]",
         expandedContent: "We've created a centralized hub where startups and investors can easily find each other. This streamlined approach saves time and resources, allowing for more efficient connections and collaborations in the entrepreneurial ecosystem."
     },
     {
@@ -104,7 +104,7 @@ const ExpandableCard: React.FC<{ card: CardData; isExpanded: boolean; onClick: (
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
             className={`relative w-full max-w-full rounded-[24px] sm:rounded-[48px] overflow-hidden flex flex-col items-center cursor-pointer 
-                ${isExpanded ? 'aspect-[3/4] sm:aspect-[10/4] md:aspect-[10/4] col-span-full' : 'aspect-[5/3] sm:aspect-[14/9]'}`}
+                ${isExpanded ? 'aspect-[3/4] sm:aspect-[10/4] md:aspect-[10/4] col-span-full' : 'aspect-[4.5/3] sm:aspect-[14/9]'}`}
             style={{
                 background: 'linear-gradient(76.91deg, #FFDE4D -0.16%, #C847FF 104.72%)',
                 padding: '2px',
@@ -115,7 +115,7 @@ const ExpandableCard: React.FC<{ card: CardData; isExpanded: boolean; onClick: (
                     layout
                     transition={{ duration: 0.3, ease: 'easeOut' }}
                     className={`text-white font-bold leading-tight text-center mt-2 sm:mt-4 ${isExpanded
-                            ? 'text-[min(4vw,24px)] sm:text-[20px] md:text-[min(5vw,28px)]'  
+                            ? 'text-[min(4vw,40px)] sm:text-[20px] md:text-[min(5vw,28px)]'  
                             : 'text-[17px] sm:text-[15px] md:text-[min(3vw,20px)]'           
                         }`}
                 >
