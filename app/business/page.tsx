@@ -21,7 +21,7 @@ const Page = () => {
                 </GradientCard>
             </div>
             <BusinessCards />
-            <div className="mb-32 pt-32 flex justify-center">
+            <div id="contactUs" className="mb-32 pt-32 flex justify-center">
                 <GradientCard
                     className="aspect-[100/14] flex justify-center items-center  max-w-[80%] h-[250px] cursor-pointer"
                 >

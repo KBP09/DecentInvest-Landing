@@ -65,9 +65,9 @@ const cardData: CardData[] = [
         title: "Easy transactions",
         imageSrc: "/transactions.svg",
         imageAlt: "Transactions illustration",
-        imageWidth: 280,
+        imageWidth: 400,
         imageHeight: 280,
-        imageClassName: "w-[150px] h-[150px] sm:w-[180px] sm:h-[180px] md:w-[220px] md:h-[220px] lg:w-[260px] lg:h-[260px]",
+        imageClassName: "w-[150px] h-[150px] sm:w-[180px] sm:h-[180px] md:w-[220px] md:h-[220px] lg:w-[400px] lg:h-[260px]",
         expandedContent: "We've simplified the investment process with our secure and user-friendly transaction system. From initial interest to final agreement, our platform facilitates smooth, transparent, and efficient financial interactions between startups and investors."
     },
     {
@@ -75,9 +75,9 @@ const cardData: CardData[] = [
         title: "Grants and investments",
         imageSrc: "/grants.svg",
         imageAlt: "Grants illustration",
-        imageWidth: 280,
+        imageWidth: 400,
         imageHeight: 280,
-        imageClassName: "w-[150px] h-[150px] sm:w-[150px] sm:h-[150px] md:w-[220px] md:h-[220px] lg:w-[260px] lg:h-[260px]",
+        imageClassName: "w-[150px] h-[150px] sm:w-[150px] sm:h-[150px] md:w-[220px] md:h-[220px] lg:w-[320px] lg:h-[260px]",
         expandedContent: "Access a wide range of funding options, from traditional investments to grants and alternative financing methods. Our platform aggregates diverse opportunities, helping startups find the right financial support to fuel their growth and innovation."
     }
 ]
@@ -122,7 +122,7 @@ const ExpandableCard: React.FC<{ card: CardData; isExpanded: boolean; onClick: (
                     </motion.div>
                     {isExpanded && (
                         <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.4, ease: 'easeInOut' }} className="overflow-hidden">
-                            <p className="text-white text-sm sm:text-base md:text-lg mt-2 sm:mt-4 mb-4 sm:mb-8 px-2 sm:px-8">
+                            <p className="text-white text-sm sm:text-base md:text-lg mt-2 sm:mt-4 mb-4 sm:mb-8 px-2 sm:px-16">
                                 {card.expandedContent}
                             </p>
                         </motion.div>

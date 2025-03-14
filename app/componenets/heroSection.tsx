@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-
+import Link from "next/link";
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
 
@@ -51,7 +51,7 @@ export default function Home() {
         </div>
 
         <button className="bg-[#FFB200] text-black font-medium w-[120px] h-[30px] sm:h-[52px] sm:w-[200px] rounded-3xl hover:bg-yellow-500 transition-all duration-300 sm:text-[23px] mt-8 shadow-md transform hover:scale-105">
-          Contact Us
+          <Link href={"/business/#contactUs"}>Contact Us</Link>
         </button>
       </div>
     </div>

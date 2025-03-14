@@ -34,7 +34,6 @@ const Page = () => {
                     <div className="flex flex-col items-left justify-center w-full h-full p-6">
                         <p className="text-[20px] sm:text-[28px] font-bold top-0 mb-4">Anushka Gupta</p>
                         <p className="text-[15px] sm:text-[20px] mb-4">Company: DecentInvest</p>
-                        <p className="text-[15px] sm:text-[20px] mb-4">Education: Highly educated individual</p>
                         <p className="text-[15px] sm:text-[20px] mb-2">About:</p>
                         <p className="text-[15px] sm:text-[16px] leading-6">
                             Believe in either a home run or running back home. Believe in either a home run or running back home.Believe in either a home run or running back home. Believe in either a home run or running back home.
