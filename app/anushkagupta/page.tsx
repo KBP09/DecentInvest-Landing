@@ -32,10 +32,10 @@ const Page = () => {
 
                 <GradientCard bgColor="#1A1A1D" className="aspect-[40/20] text-white flex items-center justify-center w-full md:max-w-[700px] h-[250px] sm:h-[320px] px-4">
                     <div className="flex flex-col items-left justify-center w-full h-full p-6">
-                        <p className="text-[20px] sm:text-[28px] font-bold top-0 mb-4">Anushka Gupta</p>
-                        <p className="text-[15px] sm:text-[20px] mb-4">Company: DecentInvest</p>
-                        <p className="text-[15px] sm:text-[20px] mb-2">About:</p>
-                        <p className="text-[15px] sm:text-[16px] leading-6">
+                        <p className="text-[19px] sm:text-[28px] font-bold top-0 mb-4">Anushka Gupta</p>
+                        <p className="text-[14px] sm:text-[20px] mb-4">Company: DecentInvest</p>
+                        <p className="text-[14px] sm:text-[20px] mb-2">About:</p>
+                        <p className="text-[14px] sm:text-[16px] leading-6">
                             Believe in either a home run or running back home. Believe in either a home run or running back home.Believe in either a home run or running back home. Believe in either a home run or running back home.
                         </p>
                     </div>
@@ -60,13 +60,15 @@ const Page = () => {
                             <GradientCard bgColor="#1A1A1D" className="w-full text-white flex flex-col items-center justify-center h-[350px] sm:h-[180px]">
                                 <div className='w-full h-full flex flex-col items-center justify-center'>
                                     <h2 className="text-white sm:w-[80%] text-[24px] sm:text-[28px]">Equity Gained</h2>
-                                    <div className="flex-col items-center sm:flex-row flex gap-6 justify-center w-full mt-2">
+                                    <div className="flex-col items-center sm:flex-row flex gap-6 justify-center w-full mt-2 h-full">
                                         {cardData.map((item, i) => (
                                             <GradientCard key={i}
                                                 bgColor="linear-gradient(180deg, rgba(48, 12, 59, 0.7) 0%, rgba(72, 17, 76, 0.7) 50%, rgba(179, 39, 140, 0.7) 100%)"
                                                 className="text-white flex flex-col items-center justify-center w-[95%] sm:w-[40%] h-[100px]">
-                                                <h1 className="text-[22px] text-center font-bold">{item.title}</h1>
-                                                <p className="text-[22px] text-center mt-2">{item.value}</p>
+                                                <div className='w-full h-full flex flex-col items-center justify-center'>
+                                                    <h1 className="text-[22px] text-center font-bold">{item.title}</h1>
+                                                    <p className="text-[22px] text-center mt-2">{item.value}</p>
+                                                </div>
                                             </GradientCard>
                                         ))}
                                     </div>

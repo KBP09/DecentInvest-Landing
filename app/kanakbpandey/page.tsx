@@ -30,10 +30,10 @@ const Page = () => {
 
                 <GradientCard bgColor="#1A1A1D" className="aspect-[40/20] text-white flex items-center justify-center w-full md:max-w-[700px] h-[250px] sm:h-[320px] px-4">
                     <div className="flex flex-col items-left justify-center w-full h-full p-4">
-                        <p className="text-[20px] sm:text-[28px] font-bold top-0 mb-4">KanaK B Pandey</p>
-                        <p className="text-[15px] sm:text-[20px] mb-4">Company: DecentInvest</p>
-                        <p className="text-[15px] sm:text-[20px] mb-2">About:</p>
-                        <p className="text-[15px] sm:text-[16px] leading-6">I believe in nothing.I believe in nothing...I believe in nothing.I believe in nothingI believe in nothing I believe in nothing I believe in nothing.I believe in nothing...I believe in nothing.</p>
+                        <p className="text-[19px] sm:text-[28px] font-bold top-0 mb-4">KanaK B Pandey</p>
+                        <p className="text-[14px] sm:text-[20px] mb-4">Company: DecentInvest</p>
+                        <p className="text-[14px] sm:text-[20px] mb-2">About:</p>
+                        <p className="text-[14px] sm:text-[16px] leading-6">I believe in nothing.I believe in nothing...I believe in nothing.I believe in nothingI believe in nothing I believe in nothing I believe in nothing.I believe in nothing...I believe in nothing.</p>
                     </div>
                 </GradientCard>
             </div>
@@ -61,8 +61,10 @@ const Page = () => {
                                             <GradientCard key={i}
                                                 bgColor="linear-gradient(180deg, rgba(48, 12, 59, 0.7) 0%, rgba(72, 17, 76, 0.7) 50%, rgba(179, 39, 140, 0.7) 100%)"
                                                 className="text-white flex flex-col items-center justify-center w-[95%] sm:w-[40%] h-[100px]">
-                                                <h1 className="text-[22px] text-center font-bold">{item.title}</h1>
-                                                <p className="text-[22px] text-center mt-2">{item.value}</p>
+                                                <div className='w-full h-full flex flex-col items-center justify-center'>
+                                                    <h1 className="text-[22px] text-center font-bold">{item.title}</h1>
+                                                    <p className="text-[22px] text-center mt-2">{item.value}</p>
+                                                </div>
                                             </GradientCard>
                                         ))}
                                     </div>
