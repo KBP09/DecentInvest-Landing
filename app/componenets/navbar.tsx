@@ -1,14 +1,27 @@
 'use client'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [hasMounted, setHasMounted] = useState(false);
+    const menuRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
         setHasMounted(true);
+
+        // Close menu if clicked outside
+        const handleClickOutside = (event: MouseEvent) => {
+            if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+                setIsOpen(false);
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
     }, []);
 
     const handleToggle = () => {
@@ -20,14 +33,16 @@ const Navbar = () => {
             <div className="max-w-screen flex flex-wrap items-center justify-between mx-auto px-4 lg:px-0 lg:mr-2 lg:pr-12 lg:ml-4 lg:w-full">
 
                 <div className="flex items-center space-x-2">
-                    <Image
-                        src="/logo.svg"
-                        alt="Logo"
-                        width={100}
-                        height={50}
-                        className='w-[60px] sm:w-[90px]'
-                        priority
-                    />
+                    <Link href={'/'}>
+                        <Image
+                            src="/logo.svg"
+                            alt="Logo"
+                            width={100}
+                            height={50}
+                            className='w-[60px] sm:w-[90px]'
+                            priority
+                        />
+                    </Link>
                 </div>
 
                 <button
@@ -46,6 +61,7 @@ const Navbar = () => {
                 {/* Mobile Menu */}
                 {hasMounted && (
                     <div
+                        ref={menuRef}
                         className={`lg:hidden w-full transition-transform duration-300 transform ${isOpen ? 'translate-y-0 block' : '-translate-y-full hidden'
                             }`}
                         id="navbar-default"
