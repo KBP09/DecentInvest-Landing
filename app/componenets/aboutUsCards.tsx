@@ -47,7 +47,7 @@ const cardData: CardData[] = [
         imageAlt: "NFT illustration",
         imageWidth: 280,
         imageHeight: 280,
-        imageClassName: "w-[150px] h-[150px] sm:w-[180px] sm:h-[180px] md:w-[220px] md:h-[220px] lg:w-[460px] lg:h-[260px]",
+        imageClassName: "w-[150px] h-[150px] sm:w-[180px] sm:h-[180px] md:w-[220px] md:h-[220px] lg:w-[260px] lg:h-[260px]",
         expandedContent: "Leverage the power of NFTs to tokenize your startup's assets, intellectual property, or even equity. This innovative approach opens up new avenues for funding, engagement, and value creation in the digital age."
     },
     {
@@ -67,7 +67,7 @@ const cardData: CardData[] = [
         imageAlt: "Transactions illustration",
         imageWidth: 400,
         imageHeight: 280,
-        imageClassName: "w-[150px] h-[150px] sm:w-[180px] sm:h-[180px] md:w-[220px] md:h-[220px] lg:w-[400px] lg:h-[260px]",
+        imageClassName: "w-[150px] h-[150px] sm:w-[180px] sm:h-[180px] md:w-[220px] md:h-[220px] lg:w-[260px] lg:h-[260px]",
         expandedContent: "We've simplified the investment process with our secure and user-friendly transaction system. From initial interest to final agreement, our platform facilitates smooth, transparent, and efficient financial interactions between startups and investors."
     },
     {
@@ -77,7 +77,7 @@ const cardData: CardData[] = [
         imageAlt: "Grants illustration",
         imageWidth: 400,
         imageHeight: 280,
-        imageClassName: "w-[150px] h-[150px] sm:w-[150px] sm:h-[150px] md:w-[220px] md:h-[220px] lg:w-[320px] lg:h-[260px]",
+        imageClassName: "w-[150px] h-[150px] sm:w-[150px] sm:h-[150px] md:w-[220px] md:h-[220px] lg:w-[260px] lg:h-[260px]",
         expandedContent: "Access a wide range of funding options, from traditional investments to grants and alternative financing methods. Our platform aggregates diverse opportunities, helping startups find the right financial support to fuel their growth and innovation."
     }
 ]
@@ -111,24 +111,50 @@ const ExpandableCard: React.FC<{ card: CardData; isExpanded: boolean; onClick: (
             }}
         >
             <motion.div layout className="absolute inset-[2px] rounded-[22px] sm:rounded-[46px] bg-black overflow-hidden">
-                <motion.div layout className={`relative z-10 h-full w-full flex items-center justify-center text-center p-4 sm:px-6 ${isExpanded ? 'flex-col sm:flex-row' : 'flex-col'}`}>
-                    <motion.div layout className="flex items-center flex-col">
-                        <motion.h2 layout transition={{ duration: 0.3, ease: 'easeOut' }} className="text-white text-[18px] sm:text-[15px] md:text-[min(3vw,20px)] font-bold leading-tight mt-2 sm:mt-8">
-                            {card.title}
-                        </motion.h2>
-                        <motion.div ref={imageRef} layout>
-                            <Image src={card.imageSrc} alt={card.imageAlt} width={card.imageWidth} height={card.imageHeight} className={card.imageClassName} priority />
-                        </motion.div>
+                <motion.h2
+                    layout
+                    transition={{ duration: 0.3, ease: 'easeOut' }}
+                    className={`text-white font-bold leading-tight text-center mt-4 ${isExpanded
+                            ? 'text-[min(4vw,24px)] sm:text-[20px] md:text-[min(5vw,28px)]'  
+                            : 'text-[17px] sm:text-[15px] md:text-[min(3vw,20px)]'           
+                        }`}
+                >
+                    {card.title}
+                </motion.h2>
+
+                <motion.div
+                    layout
+                    className={`relative z-10 h-full w-full flex items-center justify-center text-center p-4 sm:px-6 ${isExpanded ? 'flex-col sm:flex-row' : 'flex-col'
+                        }`}
+                >
+                    <motion.div layout className="flex-shrink-0">
+                        <Image
+                            src={card.imageSrc}
+                            alt={card.imageAlt}
+                            width={card.imageWidth}
+                            height={card.imageHeight}
+                            className={card.imageClassName}
+                            priority
+                        />
                     </motion.div>
+
+                    {/* Expanded Content */}
                     {isExpanded && (
-                        <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.4, ease: 'easeInOut' }} className="overflow-hidden">
-                            <p className="text-white text-sm sm:text-base md:text-lg mt-2 sm:mt-4 mb-4 sm:mb-8 px-2 sm:px-16">
+                        <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -10 }}
+                            transition={{ duration: 0.4, ease: 'easeInOut' }}
+                            className="overflow-hidden px-4"
+                        >
+                            <p className="text-white text-sm sm:text-base md:text-lg mt-2 sm:mt-4 mb-4 sm:mb-8">
                                 {card.expandedContent}
                             </p>
                         </motion.div>
                     )}
                 </motion.div>
             </motion.div>
+
         </motion.div>
     );
 };
@@ -151,7 +177,7 @@ const ExpandableCards: React.FC = () => {
 
     return (
         <div
-        id='aboutus'
+            id='aboutus'
             ref={containerRef}
             className="min-h-screen bg-black bg-[url('../public/Vector.svg')] bg-no-repeat bg-cover bg-center p-6 md:p-8 flex items-center justify-center flex-col overflow-hidden"
         >
