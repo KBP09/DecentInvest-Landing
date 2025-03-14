@@ -10,7 +10,7 @@ const FooterMobile = () => {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         try {
-            const response = await fetch("https://newsletter-proxy.kanakbpandey2014.workers.dev", {
+            await fetch("https://newsletter-proxy.kanakbpandey2014.workers.dev", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email }),
@@ -21,7 +21,7 @@ const FooterMobile = () => {
             console.log(error);
         }
     };
-    
+
     return (
         <footer className="lg:hidden flex flex-col w-full">
             <div className="bg-[#1A1A1D] text-white py-8 flex items-center justify-center">
