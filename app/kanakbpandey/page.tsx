@@ -86,7 +86,7 @@ const Page = () => {
                 </h1>
                 <div className="w-full flex flex-col gap-4 sm:flex-row items-center justify-center mt-8 mb-8 ">
                     <GradientCard className="w-[90vw] sm:w-[40vw] h-[120px] flex items-center justify-center" bgColor="rgba(26, 26, 29, 1)">
-                        <Link href={"https://www.linkedin.com/in/kanak-b-pandey-701821254/"} className="text-white font-bold text-[30px] hover:text-gray-300 flex items-center justify-center w-full h-full">
+                        <Link href={"https://www.linkedin.com/in/kanak-b-pandey-701821254/"} className="text-white font-bold text-[25px] sm:text-[30px] hover:text-gray-300 flex items-center justify-center w-full h-full">
                             <Image
                                 src="/linkedin.svg"
                                 alt="Transactions illustration"
@@ -98,7 +98,7 @@ const Page = () => {
                         </Link>
                     </GradientCard>
                     <GradientCard className="w-[90vw] sm:w-[40vw] h-[120px]" bgColor="rgba(26, 26, 29, 1)">
-                        <Link href={"https://x.com/KanaKBPandey2"} className="text-white font-bold text-[30px] hover:text-gray-300 flex items-center justify-center w-full h-full">
+                        <Link href={"https://x.com/KanaKBPandey2"} className="text-white font-bold text-[25px] sm:text-[30px] hover:text-gray-300 flex items-center justify-center w-full h-full">
                             <Image
                                 src="/linkedin.svg"
                                 alt="Transactions illustration"
