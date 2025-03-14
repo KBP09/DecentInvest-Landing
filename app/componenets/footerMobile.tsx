@@ -2,30 +2,26 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { toast } from "sonner"
 
 const FooterMobile = () => {
     const [email, setEmail] = useState("");
-    const [message, setMessage] = useState("");
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        setMessage("");
-
         try {
-            const response = await fetch("https://script.google.com/macros/s/AKfycbxpfdwzeQW-tTvV6CCjEyOadkvUVjUeidOy-3iHyiGTZqS6MhP4xcQL0ccDleDHRbSn/exec", {
+            const response = await fetch("https://newsletter-proxy.kanakbpandey2014.workers.dev", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email }),
+                mode: "cors",
             });
-
-            const data = await response.json();
-            setMessage(data.message || "Something went wrong!");
-            console.log(message);
+            toast("Newsletter subscribed");
         } catch (error) {
-            setMessage("Failed to subscribe. Try again later.");
             console.log(error);
         }
     };
+    
     return (
         <footer className="lg:hidden flex flex-col w-full">
             <div className="bg-[#1A1A1D] text-white py-8 flex items-center justify-center">

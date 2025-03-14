@@ -9,8 +9,8 @@ const Page = () => {
     const gradientStyle = "linear-gradient(180deg, #300C3B 0%, #48114C 50%, #B3278C 100%)";
     const values = ['*', '*', '*', '5', '8'];
     const cardData = [
-        { title: "Completed", value: "*.4*%" },
-        { title: "In Progress", value: "*.2*%" }
+        { title: "Completed", value: "*4%" },
+        { title: "In Progress", value: "*2%" }
     ];
 
     return (

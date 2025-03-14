@@ -2,30 +2,26 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { toast } from "sonner"
 
 const Footer = () => {
     const [email, setEmail] = useState("");
-    const [message, setMessage] = useState("");
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        setMessage("");
-
         try {
-            const response = await fetch("https://script.google.com/macros/s/AKfycbxlcudMtO7zNee-ABpXbPMRevr7UFwPtSPu-h-DE7chWW9bE3vuDKzFcFUZyBaDhKKk/exec", {
+            const response = await fetch("https://newsletter-proxy.kanakbpandey2014.workers.dev", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email }),
-                mode: "cors", // Ensure CORS mode is enabled
+                mode: "cors",
             });
-            const data = await response.json();
-            setMessage(data.message || "Something went wrong!");
-            console.log(message);
+            toast("Newsletter subscribed");
         } catch (error) {
-            setMessage("Failed to subscribe. Try again later.");
-            console.log(error);
+            console.error("Error:", error);
         }
     };
+
     return (
         <footer id="newsletter" className="hidden lg:flex w-full flex-col sm:flex-row h-[380px]">
             <div className="bg-black text-white py-12 w-[50%] flex items-center justify-center">
