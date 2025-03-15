@@ -5,6 +5,7 @@ import Footer from "./componenets/footer";
 import FooterMobile from "./componenets/footerMobile";
 import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,6 +34,7 @@ export default function RootLayout({
       >
         <Navbar/>
         {children}
+        <Analytics/>
         <Toaster/>
         <Footer/>
         <FooterMobile />
