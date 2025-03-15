@@ -104,7 +104,7 @@ const Page = () => {
                     <GradientCard className="w-[90vw] sm:w-[40vw] h-[120px]" bgColor="rgba(26, 26, 29, 1)">
                         <Link href={"https://x.com/AnushkaGupta333"} className="text-white font-bold text-[25px] sm:text-[30px] hover:text-gray-300 flex items-center justify-center w-full h-full">
                             <Image
-                                src="/linkedin.svg"
+                                src="/twitter.svg"
                                 alt="Transactions illustration"
                                 width={30}
                                 height={30}

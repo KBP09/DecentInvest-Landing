@@ -40,7 +40,7 @@ const FooterMobile = () => {
                     <p className="text-[#E7E7E7] text-lg xl:text-xl leading-snug text-center">
                         Invest Decently, Invest Decentrally
                     </p>
-                    <div className="mt-8 flex flex-col w-full px-4">
+                    <div id='newsletter2' className="mt-8 flex flex-col w-full px-4">
                         <h3 className="text-[#E7E7E7] font-medium mb-2 text-left text-sm md:text-[16px] lg:text-[18px]">
                             Subscribe to our newsletter
                         </h3>
@@ -67,9 +67,9 @@ const FooterMobile = () => {
             <div className="bg-black text-white w-full flex items-center justify-center flex-col py-4 sm:py-6 ">
                 <div className="grid grid-cols-2 gap-1 text-center md:text-[16px] lg:text-[20px] w-full">
                     <Link href="/" className="text-[#E7E7E7] hover:text-gray-300">Home</Link>
-                    <Link href="/about" className="text-[#E7E7E7] hover:text-gray-300">Startups</Link>
-                    <Link href="/newsletter" className="text-[#E7E7E7] hover:text-gray-300">Newsletter</Link>
-                    <Link href="/startups" className="text-[#E7E7E7] hover:text-gray-300">About</Link>
+                    <Link href="/startups" className="text-[#E7E7E7] hover:text-gray-300">Startups</Link>
+                    <Link href="/#newsletter2" className="text-[#E7E7E7] hover:text-gray-300">Newsletter</Link>
+                    <Link href="/#aboutus" className="text-[#E7E7E7] hover:text-gray-300">About</Link>
                 </div>
                 <p className="text-[#E7E7E7] text-center mt-4 text-sm">Contact Us:</p>
                 <div className="flex items-center justify-center gap-2 mt-2">
@@ -77,7 +77,7 @@ const FooterMobile = () => {
                         <Image src="/twitter.svg" alt="Twitter" width={20} height={20} />
                     </Link>
                     <Link href="#" className="hover:text-gray-300">
-                        <Image src="/facebook.svg" alt="Facebook" width={22} height={22} />
+                        <Image src="/mail2.svg" alt="Mail" width={22} height={22} />
                     </Link>
                     <Link href="#" className="hover:text-gray-300">
                         <Image src="/linkedin.svg" alt="LinkedIn" width={24} height={24} />
