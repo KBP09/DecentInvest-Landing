@@ -76,7 +76,7 @@ const FooterMobile = () => {
                     <Link href="#" className="hover:text-gray-300">
                         <Image src="/twitter.svg" alt="Twitter" width={20} height={20} />
                     </Link>
-                    <Link href="#" className="hover:text-gray-300">
+                    <Link href="https://mail.google.com/mail/?view=cm&fs=1&to=business@decentinvest.xyz" className="hover:text-gray-300">
                         <Image src="/mail2.svg" alt="Mail" width={22} height={22} />
                     </Link>
                     <Link href="#" className="hover:text-gray-300">

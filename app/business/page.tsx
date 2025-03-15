@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const Page = () => {
     const handleClick = () => {
-        window.open("https://calendly.com/your-link", "_blank");
+        window.open("https://calendly.com/decentinvest2024", "_blank");
     };
 
     return (

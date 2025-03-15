@@ -64,7 +64,7 @@ const Footer = () => {
                                 className=""
                             />
                         </Link>
-                        <Link href="https://x.com/DecentInvest24" className="hover:text-gray-300">
+                        <Link href="https://mail.google.com/mail/?view=cm&fs=1&to=business@decentinvest.xyz" className="hover:text-gray-300">
                             <Image
                                 src="/mail2.svg"
                                 alt="Transactions illustration"
